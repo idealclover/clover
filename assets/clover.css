@@ -1,0 +1,9 @@
+.post-content img, .comment-content img, .post-content video, .comment-content video {
+    max-width: 100%;
+}
+
+.archive-title{
+    text-align: center;
+    margin-bottom: 3em;
+    animation: fade-in-bottom .3s both;
+}
