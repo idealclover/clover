@@ -1,9 +1,348 @@
+/* - global - */
+/*------------*/
+
+a {
+    color: #3e3e3e;
+}
+
+a:hover {
+    color: #9fcff7;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 1rem;
+}
+
+body{
+    /*background-color: #F2F3EF;*/
+}
+
+/* - main - */
+/*----------*/
+
+#main {
+    padding: 1.5em 0;
+    margin-top: 1.0em;
+}
+
+#main img {
+    height: auto;
+    transition: filter .3s;
+}
+
 .post-content img, .comment-content img, .post-content video, .comment-content video {
     max-width: 100%;
 }
 
-.archive-title{
+/* - article list  - */
+/*-------------------*/
+
+.archive-title {
     text-align: center;
-    margin-bottom: 3em;
-    animation: fade-in-bottom .3s both;
+    /*margin-top: 1em;*/
+    margin-bottom: 1.5em;
+}
+
+.page-navigator {
+    list-style: none;
+    margin: 25px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.page-navigator li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.page-navigator a {
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.page-navigator a:hover {
+    background: #EEE;
+    text-decoration: none;
+}
+
+.page-navigator .current a {
+    color: #444;
+    background: #EEE;
+}
+
+/* - comments - */
+
+.post-comments {
+    word-wrap: break-word;
+}
+
+/*.post-comments form {*/
+    /*margin-bottom: 3em;*/
+/*}*/
+
+.post-comments label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.post-comments input, .post-comments textarea {
+    width: 100%;
+    display: block;
+}
+
+.post-comments .comment-list {
+    margin-left: 0;
+    list-style: none;
+    margin-bottom: 2em;
+}
+
+.post-comments .comment-list:last-child {
+    margin-bottom: 0;
+}
+
+/*.comment-list li {*/
+    /*position: relative;*/
+    /*padding-left: 60px;*/
+    /*margin-bottom: 1.5em;*/
+/*}*/
+
+/*.comment-list li:after {*/
+    /*content: "";*/
+    /*clear: both;*/
+    /*display: block;*/
+/*}*/
+
+/*.comment-list li:last-child {*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+/*input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="number"], input[type="search"], textarea, select {*/
+    /*padding: .5em;*/
+    /*color: inherit;*/
+    /*border-radius: 4px;*/
+    /*border: #ccc 1px solid;*/
+/*}*/
+
+/*!* --- 评论头像 *!*/
+.comment-list .avatar {
+    top: 0;
+    left: 0;
+    min-width: 45px;
+    max-width: 45px;
+    float: left;
+    /*position: absolute;*/
+    border-radius: 100%;
+    transition: transform .3s ease-in-out;
+}
+
+/*.comment-list li:hover .avatar {*/
+    /*transform: rotate(1turn);*/
+    /*-webkit-transform: rotate(1turn);*/
+/*}*/
+
+/*!* --- 评论信息 *!*/
+.comment-list .comment-meta {
+    float: left;
+    margin-bottom: .25em;
+}
+
+/*.comment-list .comment-time:before {*/
+    /*content: "\f017";*/
+    /*margin-right: .4em;*/
+    /*display: inline-block;*/
+    /*!*font-family: "FontAwesome";*!*/
+/*}*/
+
+/*.comment-list .comment-author,*/
+/*.comment-list .comment-time {*/
+    /*margin-right: .8em;*/
+/*}*/
+
+/*!* --- 评论内容 *!*/
+.comment-list .comment-content {
+    clear: both;
+}
+
+.comment-children > .comment-list {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+
+.comment-list .comment-reply a {
+    color: #aaa;
+}
+
+.comment-list .comment-reply a:hover {
+    color: #555;
+}
+
+.comment-list .cancel-comment-reply {
+    display: block;
+    text-align: right;
+}
+
+
+#comments {
+    padding-top: 15px;
+}
+
+.comment-list, .comment-list ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-list li {
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #EEE;
+}
+
+.comment-list li.comment-level-odd {
+    background: #F6F6F3;
+}
+
+.comment-list li.comment-level-even {
+    background: #FFF;
+}
+
+.comment-list li.comment-by-author {
+    background: #FFF9E8;
+}
+
+.comment-list li .comment-reply {
+    text-align: right;
+    font-size: .92857em;
+}
+
+.comment-meta a {
+    color: #999;
+    font-size: .92857em;
+}
+
+.comment-author {
+    display: block;
+    margin-bottom: 3px;
+    color: #444;
+}
+
+.comment-author .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-author cite {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.comment-list .respond {
+    margin-top: 15px;
+    border-top: 1px solid #EEE;
+}
+
+.respond .cancel-comment-reply {
+    float: right;
+    margin-top: 15px;
+    font-size: .92857em;
+}
+
+#comment-form label {
+    display: block;
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+#comment-form .required:after {
+    content: " *";
+    color: #C00;
+}
+
+/*.list-group-root > .list-group {*/
+/*padding: 0;*/
+/*overflow: hidden;*/
+/*}*/
+
+/*.list-group-root > .list-group .list-group {*/
+/*margin-bottom: 0;*/
+/*}*/
+
+/*.list-group-root > .list-group .list-group-item {*/
+/*border-radius: 0;*/
+/*border-width: 1px;*/
+/*}*/
+
+/*.list-group-root > .list-group > .list-group-item:first-child {*/
+/*border-top-width: 0;*/
+/*}*/
+
+/*.list-group-root > .list-group > .list-group > .list-group-item {*/
+/*padding-left: 30px;*/
+/*}*/
+
+/*.list-group-root > .list-group > .list-group > .list-group > .list-group-item {*/
+/*padding-left: 45px;*/
+/*}*/
+
+.list-group-item .category-child{
+    padding-left: -1.25rem;
+}
+
+.list-group > .list-group-item > .list-group {
+    /*padding-top: 10px;*/
+    border-top: 1px;
+    margin-top: 10px;
+}
+
+/* - side bar - */
+/*--------------*/
+
+.card {
+    margin-bottom: 1rem;
+}
+
+/* - footer  - */
+/*-------------*/
+
+.turn-up{
+    right: 20px;
+    bottom: 60px;
+    padding: .5em .6em;
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    transform: translateX(60px);
+    transition: color .3s, border .3s, background .3s, transform .3s;
+}
+.turn-up.active{
+    transform: translateX(0);
+}
+.turn-up:before{
+    width: 1.5em;
+    display: block;
+    /*content: "\f062";*/
+    text-align: center;
+    /*font-size: 20px;*/
+    /*font-family: "FontAwesome";*/
+}
+.turn-up i{
+    font-size: 30px;
+}
+
+.footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer {
+    font-size: .875rem;
 }
