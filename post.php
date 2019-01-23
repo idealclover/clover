@@ -31,7 +31,7 @@
                 <li>上一篇: <?php $this->thePrev( '%s', '没有了' ); ?></li>
                 <li>下一篇: <?php $this->theNext( '%s', '没有了' ); ?></li>
             </ul>
-	        <?php Like_Plugin::theLike(); ?>
+	        <?php AnotherLike_Plugin::theLike(); ?>
 	        <?php $this->need( 'components/comments.php' ); ?>
         </div><!-- end #main-->
 	    <?php $this->need('components/sidebar.php'); ?>
