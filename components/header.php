@@ -27,7 +27,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php $this->options->themeUrl( 'assets/clover.css' ); ?>">
     <!--    <link href="https://cdn.bootcss.com/bootswatch/4.2.1/flatly/bootstrap.min.css" rel="stylesheet">-->
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
 
@@ -50,7 +50,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 
 
             <li class="nav-item">
-                <a class="nav-link" href="/blog/index.php/">主页 <span class="sr-only">(current)</span></a>
+                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="/blog/index.php/">主页</a>
             </li>
 
 			<?php $category = $this->widget( 'Widget_Metas_Category_List' );
@@ -58,11 +58,17 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 				while ( $category->next() ):
 					if ( $category->levels === 0 ): ?>
                         <li class="nav-item">
-                            <a class="nav-link <?php if ( $this->is( 'page', $category->slug ) ): ?>active<?php endif; ?>
-                            " href="<?php $category->permalink() ?>"><?php $category->name() ?></a></li>
+                            <a class="nav-link <?php if ( $this->is( 'category', $category->slug ) ): ?>active<?php endif; ?>" href="<?php $category->permalink() ?>"><?php $category->name() ?></a></li>
 					<?php endif; ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
+
+			<!-- <?php $this->widget('Widget_Contents_Page_List')->to($pages);
+			while($pages->next()): ?>
+				<li class="nav-item">
+					<a class="nav-link <?php if ( $this->is( 'page', $pages->slug ) ): ?>active<?php endif; ?>" href="<?php $pages->permalink() ?>"><?php $pages->title() ?></a>
+				</li>
+			<?php endwhile; ?> -->
 
             <li class="nav-item">
                 <a class="nav-link" href="/blog/index.php/messageboard.html">留言板</a>
@@ -89,6 +95,3 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
         </ul>
     </div>
 </nav>
-
-
-
