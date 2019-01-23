@@ -3,11 +3,15 @@
 } ?>
 
 <footer class="footer bottom" role="contentinfo">
-    <!--TODO: 置顶-->
+	<!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
-    &copy; <?php echo date( 'Y' ); ?> <a
-            href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-	<?php _e( '由 <a href="http://www.typecho.org">Typecho</a> 强力驱动' ); ?>.
+	📝除非特别注明，本站所有文章在BY CC-SA 4.0协议下授权
+	<br />
+	Theme <a href="https://github.com/idealclover/Clover">Clover</a> made with ❤ by <a href="https://idealclover.top">idealclover</a>
+	<br />
+    &copy; <?php echo date( 'Y' ); ?>
+	<a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
+	<?php _e( 'Powered by <a href="http://www.typecho.org">Typecho</a>' ); ?>.
 </footer>
 
 <?php $this->footer(); ?>
