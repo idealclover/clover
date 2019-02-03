@@ -7,17 +7,17 @@
 
 <div class="container col-10" id="main">
 
-    <div class="col-12" id="title">
-        <h1 class="archive-title">
-			<?php $this->archiveTitle( array(
-				'category' => _t( '%s' ),
-				'search'   => _t( '包含关键字 %s 的文章' ),
-				'tag'      => _t( '标签 %s 下的文章' ),
-				'author'   => _t( '%s 发布的文章' )
-			), '', '' ); ?>
-        </h1>
-        <hr>
-    </div>
+<!--    <div class="col-12" id="title">-->
+<!--        <h1 class="archive-title">-->
+<!--			--><?php //$this->archiveTitle( array(
+//				'category' => _t( '%s' ),
+//				'search'   => _t( '包含关键字 %s 的文章' ),
+//				'tag'      => _t( '标签 %s 下的文章' ),
+//				'author'   => _t( '%s 发布的文章' )
+//			), '', '' ); ?>
+<!--        </h1>-->
+<!--        <hr>-->
+<!--    </div>-->
 
     <div class="row">
         <!--        <div class="col-12 col-lg-8" id="main" role="main">-->
@@ -25,17 +25,20 @@
 			<?php if ( $this->have() ): ?>
 				<?php while ( $this->next() ): ?>
                     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-                        <h3 class="post-title" itemprop="name headline">
+                        <h2 class="post-title" itemprop="name headline">
                             <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                        </h3>
+                        </h2>
                         <p id="post-meta">
-                            <i class="fa fa-clock-o"></i><?php $this->date( 'Y.m.d' ); ?> |
-                            <i class="fa fa-comments-o"></i><?php $this->commentsNum( ' 0 条评论', ' 1 条评论', ' %d 条评论' ); ?>
+                            <i class="fa fa-clock-o"></i> <?php $this->date( 'Y.m.d' ); ?> |
+                            <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
+                            <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid); ?> 赞 |
+                            <i class="fa fa-comments-o"></i> <?php $this->commentsNum( ' 0 条评论', ' 1 条评论', ' %d 条评论' ); ?>
+
                             <!-- TODO: 输出点赞&浏览数-->
                         </p>
                         <div class="post-content" itemprop="articleBody">
-                            <!--					--><?php //$this->content( '- 阅读剩余部分 -' ); ?>
-							<?php $this->excerpt( 100 ); ?>
+                            <?php $this->content( '查看更多 ->' ); ?>
+<!--							--><?php //$this->excerpt( 100 ); ?>
                         </div>
                         <hr/>
                     </article>

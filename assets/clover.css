@@ -11,17 +11,28 @@ a:hover {
 }
 
 h1{
-    font-size: 2em;
+    font-size: 2rem;
 }
 
-/*h1, h2, h3, h4, h5, h6{*/
+h2{
+    font-size: 1.7rem;
+}
+
+h3, h4, h5, h6{
+    font-size: 1.4rem;
+}
+
 h1, h2{
     margin-bottom: 1rem;
 }
 
-body{
-    background-color: #FFFFFF;
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
 }
+
+/*body{*/
+    /*background-color: #FFFFFF;*/
+/*}*/
 
 .navbar{
     padding: 0.3rem 1rem
@@ -31,8 +42,8 @@ body{
 /*----------*/
 
 #main {
-    padding: 1.5em 0;
-    margin-top: 1.0em;
+    padding: 1.5rem 0;
+    margin-top: 1.0rem;
 }
 
 #main img {
@@ -72,7 +83,7 @@ body{
 .archive-title {
     text-align: center;
     /*margin-top: 1em;*/
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 .page-navigator {
@@ -103,6 +114,10 @@ body{
     color: #444;
     background: #EEE;
 }
+
+/*.more {*/
+    /*text-align: right;*/
+/*}*/
 
 /* - comments - */
 
