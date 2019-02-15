@@ -3,7 +3,7 @@
 } ?>
 <?php $this->need( 'components/header.php' ); ?>
 
-<div class="container col-lg-8 col-10" id="main" role="main">
+<div class="container col-10" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post">
@@ -39,5 +39,4 @@
 	    <?php $this->need('components/sidebar.php'); ?>
     </div>
 </div>
-<!---->
 <?php $this->need( 'components/footer.php' ); ?>
