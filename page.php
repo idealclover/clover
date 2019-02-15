@@ -7,9 +7,14 @@
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-                <h1 class="post-title" itemprop="name headline">
-                    <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                </h1>
+                <section >
+                    <h1 class="page-title" itemprop="name headline">
+                        <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                    </h1>
+                    <?php if($this->authorId == $this->user->uid): ?>
+                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
+                    <?php endif; ?>
+                </section>
                 <hr />
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>

@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6{
     transition: filter .3s;
 }
 
+.page-title, .edit-link{
+    display: inline-block;
+}
+
 .post-content img, .comment-content img, .post-content video, .comment-content video {
     max-width: 100%;
 }
