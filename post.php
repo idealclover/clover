@@ -18,6 +18,8 @@
 	                <?php if($this->authorId == $this->user->uid): ?>
                         <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
 	                <?php endif; ?>
+                    <!-- TODO: 预计阅读时间-->
+                    <!-- 预计阅读时间：--><?php //mb_strlen($this->text(),'UTF-8'); ?>
                 </p>
                 <hr />
                 <div class="post-content" itemprop="articleBody">

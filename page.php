@@ -3,13 +3,14 @@
 } ?>
 <?php $this->need( 'components/header.php' ); ?>
 
-<div class="container col-lg-8 col-10" id="main" role="main">
+<div class="container col-10" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
                 <h1 class="post-title" itemprop="name headline">
                     <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                 </h1>
+                <hr />
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>
                 </div>

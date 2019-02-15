@@ -6,19 +6,25 @@ a {
 }
 
 a:hover {
-    color: #9fcff7;
+    color: #3e3e3e;
+    /*color: #9fcff7;*/
 }
 
 h1{
     font-size: 2em;
 }
 
-h1, h2, h3, h4, h5, h6{
+/*h1, h2, h3, h4, h5, h6{*/
+h1, h2{
     margin-bottom: 1rem;
 }
 
 body{
-    /*background-color: #F2F3EF;*/
+    background-color: #FFFFFF;
+}
+
+.navbar{
+    padding: 0.3rem 1rem
 }
 
 /* - main - */
@@ -36,6 +42,28 @@ body{
 
 .post-content img, .comment-content img, .post-content video, .comment-content video {
     max-width: 100%;
+}
+
+.post-content h1:before, .page-content h1:before{
+    opacity: .5;
+    content: "#";
+    margin-right: .3rem;
+}
+
+.post-content h2:before, .page-content h2:before{
+    opacity: .5;
+    content: "##";
+    margin-right: .3rem;
+}
+
+.post-content h3:before, .page-content h3:before{
+    opacity: .5;
+    content: "###";
+    margin-right: .3rem;
+}
+
+.post-content a {
+    text-decoration: underline;
 }
 
 /* - article list  - */
@@ -264,40 +292,17 @@ body{
     color: #C00;
 }
 
-/*.list-group-root > .list-group {*/
-/*padding: 0;*/
-/*overflow: hidden;*/
-/*}*/
-
-/*.list-group-root > .list-group .list-group {*/
-/*margin-bottom: 0;*/
-/*}*/
-
-/*.list-group-root > .list-group .list-group-item {*/
-/*border-radius: 0;*/
-/*border-width: 1px;*/
-/*}*/
-
-/*.list-group-root > .list-group > .list-group-item:first-child {*/
-/*border-top-width: 0;*/
-/*}*/
-
-/*.list-group-root > .list-group > .list-group > .list-group-item {*/
-/*padding-left: 30px;*/
-/*}*/
-
-/*.list-group-root > .list-group > .list-group > .list-group > .list-group-item {*/
-/*padding-left: 45px;*/
-/*}*/
-
-.list-group-item .category-child{
-    padding-left: -1.25rem;
+.list-group-root > .list-group-item , .list-group-wrapper > .list-group-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.list-group > .list-group-item > .list-group {
-    /*padding-top: 10px;*/
-    border-top: 1px;
-    margin-top: 10px;
+.list-group-wrapper {
+    margin-top: 1px;
+}
+
+.list-group-wrapper  > li{
+    padding-left: 40px;
 }
 
 /* - side bar - */
