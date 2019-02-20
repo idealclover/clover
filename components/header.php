@@ -38,7 +38,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 <body>
 <!--<nav class="navbar navbar-expand-lg navbar-white bg-white">-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/blog/index.php/">idealclover</a>
+    <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">idealclover</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,12 +47,9 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav">
-
-
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="/blog/index.php/">主页</a>
+                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">主页</a>
             </li>
-
 			<?php $category = $this->widget( 'Widget_Metas_Category_List' );
 			if ( $category->have() ):
 				while ( $category->next() ):
@@ -63,21 +60,18 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 				<?php endwhile; ?>
 			<?php endif; ?>
 
-			<!-- <?php $this->widget('Widget_Contents_Page_List')->to($pages);
-			while($pages->next()): ?>
-				<li class="nav-item">
-					<a class="nav-link <?php if ( $this->is( 'page', $pages->slug ) ): ?>active<?php endif; ?>" href="<?php $pages->permalink() ?>"><?php $pages->title() ?></a>
-				</li>
-			<?php endwhile; ?> -->
+<!--            --><?php //$this->widget('Widget_Contents_Page_List')->to($pages); ?>
+<!--	        --><?php //while($pages->next()): ?>
+<!--				<li class="nav-item">-->
+<!--					<a class="nav-link --><?php //if ( $this->is( 'page', $pages->slug ) ): ?><!--active--><?php //endif; ?><!--" href="--><?php //$pages->permalink() ?><!--">--><?php //$pages->title() ?><!--</a>-->
+<!--				</li>			-->
+<!--            --><?php //endwhile; ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="/blog/index.php/messageboard.html">留言板</a>
+                <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html">留言板</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">简历</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/blog/index.php/links.html">友链</a>
+                <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html">关于</a>
             </li>
             <li class="nav-item dropdown pull-right">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -85,11 +79,10 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
                     更多
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">关于我</a>
-                    <a class="dropdown-item" href="#">关于网站</a>
-                    <a class="dropdown-item" href="/blog/index.php/github.html">我的项目</a>
-                    <a class="dropdown-item" href="/blog/index.php/onenote.html">我的笔记</a>
-                    <a class="dropdown-item" href="/blog/index.php/cross.html">小情绪</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html">我的简历</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html">我的项目</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html">我的笔记</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html">我的情绪</a>
                 </div>
             </li>
         </ul>

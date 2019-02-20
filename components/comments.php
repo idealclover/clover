@@ -36,17 +36,17 @@
 	<?php $this->comments()->to( $comments ); ?>
 	<?php if ( $this->allow( 'comment' ) ): ?>
         <div id="<?php $this->respondId(); ?>" class="respond">
-        <span class="cancel-comment-reply">
-            <?php $comments->cancelReply(); ?>
-        </span>
+            <span class="cancel-comment-reply">
+                <?php $comments->cancelReply(); ?>
+            </span>
             <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
                 <div class="row">
 					<?php if ( $this->user->hasLogin() ): ?>
                         <p class="form-group col-12">
-                            <?php _e( '已登录: ' ); ?>
+							<?php _e( '已登录: ' ); ?>
                             <a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>.
                             <a href="<?php $this->options->logoutUrl(); ?>"
-                                title="登出"><?php _e( '登出' ); ?>&raquo;
+                               title="登出"><?php _e( '登出' ); ?>&raquo;
                             </a>
                         </p>
 					<?php else: ?>
@@ -65,8 +65,9 @@
 					<?php endif; ?>
                     <div class="col-12">
                         <p>
-                            <textarea rows="3" name="text" class="form-control" id="textarea" placeholder="快来评论吧 (*≧ω≦)ﾉ"
-                                          required=""><?php $this->remember( 'text' ); ?></textarea>
+                            <textarea rows="3" name="text" class="form-control" id="textarea"
+                                      placeholder="快来评论吧 (*≧ω≦)ﾉ"
+                                      required=""><?php $this->remember( 'text' ); ?></textarea>
                         </p>
                         <p>
                             <button type="submit" class="btn btn-dark">写好了~</button>
