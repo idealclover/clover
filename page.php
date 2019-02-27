@@ -20,7 +20,8 @@
 					<?php $this->content(); ?>
                 </div>
             </article>
-			<?php $this->need( 'components/comments.php' ); ?>
+	        <?php AnotherLike_Plugin::theLike(); ?>
+		<?php $this->need( 'components/comments.php' ); ?>
         </div>
 	    <?php $this->need( 'components/sidebar.php' ); ?>
     </div>
