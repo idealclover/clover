@@ -48,7 +48,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">主页</a>
+                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>"><?php _e("主页") ?></a>
             </li>
 			<?php $category = $this->widget( 'Widget_Metas_Category_List' );
 			if ( $category->have() ):
@@ -68,25 +68,24 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 <!--            --><?php //endwhile; ?>
 
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html">留言板</a>
+                <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','resume')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/resume.html">简历</a>
+                <a class="nav-link <?php if ( $this->is('page','links')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/links.html"><?php _e("友链") ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','links')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/links.html">友链</a>
+                <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
             </li>
             <li class="nav-item dropdown pull-right">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    更多
+                    <?php _e("更多") ?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">关于我</a>
-                    <a class="dropdown-item" href="#">关于网站</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html">我的项目</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html">我的笔记</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html">小情绪</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html"><?php _e("我的简历") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html"><?php _e("我的项目") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html"><?php _e("我的笔记") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html"><?php _e("我的情绪") ?></a>
                 </div>
             </li>
         </ul>

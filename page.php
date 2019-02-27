@@ -12,7 +12,7 @@
                         <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                     </h1>
                     <?php if($this->authorId == $this->user->uid): ?>
-                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
+                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid;?>" target="_blank"><?php _e("编辑") ?></a>
                     <?php endif; ?>
                 </section>
                 <hr />

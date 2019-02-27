@@ -31,13 +31,13 @@
                         <p id="post-meta">
                             <i class="fa fa-clock-o"></i> <?php $this->date( 'Y.m.d' ); ?> |
                             <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
-                            <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid); ?> 赞 |
-                            <i class="fa fa-comments-o"></i> <?php $this->commentsNum( ' 0 条评论', ' 1 条评论', ' %d 条评论' ); ?>
+                            <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid);?> <?php _e("赞") ?> |
+                            <i class="fa fa-comments-o"></i> <?php $this->commentsNum( _t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论') ); ?>
 
                             <!-- TODO: 输出点赞&浏览数-->
                         </p>
                         <div class="post-content" itemprop="articleBody">
-                            <?php $this->content( '查看更多 ->' ); ?>
+                            <?php $this->content( _t('查看更多 ->') ); ?>
 <!--							--><?php //$this->excerpt( 100 ); ?>
                         </div>
                         <hr/>
@@ -48,7 +48,7 @@
                     <h2 class="post-title"><?php _e( '没有找到内容' ); ?></h2>
                 </article>
 			<?php endif; ?>
-			<?php $this->pageNav( '&laquo; 前一页', '后一页 &raquo;' ); ?>
+			<?php $this->pageNav( _t('&laquo; 前一页'), _t('后一页 &raquo;') ); ?>
         </div><!-- end #main -->
 	    <?php $this->need('components/sidebar.php'); ?>
     </div><!-- end #row -->
