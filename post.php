@@ -13,10 +13,10 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date( 'Y.m.d' ); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category( 'Y.m.d' ); ?> |
-                    <i class="fa fa-comments-o"></i> <?php $this->commentsNum( ' 0 条评论', ' 1 条评论', ' %d 条评论' ); ?>
+                    <i class="fa fa-comments-o"></i> <?php $this->commentsNum( _t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
 	                <?php if($this->authorId == $this->user->uid): ?>
-                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
+                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank"><?php _e("编辑") ?></a>
 	                <?php endif; ?>
                     <!-- TODO: 预计阅读时间-->
                     <!-- 预计阅读时间：--><?php //mb_strlen($this->text(),'UTF-8'); ?>
@@ -30,8 +30,8 @@
             </article>
 
             <ul class="post-near">
-                <li>上一篇: <?php $this->thePrev( '%s', '没有了' ); ?></li>
-                <li>下一篇: <?php $this->theNext( '%s', '没有了' ); ?></li>
+                <li><?php _e('上一篇:'); $this->thePrev( '%s', _t('没有了') ); ?></li>
+                <li><?php _e('下一篇:'); $this->theNext( '%s', _t('没有了') ); ?></li>
             </ul>
 	        <?php AnotherLike_Plugin::theLike(); ?>
 	        <?php $this->need( 'components/comments.php' ); ?>
