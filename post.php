@@ -21,6 +21,39 @@
                     <!-- TODO: 预计阅读时间-->
                     <!-- 预计阅读时间：--><?php //mb_strlen($this->text(),'UTF-8'); ?>
                 </p>
+	            <?php if($this->fields->ENG):?>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">中文</a>
+                            <a class="dropdown-item" href="
+                                <?php
+                                    $temp = str_replace($this->cid, $this->fields->ENG , $this->permalink);
+                                    echo str_replace($this->options->siteUrl, "https://en.idealclover.top/" , $temp);
+                                    ?>">English</a>
+                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
+							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
+                        </div>
+                    </div>
+	            <?php elseif($this->fields->CHN): ?>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">English</a>
+                            <a class="dropdown-item" href="
+                                <?php
+                                    $temp = str_replace($this->cid, $this->fields->CHN, $this->permalink);
+                                    echo str_replace($this->options->siteUrl, "https://idealclover.top/" , $temp);
+                                ?>">简体中文</a>
+                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
+							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
+                        </div>
+                    </div>
+	            <?php endif;?>
                 <hr />
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>
