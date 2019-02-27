@@ -72,9 +72,6 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
                 <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','links')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/links.html"><?php _e("友链") ?></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
             </li>
             <li class="nav-item dropdown pull-right">
