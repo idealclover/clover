@@ -19,6 +19,16 @@
     </div>
     <div class="card">
         <div class="card-header">
+            <div class="widget-title"><?php _e("🏠关于博客") ?></div>
+        </div>
+        <div class="card-body">
+            <?php _e("基于 Typecho 博客框架") ?><br/>
+            <?php _e("使用个人创作的") ?><a href="https://github.com/idealclover/clover" target="_blank">clover</a><?php _e("主题") ?><br/>
+            <a href="https://www.pgyer.com/8keO" target="_blank"><?php _e("下载Android APP->") ?></a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
             <div class="widget-title"><?php _e("💡文章分类") ?></div>
         </div>
         <ul class="list-group list-group-root">

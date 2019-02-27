@@ -26,6 +26,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php $this->options->themeUrl( 'assets/clover.css' ); ?>">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
     <!--    <link href="https://cdn.bootcss.com/bootswatch/4.2.1/flatly/bootstrap.min.css" rel="stylesheet">-->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -91,3 +92,11 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
         </ul>
     </div>
 </nav>
+<?php
+if ($this->is('single')) {
+	$cid = $this->cid;
+	$db = Typecho_Db::get();
+	$row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
+	$db->query($db->update('table.contents')->rows(array('views' => (int)$row['views']+1))->where('cid = ?', $cid));
+}
+?>

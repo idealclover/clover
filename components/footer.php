@@ -23,6 +23,21 @@
 <script src="https://cdn.bootcss.com/smooth-scroll/12.1.3/js/smooth-scroll.min.js"></script>
 <script>var scroll = new SmoothScroll('a.turn-up, .article-list a', {offset: 100});</script>
 <script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://cdn.bootcss.com/smooth-scroll/12.1.3/js/smooth-scroll.min.js"></script>
+<script>var scroll = new SmoothScroll('a.turn-up, .article-list a', {offset: 100});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112910356-3');
+    gtag('set', {'user_id': 'USER_ID'});
+</script>
+<script>
     //function is_weixin() {
     //    var ua = navigator.userAgent.toLowerCase();
     //    if (ua.match(/MicroMessenger/i) == "micromessenger") {
