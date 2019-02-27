@@ -21,6 +21,7 @@
 <script src="<?php $this->options->themeUrl( 'libs/canvas-nest/canvas-nest.min.js' ); ?>"></script>
 <!--<script src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js"></script>-->
 <script src="https://cdn.bootcss.com/smooth-scroll/12.1.3/js/smooth-scroll.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.14.2/highlight.min.js"></script>
 <script>var scroll = new SmoothScroll('a.turn-up, .article-list a', {offset: 100});</script>
 <script>
     hljs.initHighlightingOnLoad();
