@@ -27,6 +27,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl( 'assets/clover.css' ); ?>">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
     <!--    <link href="https://cdn.bootcss.com/bootswatch/4.2.1/flatly/bootstrap.min.css" rel="stylesheet">-->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -50,7 +51,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">主页</a>
+                <a class="nav-link <?php if ( $this->is('index') ): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>"><?php _e("主页") ?></a>
             </li>
 			<?php $category = $this->widget( 'Widget_Metas_Category_List' );
 			if ( $category->have() ):
@@ -70,23 +71,31 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 <!--            --><?php //endwhile; ?>
 
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html">留言板</a>
+                <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html">关于</a>
+                <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
             </li>
             <li class="nav-item dropdown pull-right">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    更多
+                    <?php _e("更多") ?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html">我的简历</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html">我的项目</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html">我的笔记</a>
-                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html">我的情绪</a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html"><?php _e("我的简历") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html"><?php _e("我的项目") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html"><?php _e("我的笔记") ?></a>
+                    <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html"><?php _e("我的情绪") ?></a>
                 </div>
             </li>
         </ul>
     </div>
 </nav>
+<?php
+if ($this->is('single')) {
+	$cid = $this->cid;
+	$db = Typecho_Db::get();
+	$row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
+	$db->query($db->update('table.contents')->rows(array('views' => (int)$row['views']+1))->where('cid = ?', $cid));
+}
+?>

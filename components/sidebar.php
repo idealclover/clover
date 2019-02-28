@@ -4,13 +4,13 @@
 <div class="col-12 col-lg-4" id="secondary" role="complementary">
     <div class="card">
         <div class="card-header">
-            <div class="widget-title">🤔关于我</div>
+            <div class="widget-title"><?php _e("🤔关于我") ?></div>
         </div>
         <div class="card-body">
-            翠翠<br/>
-            南京大学商学院<br/>
-            2016级本科生<br />
-            <a href="<?php $this->options->siteUrl(); ?>index.php/about.html">了解更多-></a>
+	        <?php _e("翠翠") ?><br/>
+            <?php _e("南京大学商学院") ?><br/>
+            <?php _e("2016级本科生") ?><br/>
+            <a href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("了解更多->") ?></a>
             <!--         <div class="row">-->
             <!--             <img src="https://ws1.sinaimg.cn/large/005HTDcGly1fl2ylylv2hj301s01sjr5.jpg" class="img-circle">-->
             <!--             <img src="https://ws1.sinaimg.cn/large/005HTDcGgy1fro4q2dw0rj30dw0dwmxj.jpg" class="img-circle">-->
@@ -19,17 +19,17 @@
     </div>
 	<div class="card">
         <div class="card-header">
-            <div class="widget-title">🏠关于博客</div>
+            <div class="widget-title"><?php _e("🏠关于博客") ?></div>
         </div>
         <div class="card-body">
-			基于 Typecho 博客框架<br/>
-            使用个人创作的<a href="https://github.com/idealclover/clover" target="_blank">clover</a>主题<br/>
-            <a href="https://www.pgyer.com/8keO target="_blank"">下载Android APP (Based on Lavas PWA)-></a>
+            <?php _e("基于 Typecho 博客框架") ?><br/>
+            <?php _e("使用个人创作的") ?><a href="https://github.com/idealclover/clover" target="_blank">clover</a><?php _e("主题") ?><br/>
+            <a href="https://www.pgyer.com/8keO" target="_blank"><?php _e("下载Android APP->") ?></a>
         </div>
     </div>
     <div class="card">
         <div class="card-header">
-            <div class="widget-title">💡文章分类</div>
+            <div class="widget-title"><?php _e("💡文章分类") ?></div>
         </div>
         <ul class="list-group list-group-root">
 			<?php $this->widget( 'Widget_Metas_Category_List' )->to( $categories ); ?>

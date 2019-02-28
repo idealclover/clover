@@ -1,6 +1,6 @@
 <?php
 /**
- * 一个简洁大气，含夜间模式的 Typecho 博客模板。
+ * 愿未来能让人有所期待。
  *
  * @package clover
  * @author idealclover

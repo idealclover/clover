@@ -13,14 +13,47 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date( 'Y.m.d' ); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category( 'Y.m.d' ); ?> |
-                    <i class="fa fa-comments-o"></i> <?php $this->commentsNum( ' 0 条评论', ' 1 条评论', ' %d 条评论' ); ?>
+                    <i class="fa fa-comments-o"></i> <?php $this->commentsNum( _t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
 	                <?php if($this->authorId == $this->user->uid): ?>
-                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
+                        <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank"><?php _e("编辑") ?></a>
 	                <?php endif; ?>
                     <!-- TODO: 预计阅读时间-->
                     <!-- 预计阅读时间：--><?php //mb_strlen($this->text(),'UTF-8'); ?>
                 </p>
+	            <?php if($this->fields->ENG):?>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">中文</a>
+                            <a class="dropdown-item" href="
+                                <?php
+                                    $temp = str_replace($this->cid, $this->fields->ENG , $this->permalink);
+                                    echo str_replace($this->options->siteUrl, "https://en.idealclover.top/" , $temp);
+                                    ?>">English</a>
+                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
+							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
+                        </div>
+                    </div>
+	            <?php elseif($this->fields->CHN): ?>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">English</a>
+                            <a class="dropdown-item" href="
+                                <?php
+                                    $temp = str_replace($this->cid, $this->fields->CHN, $this->permalink);
+                                    echo str_replace($this->options->siteUrl, "https://idealclover.top/" , $temp);
+                                ?>">简体中文</a>
+                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
+							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
+                        </div>
+                    </div>
+	            <?php endif;?>
                 <hr />
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>
@@ -30,8 +63,8 @@
             </article>
 
             <ul class="post-near">
-                <li>上一篇: <?php $this->thePrev( '%s', '没有了' ); ?></li>
-                <li>下一篇: <?php $this->theNext( '%s', '没有了' ); ?></li>
+                <li><?php _e('上一篇:'); $this->thePrev( '%s', _t('没有了') ); ?></li>
+                <li><?php _e('下一篇:'); $this->theNext( '%s', _t('没有了') ); ?></li>
             </ul>
 	        <?php AnotherLike_Plugin::theLike(); ?>
 	        <?php $this->need( 'components/comments.php' ); ?>
@@ -39,5 +72,4 @@
 	    <?php $this->need('components/sidebar.php'); ?>
     </div>
 </div>
-<!---->
 <?php $this->need( 'components/footer.php' ); ?>

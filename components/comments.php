@@ -51,35 +51,34 @@
                         </p>
 					<?php else: ?>
                         <p class="col-sm col-lg-4">
-                            <input class="form-control" type="text" name="author" id="author" placeholder="昵称 *："
+                            <input class="form-control" type="text" name="author" id="author" placeholder="<?php _e( '昵称 *：' ); ?>"
                                    value="<?php $this->remember( 'author' ); ?>" required="">
                         </p>
                         <p class="col-sm col-lg-4">
-                            <input class="form-control" type="email" name="mail" id="mail" placeholder="电邮 *："
+                            <input class="form-control" type="email" name="mail" id="mail" placeholder="<?php _e( '电邮 *：' ); ?>"
                                    value="<?php $this->remember( 'mail' ); ?>"<?php if ( $this->options->commentsRequireMail ): ?> required<?php endif; ?>>
                         </p>
                         <p class="col-sm col-lg-4">
-                            <input class="form-control" type="url" name="url" id="url" placeholder="http://"
+                            <input class="form-control" type="url" name="url" id="url" placeholder="<?php _e( 'http://' ); ?>"
                                    value="<?php $this->remember( 'url' ); ?>"<?php if ( $this->options->commentsRequireURL ): ?> required<?php endif; ?>>
                         </p>
 					<?php endif; ?>
                     <div class="col-12">
                         <p>
                             <textarea rows="3" name="text" class="form-control" id="textarea"
-                                      placeholder="快来评论吧 (*≧ω≦)ﾉ"
+                                      placeholder="<?php _e( '快来评论吧 (*≧ω≦)ﾉ' ); ?>"
                                       required=""><?php $this->remember( 'text' ); ?></textarea>
                         </p>
                         <p>
-                            <button type="submit" class="btn btn-dark">写好了~</button>
+                            <button type="submit" class="btn btn-dark"><?php _e( '写好了~' ); ?></button>
                         </p>
                     </div>
-                    <!--					--><?php //endif; ?>
                 </div>
             </form>
         </div>
 	<?php endif; ?>
 	<?php if ( $comments->have() ): ?>
 		<?php $comments->listComments(); ?>
-		<?php $comments->pageNav( '&laquo; 前一页', '后一页 &raquo;' ); ?>
+		<?php $comments->pageNav( _t( '&laquo; 前一页'), _t('后一页 &raquo;') ); ?>
 	<?php endif; ?>
 </section>
