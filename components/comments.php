@@ -1,7 +1,8 @@
 <?php if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 	exit;
 } ?>
-<?php function threadedComments( $comments, $options ) {
+<?php $url = $this->options->themeUrl( 'assets/default.jpg' ); ?>
+<?php function threadedComments( $comments, $options) {
 	$commentClass = '';
 	if ( $comments->authorId ) {
 		if ( $comments->authorId == $comments->ownerId ) {
@@ -15,7 +16,8 @@
 	?>
 
     <li id="<?php $comments->theId(); ?>">
-		<?php $comments->gravatar( '45', 'robohash' ); ?>
+<!--		--><?php //$comments->gravatar( '45', 'robohash' ); ?>
+	    <?php $comments->gravatar( '45', $default=Helper::options()->themeUrl.'/assets/default.jpg'); ?>
         <div class="comment-meta">
             <span class="comment-author"><?php $comments->author(); ?></span>
             <time class="comment-time"><?php $comments->date( 'y.m.d' ); ?></time>
