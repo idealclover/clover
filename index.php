@@ -40,7 +40,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     }
 
     a.small {
-        padding-top: 10px;
+        padding-top: 3.0em;
         color: #8C2727;
         font-size: 12px;
         font-family: arial, sans-serif;
@@ -49,17 +49,29 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 <div id="main">
     <h1 id="title"> ... </h1> <br/>
     <h3 id="head"> ... </h3> <br/>
-    <a href="https://www.idealclover.top">Blog</a> |
-    <a href="https://blog.idealclover.top">Zone</a> |
-    <a href="https://t.me/idealclover">Telegram</a> |
-    <a href="https://github.com/idealclover">Github</a> |
-    <a href="https://idealclover.top/resume/resume.html">Resume</a> |
-    <a href="mailto:shadowspacex@163.com">Email</a> <br/>
-    <a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
+	<!-- <a class="btn btn-outline-secondary" href="category/blog/" role="button">Blog</a>
+	<a class="btn btn-outline-secondary" href="category/thinking/" role="button">Thinking</a>
+	<a class="btn btn-outline-secondary" href="category/life/" role="button">Life</a>
+	<a class="btn btn-outline-secondary" href="resume.html" role="button">Resume</a>
+	<a class="btn btn-outline-secondary" href="about.html" role="button">About</a> -->
+	<!-- <a class="btn btn-outline-dark" href="category/blog/" role="button">Blog</a>
+	<a class="btn btn-outline-dark" href="category/thinking/" role="button">Thinking</a>
+	<a class="btn btn-outline-dark" href="category/life/" role="button">Life</a>
+	<a class="btn btn-outline-dark" href="resume.html" role="button">Resume</a>
+	<a class="btn btn-outline-dark" href="about.html" role="button">About</a>
+	<br /> -->
+    <a href="category/blog/">🚣Blog</a> |
+    <a href="category/thinking/">🤔Thinking</a> |
+    <a href="category/life/">😋Life</a> |
+	<a href="resume.html">📇Resume</a> |
+	<a href="about.html">📖About</a> <br/>
+	<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes" target="_blank">QQ</a> |
+	<a href="http://t.me/idealclover" target="_blank">Telegram</a> |
+    <a href="https://github.com/idealclover target="_blank"">Github</a> |
+    <a href="mailto:shadowspacex@163.com" target="_blank">Email</a> <br/> -->
+	<a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
 </div>
 
 <script src="<?php $this->options->themeUrl( 'libs/random-homepage/head.js' ); ?>"></script>
 <script src="<?php $this->options->themeUrl( 'libs/random-homepage/title.js' ); ?>"></script>
 <?php $this->need( 'components/footer.php' ); ?>
-
-
