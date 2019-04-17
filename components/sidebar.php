@@ -7,14 +7,34 @@
             <div class="widget-title"><?php _e("🤔关于我") ?></div>
         </div>
         <div class="card-body">
-	        <?php _e("翠翠") ?><br/>
-            <?php _e("南京大学商学院") ?><br/>
-            <?php _e("2016级本科生") ?><br/>
-            <a href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("了解更多->") ?></a>
-            <!--         <div class="row">-->
-            <!--             <img src="https://ws1.sinaimg.cn/large/005HTDcGly1fl2ylylv2hj301s01sjr5.jpg" class="img-circle">-->
-            <!--             <img src="https://ws1.sinaimg.cn/large/005HTDcGgy1fro4q2dw0rj30dw0dwmxj.jpg" class="img-circle">-->
-            <!--         </div>-->
+	        <?php _e("翠翠 idealclover") ?><br/>
+            <?php _e("南京大学商学院2016级本科生") ?><br/>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes" style="text-decoration: none" target="_blank" title="QQ: 1455169173">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/QQ.svg' ); ?>">
+			</a>
+			<a href="http://t.me/idealclover" style="text-decoration: none" target="_blank" title="Telegram: @idealclover">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/telegram.svg' ); ?>">
+			</a>
+			<a href="mailto:idealclover@163.com" style="text-decoration: none" target="_blank" title="Email: idealclover@163.com">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/mail.svg' ); ?>">
+			</a>
+			<a href="https://github.com/idealclover" style="text-decoration: none" target="_blank" title="GitHub: @idealclover">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/github.svg' ); ?>">
+			</a>
+			<a href="https://www.zhihu.com/people/cuicuijiang" style="text-decoration: none" target="_blank" title="Zhihu: @不蠢会死的某翠">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/zhihu.svg' ); ?>">
+			</a>
+			<a href="https://steamcommunity.com/id/idealclover" style="text-decoration: none" target="_blank" title="Steam: @idealclover">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/steam.svg' ); ?>">
+			</a>
+			<a href="https://twitter.com/idealclover" style="text-decoration: none" target="_blank" title="Twitter: @idealclover">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/twitter.svg' ); ?>">
+			</a>
+			<a href="https://weibo.com/idealclover" style="text-decoration: none" target="_blank" title="Weibo: @不蠢会死的某翠">
+				<img src="<?php $this->options->themeUrl( 'assets/icons/weibo.svg' ); ?>">
+			</a>
+			<br />
+            <a style="text-decoration: underline" href="<?php $this->options->siteUrl();?>index.php/about.html"><?php _e("了解更多->") ?></a>
         </div>
     </div>
 	<div class="card">
@@ -23,8 +43,8 @@
         </div>
         <div class="card-body">
             <?php _e("基于 Typecho 博客框架") ?><br/>
-            <?php _e("使用个人创作的") ?><a href="https://github.com/idealclover/clover" target="_blank">clover</a><?php _e("主题") ?><br/>
-            <a href="https://www.pgyer.com/8keO" target="_blank"><?php _e("下载Android APP->") ?></a>
+            <?php _e("使用个人创作的") ?> <a style="text-decoration: underline" href="https://github.com/idealclover/clover" target="_blank">clover</a> <?php _e("主题") ?><br/>
+            <a style="text-decoration: underline" href="https://www.pgyer.com/8keO" target="_blank"><?php _e("下载Android APP->") ?></a>
         </div>
     </div>
     <div class="card">
