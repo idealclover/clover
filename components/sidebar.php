@@ -47,6 +47,14 @@
             <a style="text-decoration: underline" href="https://www.pgyer.com/8keO" target="_blank"><?php _e("下载Android APP->") ?></a>
         </div>
     </div>
+	<div class="card">
+		<div class="card-header">
+			<div class="widget-title"><?php _e("💾博客小程序") ?></div>
+		</div>
+		<div class="card-body">
+			<img src="<?php $this->options->themeUrl( 'assets/qrcode.png' ); ?>" />
+		</div>
+	</div>
     <div class="card">
         <div class="card-header">
             <div class="widget-title"><?php _e("💡文章分类") ?></div>
@@ -76,18 +84,5 @@
 				<?php endif; ?>
 			<?php endwhile; ?>
         </ul>
-
-
-        <!--                <ul class="list-group list-group-root list-group-flush">-->
-        <!--                    <li class="list-group-item">Cras justo odio</li>-->
-        <!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
-        <!--                    <li class="list-group-item">Vestibulum at eros</li>-->
-        <!--                    <li class="list-group-item">Vestibulum at eros <ul class="list-group" ><li class="list-group-item">aaa</li><li class="list-group-item">bbb</li></ul></li>-->
-        <!--                    --><?php
-		//                    $this->widget('Widget_Metas_Category_List')->parse('<li class="list-group-item"><a href="{permalink}">{name}</a></li>');
-		//                    ?>
-        <!--                    <li class="list-group-item">-->
-        <!--                    </li>-->
-        <!--                </ul>-->
     </div>
 </div><!-- end #sidebar -->
