@@ -18,7 +18,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
         margin: 0;
         padding: 0;
     }
-    html, body {
+    html{
         height:100%
     }
 
