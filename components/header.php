@@ -10,7 +10,7 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 	exit;
 } ?>
 <!DOCTYPE HTML>
-<html class="no-js">
+<html class="no-js" lang="zh-CN">
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,22 +25,18 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl( 'assets/clover.css' ); ?>">
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
-    <!--    <link href="https://cdn.bootcss.com/bootswatch/4.2.1/flatly/bootstrap.min.css" rel="stylesheet">-->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
-		<script src="https://cdn.bootcss.com/highlight.js/9.14.2/highlight.min.js"></script>
-		<!-- <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.6.0/highlightjs-line-numbers.min.js"></script> -->
+
     <!-- 通过自有函数输出HTML头部信息 -->
 	<?php $this->header(); ?>
 </head>
 
 <body>
-<!--<nav class="navbar navbar-expand-lg navbar-white bg-white">-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">idealclover</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +68,9 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
 
             <li class="nav-item">
                 <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link search-form-input"><?php _e("搜索") ?></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php if ( $this->is('page','about')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
