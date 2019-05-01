@@ -30,7 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    padding: 0.3rem 1rem
+    padding: 0.3rem 1rem;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* - main - */
@@ -38,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main {
     padding: 1.5rem 0;
-    margin-top: 1.0rem;
+    margin-top: 4.0rem;
 }
 
 #main img {
