@@ -58,6 +58,10 @@
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>
                 </div>
+                <blockquote>
+                    <p><?php _e( '本文链接：'); ?><a style="text-decoration: underline" href="<?php $this->permalink(); ?>"><?php $this->permalink(); ?></a></p>
+                    <p><?php _e( '本作品由'); ?> <a style="text-decoration: underline" href="https://idealclover.top"><?php _e('idealclover'); ?> </a><?php _e('采用'); ?> <a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/"><?php _e('知识共享署名-相同方式共享 4.0 国际许可协议'); ?></a> <?php _e('进行许可,转载请注明出处。' ); ?></p>
+                </blockquote>
                 <p itemprop="keywords"
                    class="tags"><?php _e( '标签: ' ); ?><?php $this->tags( ', ', true, 'none' ); ?></p>
             </article>
