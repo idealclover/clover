@@ -7,34 +7,29 @@ a {
 
 a:hover {
     color: #3e3e3e;
-    /*color: #9fcff7;*/
 }
 
-h1{
+h1 {
     font-size: 2rem;
 }
 
-h2{
+h2 {
     font-size: 1.7rem;
 }
 
-h3, h4, h5, h6{
+h3, h4, h5, h6 {
     font-size: 1.4rem;
 }
 
-h1, h2{
+h1, h2 {
     margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-/*body{*/
-    /*background-color: #FFFFFF;*/
-/*}*/
-
-.navbar{
+.navbar {
     padding: 0.3rem 1rem
 }
 
@@ -51,7 +46,7 @@ h1, h2, h3, h4, h5, h6{
     transition: filter .3s;
 }
 
-.page-title, .edit-link{
+.page-title, .edit-link {
     display: inline-block;
 }
 
@@ -59,19 +54,19 @@ h1, h2, h3, h4, h5, h6{
     max-width: 100%;
 }
 
-.post-content h1:before, .page-content h1:before{
+.post-content h1:before, .page-content h1:before {
     opacity: .5;
     content: "#";
     margin-right: .3rem;
 }
 
-.post-content h2:before, .page-content h2:before{
+.post-content h2:before, .page-content h2:before {
     opacity: .5;
     content: "##";
     margin-right: .3rem;
 }
 
-.post-content h3:before, .page-content h3:before{
+.post-content h3:before, .page-content h3:before {
     opacity: .5;
     content: "###";
     margin-right: .3rem;
@@ -79,6 +74,21 @@ h1, h2, h3, h4, h5, h6{
 
 .post-content a {
     text-decoration: underline;
+}
+
+blockquote {
+    padding: 0.5rem;
+    background: #F0F0F0;
+}
+
+blockquote p:before {
+    opacity: .5;
+    margin-right: .3rem;
+    content: ">";
+}
+
+blockquote p {
+    margin: 0;
 }
 
 /* - article list  - */
@@ -119,130 +129,24 @@ h1, h2, h3, h4, h5, h6{
     background: #EEE;
 }
 
-/*.more {*/
-    /*text-align: right;*/
-/*}*/
-
 /* - comments - */
+/*--------------*/
 
 .post-comments {
     word-wrap: break-word;
-}
-
-/*.post-comments form {*/
-    /*margin-bottom: 3em;*/
-/*}*/
-
-.post-comments label {
-    display: block;
-    margin-bottom: .5em;
-}
-
-.post-comments input, .post-comments textarea {
-    width: 100%;
-    display: block;
+    padding-top: 15px;
 }
 
 .post-comments .comment-list {
     margin-left: 0;
     list-style: none;
     margin-bottom: 2em;
-}
-
-.post-comments .comment-list:last-child {
-    margin-bottom: 0;
-}
-
-/*.comment-list li {*/
-    /*position: relative;*/
-    /*padding-left: 60px;*/
-    /*margin-bottom: 1.5em;*/
-/*}*/
-
-/*.comment-list li:after {*/
-    /*content: "";*/
-    /*clear: both;*/
-    /*display: block;*/
-/*}*/
-
-/*.comment-list li:last-child {*/
-    /*margin-bottom: 0;*/
-/*}*/
-
-/*input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="number"], input[type="search"], textarea, select {*/
-    /*padding: .5em;*/
-    /*color: inherit;*/
-    /*border-radius: 4px;*/
-    /*border: #ccc 1px solid;*/
-/*}*/
-
-/*!* --- 评论头像 *!*/
-.comment-list .avatar {
-    top: 0;
-    left: 0;
-    min-width: 45px;
-    max-width: 45px;
-    float: left;
-    /*position: absolute;*/
-    border-radius: 100%;
-    transition: transform .3s ease-in-out;
-}
-
-/*.comment-list li:hover .avatar {*/
-    /*transform: rotate(1turn);*/
-    /*-webkit-transform: rotate(1turn);*/
-/*}*/
-
-/*!* --- 评论信息 *!*/
-.comment-list .comment-meta {
-    float: left;
-    margin-bottom: .25em;
-}
-
-/*.comment-list .comment-time:before {*/
-    /*content: "\f017";*/
-    /*margin-right: .4em;*/
-    /*display: inline-block;*/
-    /*!*font-family: "FontAwesome";*!*/
-/*}*/
-
-/*.comment-list .comment-author,*/
-/*.comment-list .comment-time {*/
-    /*margin-right: .8em;*/
-/*}*/
-
-/*!* --- 评论内容 *!*/
-.comment-list .comment-content {
-    clear: both;
+    padding: 0;
 }
 
 .comment-children > .comment-list {
     margin-top: 1.5em;
     margin-bottom: 0;
-}
-
-.comment-list .comment-reply a {
-    color: #aaa;
-}
-
-.comment-list .comment-reply a:hover {
-    color: #555;
-}
-
-.comment-list .cancel-comment-reply {
-    display: block;
-    text-align: right;
-}
-
-
-#comments {
-    padding-top: 15px;
-}
-
-.comment-list, .comment-list ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .comment-list li {
@@ -251,65 +155,47 @@ h1, h2, h3, h4, h5, h6{
     border: 1px solid #EEE;
 }
 
-.comment-list li.comment-level-odd {
-    background: #F6F6F3;
+.comment-list .avatar {
+    top: 0;
+    left: 0;
+    min-width: 45px;
+    max-width: 45px;
+    float: left;
+    border-radius: 100%;
+    transition: transform .3s ease-in-out;
 }
 
-.comment-list li.comment-level-even {
-    background: #FFF;
+.comment-list .comment-meta {
+    float: left;
+    padding-left: .5rem;
+    margin-bottom: .5rem;
 }
 
-.comment-list li.comment-by-author {
-    background: #FFF9E8;
-}
-
-.comment-list li .comment-reply {
-    text-align: right;
-    font-size: .92857em;
-}
-
-.comment-meta a {
+.comment-list .comment-meta a {
     color: #999;
-    font-size: .92857em;
 }
 
-.comment-author {
+.comment-list .comment-author {
     display: block;
     margin-bottom: 3px;
     color: #444;
 }
 
-.comment-author .avatar {
-    float: left;
-    margin-right: 10px;
+.comment-list .comment-content {
+    clear: both;
 }
 
-.comment-author cite {
-    font-weight: bold;
-    font-style: normal;
+.comment-content p{
+    margin: 0;
 }
 
-.comment-list .respond {
-    margin-top: 15px;
-    border-top: 1px solid #EEE;
+/* - side bar - */
+/*--------------*/
+
+.card {
+    margin-bottom: 1rem;
 }
 
-.respond .cancel-comment-reply {
-    float: right;
-    margin-top: 15px;
-    font-size: .92857em;
-}
-
-#comment-form label {
-    display: block;
-    margin-bottom: .5em;
-    font-weight: bold;
-}
-
-#comment-form .required:after {
-    content: " *";
-    color: #C00;
-}
 
 .list-group-root > .list-group-item , .list-group-wrapper > .list-group-item {
     padding-top: 10px;
@@ -324,17 +210,10 @@ h1, h2, h3, h4, h5, h6{
     padding-left: 40px;
 }
 
-/* - side bar - */
-/*--------------*/
-
-.card {
-    margin-bottom: 1rem;
-}
-
 /* - footer  - */
 /*-------------*/
 
-.turn-up{
+.turn-up {
     right: 20px;
     bottom: 60px;
     padding: .5em .6em;
@@ -347,18 +226,18 @@ h1, h2, h3, h4, h5, h6{
     transform: translateX(60px);
     transition: color .3s, border .3s, background .3s, transform .3s;
 }
-.turn-up.active{
+
+.turn-up.active {
     transform: translateX(0);
 }
-.turn-up:before{
+
+.turn-up:before {
     width: 1.5em;
     display: block;
-    /*content: "\f062";*/
     text-align: center;
-    /*font-size: 20px;*/
-    /*font-family: "FontAwesome";*/
 }
-.turn-up i{
+
+.turn-up i {
     font-size: 30px;
 }
 
