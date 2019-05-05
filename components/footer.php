@@ -18,6 +18,43 @@
 <!--<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="../libs/canvas-nest.js"></script>-->
 <!--<script type="text/javascript" src="../libs/canvas-nest.js"></script>-->
 
+<script type="text/javascript">
+	function is_weixin() {
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	var isWeixin = is_weixin();
+	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+	function loadHtml(){
+		var div = document.createElement('div');
+		div.id = 'weixin-tip';
+		div.innerHTML = '<p><img src="<?php $this->options->themeUrl( 'assets/fuckweixin.png' ); ?>" alt="微信打开"/></p>';
+		document.body.appendChild(div);
+	}
+
+	function loadStyleText(cssText) {
+		var style = document.createElement('style');
+		style.rel = 'stylesheet';
+		style.type = 'text/css';
+		try {
+			style.appendChild(document.createTextNode(cssText));
+		} catch (e) {
+			style.styleSheet.cssText = cssText; //ie9以下
+		}
+		var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+		head.appendChild(style);
+	}
+	var cssText = "img{max-width: 100%; height: auto;} #weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+	if(isWeixin){
+		loadHtml();
+		loadStyleText(cssText);
+	}
+</script>
+
 <script src="<?php $this->options->themeUrl( 'assets/clover.js' ); ?>"></script>
 <script src="<?php $this->options->themeUrl( 'libs/canvas-nest/canvas-nest.min.js' ); ?>"></script>
 <!--<script src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js"></script>-->
