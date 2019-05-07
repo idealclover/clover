@@ -67,9 +67,10 @@
 					<?php endif; ?>
                     <div class="col-12">
                         <p>
-                            <textarea rows="3" name="text" class="form-control" id="textarea"
+                            <textarea rows="3" name="text" class="form-control OwO-textarea" id="textarea"
                                       placeholder="<?php _e( '快来评论吧 (*≧ω≦)ﾉ' ); ?>"
                                       required=""><?php $this->remember( 'text' ); ?></textarea>
+                            <div class="OwO"></div>
                         </p>
                         <p>
                             <button type="submit" class="btn btn-dark"><?php _e( '写好了~' ); ?></button>
@@ -84,3 +85,15 @@
 		<?php $comments->pageNav( _t( '&laquo; 前一页'), _t('后一页 &raquo;') ); ?>
 	<?php endif; ?>
 </section>
+<script src="<?php $this->options->themeUrl( 'libs/OwO/OwO.min.js' ); ?>"></script>
+<script>
+    var OwO_demo = new OwO({
+        logo: 'OωO表情',
+        container: document.getElementsByClassName('OwO')[0],
+        target: document.getElementsByClassName('OwO-textarea')[0],
+        api: 'https://clover-1254951786.cos.ap-shanghai.myqcloud.com/Blog/OwO/OwO.json',
+        position: 'down',
+        width: '100%',
+        maxHeight: '250px'
+    });
+</script>
