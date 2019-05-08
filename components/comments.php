@@ -67,7 +67,7 @@
 					<?php endif; ?>
                     <div class="col-12">
                         <p>
-                            <textarea rows="3" name="text" class="form-control OwO-textarea" id="textarea"
+                            <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea"
                                       placeholder="<?php _e( '快来评论吧 (*≧ω≦)ﾉ' ); ?>"
                                       required=""><?php $this->remember( 'text' ); ?></textarea>
                             <div class="OwO"></div>

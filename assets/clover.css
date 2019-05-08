@@ -133,6 +133,16 @@ blockquote p {
     background: #EEE;
 }
 
+/* - post comments - */
+/*-------------------*/
+
+#comment-area {
+    background-image: url(https://clover-1254951786.file.myqcloud.com/Blog/comments.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 /* - comments - */
 /*--------------*/
 
