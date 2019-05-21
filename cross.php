@@ -22,18 +22,16 @@
 
 	$commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
 	?>
-
-    <li id="<?php $comments->theId(); ?>">
+    <li class="moment" id="<?php $comments->theId(); ?>">
 		<?php $comments->gravatar( '45', $default=Helper::options()->themeUrl.'/assets/default.jpg'); ?>
-        <div class="comment-meta">
-            <span class="comment-author"><?php $comments->author(); ?></span>
-            <time class="comment-time"><?php $comments->date( 'y.m.d' ); ?></time>
-<!--            <span class="comment-reply">--><?php //$comments->reply(); ?><!--</span>-->
-        </div>
-        <div class="comment-content">
-<!--	        --><?php //echo Meting_Plugin::playerReplace($comments->content); ?>
-
+        <div class="moment-meta">
+            <span class="moment-author"><?php $comments->author(); ?></span>
+            <time class="moment-time"><?php $comments->date( 'm月d日' ); ?></time>
+<!--	        --><?php //$comments->content(); ?>
 	        <?php $comments->content(); ?>
+        </div>
+
+        <div class="moment-content">
         </div>
 		<?php if ( $comments->children ) : ?>
             <div class="comment-children">

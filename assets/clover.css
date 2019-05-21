@@ -203,6 +203,42 @@ blockquote p {
     margin: 0;
 }
 
+/* -  moments - */
+/*--------------*/
+
+.comment-list .moment {
+    padding: 14px;
+    margin-top: 0;
+    /*border: 1px solid #EEE;*/
+    border:0;
+    border-bottom: 1px solid #EEE;
+}
+
+.comment-list .moment-meta {
+    margin-left: 55px;
+    display: block;
+}
+
+.comment-list .moment-meta a {
+    color: #444;
+}
+
+.comment-list .moment-time {
+    color: #999;
+}
+
+.comment-list .moment-time:before {
+    content: "\00b7";
+}
+
+.comment-list .moment-content {
+    clear: both;
+}
+
+.moment-meta p{
+    margin: 0;
+}
+
 /* - side bar - */
 /*--------------*/
 
