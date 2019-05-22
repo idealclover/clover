@@ -7,11 +7,31 @@
             <div class="widget-title"><?php _e("🤔关于我") ?></div>
         </div>
         <div class="card-body">
-			<p>
+			<p style="margin-bottom:.5rem;">
 		        <?php _e("翠翠 idealclover") ?><br/>
 	            <?php _e("南京大学商学院2016级本科生") ?>
 			</p>
-			<p>
+            <p style="margin-bottom:.5rem;">
+                <a href="https://www.zhihu.com/people/cuicuijiang" style="text-decoration: none; padding-top:2px" target="_blank" title="Zhihu: @不蠢会死的某翠">
+                    <img src="https://img.shields.io/badge/dynamic/json.svg?labelColor=%230767C8&color=%23343A40&label=%E7%9F%A5%E4%B9%8E%20zhihu&query=%24.paging.totals&suffix=%20Followers&url=https%3A%2F%2Fwww.zhihu.com%2Fapi%2Fv4%2Fmembers%2Fcuicuijiang%2Ffollowers%3Flimit%3D1&style=for-the-badge">
+                </a>
+            </p>
+            <p style="margin-bottom:.5rem;">
+                <a href="https://github.com/idealclover" style="text-decoration: none" target="_blank" title="GitHub: @idealclover">
+                    <img src="https://img.shields.io/badge/dynamic/json.svg?labelColor=%23333&color=%23343A40&label=GitHub&query=%24.followers&suffix=%20Followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fidealclover&style=for-the-badge&logo=github">
+                </a>
+            </p>
+            <p style="margin-bottom:.5rem;">
+                <a href="https://steamcommunity.com/id/idealclover" style="text-decoration: none" target="_blank" title="Steam: @idealclover">
+                    <img src="https://img.shields.io/badge/dynamic/json.svg?labelColor=%231B2838&color=%23343A40&label=Steam&query=%24.response.game_count&suffix=%20Games&url=http%3A%2F%2Fapi.steampowered.com%2FIPlayerService%2FGetOwnedGames%2Fv0001%2F%3Fkey%3D4A6657FE80551ED4EAFD79643B5FEC86%26steamid%3D76561198310142748%26format%3Djson&style=for-the-badge&logo=steam">
+                </a>
+            </p>
+            <p style="margin-bottom:.7rem;">
+                <a href="https://space.bilibili.com/5044093" style="text-decoration: none" target="_blank" title="Bilibili: @不蠢会死的某翠TAT">
+                    <img src="https://img.shields.io/badge/dynamic/json.svg?labelColor=%23F45A8D&color=%23343A40&label=Bilibili&query=%24.data.count&suffix=%20Videos&url=https%3A%2F%2Fspace.bilibili.com%2Fajax%2Fmember%2FgetSubmitVideos%3Fmid%3D5044093&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACKklEQVRYR+2W0XHbMAyGAfJJIu/iTNB0A29Qd4JqBGcDZ4K6EzSdoO4G7QRVJ4i7QUZw78iTX0T0/hzdU11ZohX2/BI96SQc8BEgfoDpwg9fOD69AGTPQNM0N23bPhhjXjPzbqzE2QG891sR2VlrF2PB8X8UwHu/FpE3RHRnrd0OOY22K631vCiKxywAMaUbZgbERin1oc+5c27OzA8icmut3aQET8rAwVHTNIu2bdcRZF2W5adujZF6Ino0xlSpwU8C4DRa66s+RyGEJREtUWdmvldK1YdvRFQppU5evKIofhz7/OcO4KQhhO/nnCLVVin1tiiKumt/EsAYM3pBUwPDzjlXa63XZwE455Dm3lKkBo8teT0JwHsvzHzHzIPtNwSDciKbkwH66pZ6etjhENkAoAkhhPd9WuC9/yoiV1rr265OZAFo2xat9ZGZIa9fyrJcHet8hLsnondE9EcncgFUzDxTSuEWD0psbGMo4RailAWg2zoiMntSMOYd3vf7/ewAhSwcv2cHwMAhohtjzNI5h5TPMfmcc08KeTwF/wdAJSJI8WcERGlEBCB4/wawbpdkB4ithRG9YGbIKub/KtYcw+qvWfBsAGbGjX+OENWTdSCTFP+y1s4mKeE5ijdmezbAmMMp/5PGMRyjn9FqIQRcrldE9FNEKq110rYTQkCXYD27jqDYE3d9IjY486O81lF8Vqm7XtQEtCaexdAym3XpmFKWF4CLZ+A3c0P9MHk/bssAAAAASUVORK5CYII=">
+                </a>
+            </p>
+            <p style="margin-bottom:.7rem;">
 				<a href="http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes" style="text-decoration: none" target="_blank" title="QQ: 1455169173">
 					<img src="<?php $this->options->themeUrl( 'assets/icons/QQ.svg' ); ?>">
 				</a>
@@ -20,15 +40,6 @@
 				</a>
 				<a href="mailto:idealclover@163.com" style="text-decoration: none" target="_blank" title="Email: idealclover@163.com">
 					<img src="<?php $this->options->themeUrl( 'assets/icons/mail.svg' ); ?>">
-				</a>
-				<a href="https://github.com/idealclover" style="text-decoration: none" target="_blank" title="GitHub: @idealclover">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/github.svg' ); ?>">
-				</a>
-				<a href="https://www.zhihu.com/people/cuicuijiang" style="text-decoration: none" target="_blank" title="Zhihu: @不蠢会死的某翠">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/zhihu.svg' ); ?>">
-				</a>
-				<a href="https://steamcommunity.com/id/idealclover" style="text-decoration: none" target="_blank" title="Steam: @idealclover">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/steam.svg' ); ?>">
 				</a>
 				<a href="https://twitter.com/idealclover" style="text-decoration: none" target="_blank" title="Twitter: @idealclover">
 					<img src="<?php $this->options->themeUrl( 'assets/icons/twitter.svg' ); ?>">
@@ -96,4 +107,5 @@
 			<?php endwhile; ?>
         </ul>
     </div>
-</div><!-- end #sidebar -->
+</div>
+<!-- end #sidebar -->
