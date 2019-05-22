@@ -12,11 +12,24 @@
     &copy; <?php echo date( 'Y' ); ?>
 	<a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
 	<?php _e( 'Powered by <a href="http://www.typecho.org">Typecho</a>' ); ?>.
+    <br />
+    <div id ="span_dt_dt"></div>
+    <script data-no-instant>
+        function show_date_time(){window.setTimeout("show_date_time()",1e3);
+        var BirthDay=new Date("2017/5/20 13:14:15"),
+            today=new Date,timeold=today.getTime()-BirthDay.getTime(),msPerDay=864e5,
+            e_daysold=timeold/msPerDay,daysold=Math.floor(e_daysold),
+            e_hrsold=24*(e_daysold-daysold),
+            hrsold=Math.floor(e_hrsold),
+            e_minsold=60*(e_hrsold-hrsold),
+            minsold=Math.floor(60*(e_hrsold-hrsold)),
+            seconds=Math.floor(60*(e_minsold-minsold));
+        span_dt_dt.innerHTML="博客已悄悄运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";}
+        show_date_time();
+    </script>
 </footer>
 
 <?php $this->footer(); ?>
-<!--<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="../libs/canvas-nest.js"></script>-->
-<!--<script type="text/javascript" src="../libs/canvas-nest.js"></script>-->
 
 <script type="text/javascript">
 	function is_weixin() {
