@@ -54,6 +54,32 @@
 		loadStyleText(cssText);
 	}
 </script>
+<script>
+    var titleTime;
+    var OriginTitile = document.title;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = '/favicon2.ico';
+            document.getElementsByTagName('head')[0].appendChild(link);
+            document.title = '|ω･) 哎呦~页面不见了~';
+            clearTimeout(titleTime);
+        }
+        else {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = '/favicon.ico';
+            document.getElementsByTagName('head')[0].appendChild(link);
+            document.title = '(/≧▽≦)/ 呦吼~肥来啦！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 1000);
+        }
+    });
+</script>
 <script src="<?php $this->options->themeUrl( 'assets/clover.js' ); ?>"></script>
 <script src="<?php $this->options->themeUrl( 'libs/canvas-nest/canvas-nest.min.js' ); ?>"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>

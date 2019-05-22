@@ -29,8 +29,6 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/default.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl( 'libs/OwO/OwO.min.css' ); ?>">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
     <!-- 通过自有函数输出HTML头部信息 -->
 	<?php $this->header(); ?>
 </head>
