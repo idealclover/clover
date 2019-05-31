@@ -9,28 +9,29 @@
     exit;
 }
 ?>
-<?php $this->need('components/header.php');?>
+<?php $this->need('components/header.php'); ?>
 
 <?php
 require 'libs/ParserDom/ParserDom.php';
 
 //获取书籍清单数据
 
-function getBookData($mid){
+function getBookData($mid)
+{
     $url = "https://space.bilibili.com/ajax/Bangumi/getList?mid=$mid";
     // $url = "https://api.douban.com/v2/book/user/$userID/collections?count=100"; //最多取100条数据
-    $res=json_decode(curl_get_contents($url),true); //读取api得到json
+    $res = json_decode(curl_get_contents($url), true); //读取api得到json
     $res = $res['data']['result'];
-    if ($res == null || $res ==""){
+    if ($res == null || $res == "") {
         echo '<script>$(function(){$(".douban_book_tips").text("获取书籍数据失败，可能原因是：1. 豆瓣API发生故障 2. 豆瓣id配置错误")})</script>';
         return [];
     }
-    foreach($res as $v){
-        $book_name=$v['title'];
+    foreach ($res as $v) {
+        $book_name = $v['title'];
         $book_img = $v['cover'];
         // $book_img = str_replace("/view/subject/m/public/","/lpic/",$book_img);
         $book_url = $v['share_url'];
-        $readlist[] = array("name"=>$book_name,"img"=>$book_img,"url"=>$book_url);
+        $readlist[] = array("name" => $book_name, "img" => $book_img, "url" => $book_url);
     }
 
     return $readlist;
@@ -50,27 +51,26 @@ function curl_get_contents($url)
 ?>
 
 <style>
-.moviecard{
-  margin: 1rem 1.4rem;
-}
+    .moviecard {
+        margin: 1rem 1.4rem;
+    }
 
-.movieimg{
-    object-fit: cover;
-    width:100%;
-}
+    .movieimg {
+        object-fit: cover;
+        width: 100%;
+    }
 
-.movietitle{
-  height: 4rem;
-}
+    .movietitle {
+        height: 4rem;
+    }
 
-.moviename{
-    height: 4rem;
-    overflow: hidden;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
+    .moviename {
+        height: 4rem;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 </style>
 
 <div class="container col-lg-8 col-10" id="main" role="main">
@@ -83,26 +83,26 @@ function curl_get_contents($url)
                     <div class="row">
                         <?php
                         $readList = getBookData($this->fields->mid);
-                        foreach($readList as $v):?>
+                        foreach ($readList as $v) : ?>
                             <div class="card moviecard" style="width: 10rem;">
                                 <img class="card-img-top movieimg" src="<?php echo $v['img']; ?>" alt="Card image cap" style="height:12rem;">
                                 <!-- <div class="card-body moviename">
-                                    <a target="_blank" href="<?php echo $v['url'];?>"><?php echo $v['name']; ?></a>
-                                </div> -->
+                                        <a target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
+                                    </div> -->
                                 <div class="card-body movietitle">
-                                    <a class="card-title moviename" target="_blank" target="_blank" href="<?php echo $v['url'];?>"><?php echo $v['name']; ?></a>
+                                    <a class="card-title moviename" target="_blank" target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
             </article>
-			<?php $this->need( 'components/comments.php' ); ?>
+            <?php $this->need('components/comments.php'); ?>
         </div>
-	    <?php $this->need( 'components/sidebar.php' ); ?>
+        <?php $this->need('components/sidebar.php'); ?>
     </div>
 </div><!-- end #main-->
 
 <!-- footer -->
-<?php $this->need('components/footer.php');?>
+<?php $this->need('components/footer.php'); ?>
 <!-- / footer -->

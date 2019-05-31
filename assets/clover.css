@@ -17,15 +17,24 @@ h2 {
     font-size: 1.7rem;
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
     font-size: 1.4rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
 }
 
@@ -50,27 +59,34 @@ img {
     transition: filter .3s;
 }
 
-.page-title, .edit-link {
+.page-title,
+.edit-link {
     display: inline-block;
 }
 
-.post-content img, .comment-content img, .post-content video, .comment-content video {
+.post-content img,
+.comment-content img,
+.post-content video,
+.comment-content video {
     max-width: 100%;
 }
 
-.post-content h1:before, .page-content h1:before {
+.post-content h1:before,
+.page-content h1:before {
     opacity: .5;
     content: "#";
     margin-right: .3rem;
 }
 
-.post-content h2:before, .page-content h2:before {
+.post-content h2:before,
+.page-content h2:before {
     opacity: .5;
     content: "##";
     margin-right: .3rem;
 }
 
-.post-content h3:before, .page-content h3:before {
+.post-content h3:before,
+.page-content h3:before {
     opacity: .5;
     content: "###";
     margin-right: .3rem;
@@ -158,7 +174,7 @@ blockquote p {
     padding: 0;
 }
 
-.comment-children > .comment-list {
+.comment-children>.comment-list {
     margin-top: 1.5em;
     margin-bottom: 0;
 }
@@ -199,7 +215,7 @@ blockquote p {
     clear: both;
 }
 
-.comment-content p{
+.comment-content p {
     margin: 0;
 }
 
@@ -210,7 +226,7 @@ blockquote p {
     padding: 14px;
     margin-top: 0;
     /*border: 1px solid #EEE;*/
-    border:0;
+    border: 0;
     border-bottom: 1px solid #EEE;
 }
 
@@ -235,7 +251,7 @@ blockquote p {
     clear: both;
 }
 
-.moment-meta p{
+.moment-meta p {
     margin: 0;
 }
 
@@ -247,7 +263,8 @@ blockquote p {
 }
 
 
-.list-group-root > .list-group-item , .list-group-wrapper > .list-group-item {
+.list-group-root>.list-group-item,
+.list-group-wrapper>.list-group-item {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -256,7 +273,7 @@ blockquote p {
     margin-top: 1px;
 }
 
-.list-group-wrapper  > li{
+.list-group-wrapper>li {
     padding-left: 40px;
 }
 
