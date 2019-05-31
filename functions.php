@@ -22,3 +22,21 @@ function gettopcategory($category)
 		return $rs2['slug'];
 	}
 }
+
+function themeConfig($form) {
+	$title = new Typecho_Widget_Helper_Form_Element_Text('clover_title', NULL,  NULL, _t('站点标题'), _t('在这里填入想显示的站点标题，要求必须为英文'));
+	$form->addInput($title);
+
+	$subtitle = new Typecho_Widget_Helper_Form_Element_Text('clover_subtitle', NULL,  NULL, _t('站点副标题'), _t('在这里填入想显示的站点副标题，要求必须为英文'));
+	$form->addInput($subtitle);
+
+	$sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock',
+		array('ShowRecentPosts' => _t('显示最新文章'),
+		      'ShowRecentComments' => _t('显示最近回复'),
+		      'ShowCategory' => _t('显示分类'),
+		      'ShowArchive' => _t('显示归档'),
+		      'ShowOther' => _t('显示其它杂项')),
+		array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
+
+	$form->addInput($sidebarBlock->multiMode());
+}

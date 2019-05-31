@@ -55,9 +55,14 @@
 	var isRunning = false;
 
 	var init = function init() {
+
+	  var scripts = document.getElementsByTagName("script"),
+		script_len = scripts.length,
+		script = scripts[script_len - 1];
+	  var string = script.getAttribute("string") || "Stay simple, stay naive.";
 	  redirectPosts();
 	  listen();
-	  play();
+	  play(string);
 	};
 
 	function redirectPosts() {
@@ -75,9 +80,9 @@
 	  });
 	}
 
-	function play() {
+	function play(string) {
 	  var head = document.getElementById('head');
-	  var history = (0, _gen2.default)('Stay simple, stay naive.').history;
+	  var history = (0, _gen2.default)(string).history;
 	  isRunning = true;
 	  var i = 0;
 	  history.forEach(function (text, i) {

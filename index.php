@@ -58,6 +58,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
 </div>
 
-<script src="<?php $this->options->themeUrl('libs/random-homepage/head.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('libs/random-homepage/title.js'); ?>"></script>
+
+<script src="<?php $this->options->themeUrl('libs/random-homepage/title.js'); ?>" string="<?php $this->options->clover_title(); ?>"></script>
+<script src="<?php $this->options->themeUrl('libs/random-homepage/head.js'); ?>" string="<?php $this->options->clover_subtitle(); ?>"></script>
 <?php $this->need('components/footer.php'); ?>

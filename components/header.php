@@ -37,7 +37,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">idealclover</a>
+        <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,31 +57,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                         <?php endif; ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
-
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($this->is('page', 'messageboard')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($this->is('page', 'projects')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/projects.html"><?php _e("项目") ?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link search-form-input"><?php _e("搜索") ?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($this->is('page', 'about')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
-                </li>
-                <li class="nav-item dropdown pull-right">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php _e("更多") ?>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html"><?php _e("我的简历") ?></a>
-                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html"><?php _e("我的项目") ?></a>
-                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html"><?php _e("我的笔记") ?></a>
-                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/bilibili.html"><?php _e("我的追番") ?></a>
-                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html"><?php _e("我的情绪") ?></a>
-                    </div>
-                </li>
+	            <?php $pages = $this->widget('Widget_Contents_Page_List');
+	            if ($pages->have()) :
+		            while ($pages->next()) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if ($this->is('page', $pages->slug)) : ?>active<?php endif; ?>" href="<?php $pages->permalink() ?>"><?php $pages->title() ?></a></li>
+		            <?php endwhile; ?>
+	            <?php endif; ?>
             </ul>
         </div>
     </nav>
