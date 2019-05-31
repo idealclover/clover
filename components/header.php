@@ -17,6 +17,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="referrer" content="never">
     <title><?php $this->archiveTitle(array(
                 'category' => _t('%s'),
                 'search'   => _t('包含关键字 %s 的文章'),
@@ -77,6 +78,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                         <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html"><?php _e("我的简历") ?></a>
                         <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html"><?php _e("我的项目") ?></a>
                         <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html"><?php _e("我的笔记") ?></a>
+                        <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/bilibili.html"><?php _e("我的追番") ?></a>
                         <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html"><?php _e("我的情绪") ?></a>
                     </div>
                 </li>
