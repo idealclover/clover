@@ -22,31 +22,6 @@
                         <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid;?>" target="_blank"><?php _e("编辑") ?></a>
                     <?php endif; ?>
                 </section>
-	            <?php if($this->options->siteUrl == "https://idealclover.top/"):?>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Language
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">中文</a>
-                            <a class="dropdown-item" href="<?php echo str_replace($this->options->siteUrl, "https://en.idealclover.top/" , $this->permalink); ?>">English</a>
-                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
-							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
-                        </div>
-                    </div>
-	            <?php elseif($this->options->siteUrl == "https://en.idealclover.top/"): ?>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Language
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?php $this->permalink(); ?>">English</a>
-                            <a class="dropdown-item" href="<?php echo str_replace($this->options->siteUrl, "https://idealclover.top/", $this->permalink); ?>">简体中文</a>
-                            <!-- <button class="dropdown-item" type="button" onclick="zh_cn()">中文</button>
-							<button class="dropdown-item" type="button" onclick="en()">English</button> -->
-                        </div>
-                    </div>
-	            <?php endif;?>
                 <hr />
                 <div class="post-content" itemprop="articleBody">
 					<?php $this->content(); ?>
