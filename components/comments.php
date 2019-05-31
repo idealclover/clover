@@ -1,7 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) {
     exit;
 } ?>
-<?php $url = $this->options->themeUrl('assets/default.jpg'); ?>
 <?php function threadedComments($comments, $options)
 {
     $commentClass = '';
