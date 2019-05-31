@@ -101,15 +101,15 @@
 </script>
 <script src="<?php $this->options->themeUrl('assets/clover.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script>
     $(function() {
         $('[data-toggle="popover"]').popover()
     })
 </script>
-<script src="https://cdn.bootcss.com/smooth-scroll/12.1.3/js/smooth-scroll.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.14.2/highlight.min.js"></script>
 <script>
     var scroll = new SmoothScroll('a.turn-up, .article-list a', {
         offset: 100
@@ -118,7 +118,6 @@
 <script>
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://cdn.bootcss.com/smooth-scroll/12.1.3/js/smooth-scroll.min.js"></script>
 <script>
     var scroll = new SmoothScroll('a.turn-up, .article-list a', {
         offset: 100
