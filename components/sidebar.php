@@ -33,19 +33,19 @@
             </p>
             <p style="margin-bottom:.7rem;">
 				<a href="http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes" style="text-decoration: none" target="_blank" title="QQ: 1455169173">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/QQ.svg' ); ?>">
+					<img width="28px" src="<?php $this->options->themeUrl( 'assets/icons/QQ.svg' ); ?>">
 				</a>
 				<a href="http://t.me/idealclover" style="text-decoration: none" target="_blank" title="Telegram: @idealclover">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/telegram.svg' ); ?>">
+					<img width="28px"  src="<?php $this->options->themeUrl( 'assets/icons/telegram.svg' ); ?>">
 				</a>
 				<a href="mailto:idealclover@163.com" style="text-decoration: none" target="_blank" title="Email: idealclover@163.com">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/mail.svg' ); ?>">
+					<img width="28px"  src="<?php $this->options->themeUrl( 'assets/icons/mail.svg' ); ?>">
 				</a>
 				<a href="https://twitter.com/idealclover" style="text-decoration: none" target="_blank" title="Twitter: @idealclover">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/twitter.svg' ); ?>">
+					<img width="28px"  src="<?php $this->options->themeUrl( 'assets/icons/twitter.svg' ); ?>">
 				</a>
 				<a href="https://weibo.com/idealclover" style="text-decoration: none" target="_blank" title="Weibo: @不蠢会死的某翠">
-					<img src="<?php $this->options->themeUrl( 'assets/icons/weibo.svg' ); ?>">
+					<img width="28px"  src="<?php $this->options->themeUrl( 'assets/icons/weibo.svg' ); ?>">
 				</a>
 			</p>
 			<button type="button" class="btn btn-outline-dark btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" data-content='
