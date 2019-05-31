@@ -68,6 +68,9 @@ if ( ! defined( '__TYPECHO_ROOT_DIR__' ) ) {
                 <a class="nav-link <?php if ( $this->is('page','messageboard')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link <?php if ( $this->is('page','projects')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/projects.html"><?php _e("项目") ?></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link search-form-input"><?php _e("搜索") ?></a>
             </li>
             <li class="nav-item">
