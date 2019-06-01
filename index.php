@@ -50,11 +50,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 <div id="main">
     <h1 id="title"> ... </h1> <br />
     <h3 id="head"> ... </h3> <br />
-    <a href="category/blog/">🚣Blog</a> |
-    <a href="category/thinking/">🤔Thinking</a> |
-    <a href="category/life/">😋Life</a> |
-    <a href="resume.html">📇Resume</a> |
-    <a href="about.html">📖About</a> <br />
+	<?php $this->options->clover_contents(); ?>
+
+    <br />
     <a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
 </div>
 

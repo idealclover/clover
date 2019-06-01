@@ -5,8 +5,6 @@
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
-    <?php _e("📝除非特别注明，本站所有文章在BY CC-SA 4.0协议下授权") ?>
-    <br />
     Theme <a href="https://github.com/idealclover/Clover">Clover</a> made with ❤ by <a href="https://idealclover.top">idealclover</a>
     <br />
     &copy; <?php echo date('Y'); ?>
@@ -17,7 +15,7 @@
     <script data-no-instant>
         function show_date_time() {
             window.setTimeout("show_date_time()", 1e3);
-            var BirthDay = new Date("2017/5/20 13:14:15"),
+            var BirthDay = new Date("<?php $this->options->clover_start_time(); ?>"),
                 today = new Date,
                 timeold = today.getTime() - BirthDay.getTime(),
                 msPerDay = 864e5,
@@ -35,6 +33,8 @@
 </footer>
 
 <?php $this->footer(); ?>
+
+<?php $this->options->clover_js(); ?>
 
 <script type="text/javascript">
     function is_weixin() {
@@ -84,7 +84,8 @@
             link.rel = 'shortcut icon';
             link.href = '/favicon2.ico';
             document.getElementsByTagName('head')[0].appendChild(link);
-            document.title = '|ω･) 哎呦~页面不见了~';
+            // document.title = '|ω･) 哎呦~页面不见了~';
+            document.title = '<?php $this->options->clover_leave(); ?>';
             clearTimeout(titleTime);
         } else {
             var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
@@ -92,7 +93,8 @@
             link.rel = 'shortcut icon';
             link.href = '/favicon.ico';
             document.getElementsByTagName('head')[0].appendChild(link);
-            document.title = '(/≧▽≦)/ 呦吼~肥来啦！';
+            // document.title = '(/≧▽≦)/ 呦吼~肥来啦！';
+            document.title = '<?php $this->options->clover_return(); ?>';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             }, 1000);
@@ -100,7 +102,7 @@
     });
 </script>
 <script src="<?php $this->options->themeUrl('assets/clover.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover@v0.0.1/libs/canvas-nest/canvas-nest.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
@@ -122,25 +124,6 @@
     var scroll = new SmoothScroll('a.turn-up, .article-list a', {
         offset: 100
     });
-</script>
-<script type="text/javascript">
-    var _paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u = "//analytics.idealclover.cn/";
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript';
-        g.async = true;
-        g.defer = true;
-        g.src = u + 'matomo.js';
-        s.parentNode.insertBefore(g, s);
-    })();
 </script>
 </body>
 

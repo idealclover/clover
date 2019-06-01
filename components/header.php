@@ -33,6 +33,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
+	<?php $this->options->clover_css(); ?>
 </head>
 
 <body>

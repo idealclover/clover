@@ -84,7 +84,7 @@
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        api: 'https://clover-1254951786.cos.ap-shanghai.myqcloud.com/Blog/OwO/OwO.json',
+        api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
         position: 'down',
         width: '100%',
         maxHeight: '250px'
