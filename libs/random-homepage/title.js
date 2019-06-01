@@ -55,9 +55,13 @@
 	var isRunning = false;
 
 	var init = function init() {
+      var scripts = document.getElementsByTagName("script"),
+        script_len = scripts.length,
+        script = scripts[script_len - 1];
+      var string = script.getAttribute("string") || "Idealclover";
 	  redirectPosts();
 	  listen();
-	  play();
+	  play(string);
 	};
 
 	function redirectPosts() {
@@ -75,9 +79,9 @@
 	  });
 	}
 
-	function play() {
+	function play(string) {
 	  var head = document.getElementById('title');
-	  var history = (0, _gen2.default)('Idealclover').history;
+	  var history = (0, _gen2.default)(string).history;
 	  isRunning = true;
 	  var i = 0;
 	  history.forEach(function (text, i) {

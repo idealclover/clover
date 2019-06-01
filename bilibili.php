@@ -19,18 +19,15 @@ require 'libs/ParserDom/ParserDom.php';
 function getBookData($mid)
 {
     $url = "https://space.bilibili.com/ajax/Bangumi/getList?mid=$mid";
-    // $url = "https://api.douban.com/v2/book/user/$userID/collections?count=100"; //最多取100条数据
     $res = json_decode(curl_get_contents($url), true); //读取api得到json
     $res = $res['data']['result'];
     if ($res == null || $res == "") {
-        echo '<script>$(function(){$(".douban_book_tips").text("获取书籍数据失败，可能原因是：1. 豆瓣API发生故障 2. 豆瓣id配置错误")})</script>';
         return [];
     }
     foreach ($res as $v) {
         $book_name = $v['title'];
-        $book_img = $v['cover'];
-        // $book_img = str_replace("/view/subject/m/public/","/lpic/",$book_img);
-        $book_url = $v['share_url'];
+        $book_img = str_replace("http", "https", $v['cover']);
+        $book_url = str_replace("http", "https", $v['share_url']);
         $readlist[] = array("name" => $book_name, "img" => $book_img, "url" => $book_url);
     }
 
@@ -73,7 +70,7 @@ function curl_get_contents($url)
     }
 </style>
 
-<div class="container col-lg-8 col-10" id="main" role="main">
+<div class="container col-10" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="panel">
@@ -85,7 +82,7 @@ function curl_get_contents($url)
                         $readList = getBookData($this->fields->mid);
                         foreach ($readList as $v) : ?>
                             <div class="card moviecard" style="width: 10rem;">
-                                <img class="card-img-top movieimg" src="<?php echo $v['img']; ?>" alt="Card image cap" style="height:12rem;">
+                                <img class="card-img-top movieimg" src="<?php echo $v['img']; ?>" alt="Card image cap" style="height:12rem;" referrerPolicy="no-referrer">
                                 <!-- <div class="card-body moviename">
                                         <a target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                     </div> -->
