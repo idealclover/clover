@@ -17,7 +17,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="referrer" content="never">
     <title><?php $this->archiveTitle(array(
                 'category' => _t('%s'),
                 'search'   => _t('包含关键字 %s 的文章'),
