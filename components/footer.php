@@ -100,7 +100,8 @@
     });
 </script>
 <script src="<?php $this->options->themeUrl('assets/clover.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
+<!-- TODO -->
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
