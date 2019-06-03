@@ -17,7 +17,7 @@
 
     <li id="<?php $comments->theId(); ?>">
         <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/default.jpg'); ?>
-        <div class="moment-meta">
+        <div class="coment-meta">
             <span class="comment-author"><?php $comments->author(); ?></span>
             <time class="comment-time"><?php $comments->date('y.m.d'); ?></time>
             <span class="comment-reply"><?php $comments->reply(); ?></span>
