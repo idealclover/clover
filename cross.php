@@ -9,8 +9,22 @@
     exit;
 } ?>
 <?php $this->need('components/header.php'); ?>
-<?php function threadedComments($comments, $options)
+
+<?php
+
+$GLOBALS['isLogin'] = $this->user->hasLogin();
+
+function threadedComments($comments, $options)
 {
+    // echo(substr($comments->content, 10,3));
+    if (strpos($comments->content, "<p>[secret]") !== false) {
+        if (!$GLOBALS['isLogin']) {
+            return;
+        } else {
+            $comments->content = preg_replace("/\[secret\](<br>)?/", '', $comments->content);
+        }
+    }
+
     $commentClass = '';
     if ($comments->authorId) {
         if ($comments->authorId == $comments->ownerId) {
@@ -26,8 +40,6 @@
         <div class="moment-meta">
             <span class="moment-author"><?php $comments->author(); ?></span>
             <time class="moment-time"><?php $comments->date('m月d日'); ?></time>
-            <!--	        --><?php
-                                ?>
             <?php $comments->content(); ?>
         </div>
 
@@ -60,6 +72,28 @@
             <section id="comments" class="post-comments">
                 <hr />
                 <?php $this->comments()->to($comments); ?>
+                <?php if ($this->user->hasLogin()) : ?>
+                    <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+                        <div class="row">
+                            <p class="form-group col-12">
+                                <?php _e('已登录: '); ?>
+                                <a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>.
+                                <a href="<?php $this->options->logoutUrl(); ?>" title="登出"><?php _e('登出'); ?>&raquo;
+                                </a>
+                            </p>
+                            <div class="col-12">
+                                <p>
+                                    <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea" placeholder="<?php _e('快来评论吧 (*≧ω≦)ﾉ'); ?>" required=""><?php $this->remember('text'); ?></textarea>
+                                    <div class="OwO"></div>
+                                </p>
+                                <p>
+                                    <button type="submit" class="btn btn-dark"><?php _e('写好了~'); ?></button>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                <?php endif; ?>
+
                 <?php if ($comments->have()) : ?>
                     <?php $comments->listComments(); ?>
                     <?php $comments->pageNav(_t('&laquo; 前一页'), _t('后一页 &raquo;')); ?>
