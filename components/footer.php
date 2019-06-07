@@ -1,7 +1,43 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) {
     exit;
 } ?>
-
+<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-labelledby="failTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successTitle">版权声明</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                📝除非特别注明，本站所有文章在BY CC-SA 4.0协议下授权<br />
+                这意味着您可以自由地转载，修改本文，但<b>必须</b>遵守以下规定：<br />
+                1. 您<b>必须</b>给出适当的署名（idealclover），提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改<b>（包括标题）</b>。<br />
+                2. 如果您再混合、转换或者基于本作品进行创作，您必须<br />同样基于该许可协议（即 BY CC-SA 4.0 协议）分发您贡献的作品。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="copy()" data-dismiss="modal">我遵守版权协议</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="copyright-true" tabindex="-1" role="dialog" aria-labelledby="failTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successTitle">请重新复制</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
@@ -35,7 +71,48 @@
 </footer>
 
 <?php $this->footer(); ?>
-
+<script>
+    function copy() {
+        if (window.ActiveXObject) {
+            document.body.oncopy = function() {
+                event.returnValue = false;
+                var t = document.selection.createRange().text;
+                var s = "原文链接：" + location.href;
+                clipboardData.setData('Text', t + '\r\n' + s);
+            };
+        } else {
+            function addLink() {
+                var body_element = document.getElementsByTagName('body')[0];
+                var selection;
+                selection = window.getSelection();
+                var pagelink = "\n原文链接：" + location.href;
+                var copytext = selection + pagelink;
+                var newdiv = document.createElement('div');
+                newdiv.style.position = 'absolute';
+                newdiv.style.left = '-99999px';
+                body_element.appendChild(newdiv);
+                newdiv.innerHTML = copytext;
+                selection.selectAllChildren(newdiv);
+                window.setTimeout(function() {
+                    body_element.removeChild(newdiv);
+                }, 0);
+            }
+            document.oncopy = addLink;
+            $('#copyright-true').modal({
+                show: true
+            });
+        }
+    }
+    document.oncopy = function() {
+        $('#copyright').modal({
+            show: true
+        });
+        return false;
+    };
+    document.oncut = function() {
+        return false;
+    }
+</script>
 <script type="text/javascript">
     function is_weixin() {
         var ua = navigator.userAgent.toLowerCase();
