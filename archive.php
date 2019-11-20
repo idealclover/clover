@@ -25,9 +25,9 @@
             <?php if ($this->have()) : ?>
                 <?php while ($this->next()) : ?>
                     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-                        <h2 class="post-title" itemprop="name headline">
+                        <h1 class="post-title" itemprop="name headline">
                             <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                        </h2>
+                        </h1>
                         <p id="post-meta">
                             <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                             <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
@@ -38,8 +38,8 @@
                         <div class="post-content" itemprop="articleBody">
                             <?php $this->content(_t('查看更多 ->')); ?>
                         </div>
-                        <hr />
-                    </article>
+                     </article>
+                     <hr />
                 <?php endwhile; ?>
             <?php else : ?>
                 <article class="post">

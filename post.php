@@ -46,12 +46,20 @@
                     </div>
                 <?php endif; ?>
                 <hr />
+                <?php
+                    date_default_timezone_set("Asia/Shanghai");
+                    $created = round((time()- $this->created) / 3600 / 24);
+                    $updated = round((time()- $this->modified) / 3600 / 24);
+                    if ($updated >= 60 && $created > 180){
+                        echo '<blockquote>'.sprintf(_("请注意，本文编写于 %d 天前，最后修改于 %d 天前，其中某些信息可能已经过时。"),$created,$updated).'</blockquote>';
+                    }
+                ?>
                 <div class="post-content" itemprop="articleBody">
                     <?php $this->content(); ?>
                 </div>
                 <blockquote>
                     <p><?php _e('本文链接：'); ?><a style="text-decoration: underline" href="<?php $this->permalink(); ?>"><?php $this->permalink(); ?></a></p>
-                    <p><?php _e('本作品由'); ?> <a style="text-decoration: underline" href="https://idealclover.top"><?php _e('idealclover'); ?> </a><?php _e('采用'); ?> <a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/"><?php _e('知识共享署名-相同方式共享 4.0 国际许可协议'); ?></a> <?php _e('进行许可,转载请注明出处。'); ?></p>
+                    <p><?php _e('本作品由'); ?> <a style="text-decoration: underline" href="https://idealclover.top"><?php _e('idealclover'); ?> </a><?php _e('采用'); ?> <a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php _e('知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议'); ?></a> <?php _e('进行许可,转载请注明出处。'); ?></p>
                 </blockquote>
                 <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
             </article>

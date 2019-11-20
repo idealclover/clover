@@ -14,47 +14,54 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 <?php $this->need('components/header.php'); ?>
 <style type="text/css">
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    html {
-        height: 100%
-    }
-
-    h3 {
-        width: 100%;
-        overflow: hidden;
-        height: 60px;
-    }
 
     #main {
-        padding: 3.0em 0;
+        margin-top: 3rem;
+        padding-bottom: 4rem;
         text-align: center;
         font-family: COURIER, arial, sans-serif;
     }
 
-    a {
+    #title{
+        margin-top: 3rem;
+    }
+
+    #head{
+        margin-top: 2rem;
+    }
+
+    #items{
         color: #737386;
+        font-size: 1rem;
+        display: block;
+        margin-top: 3.5rem;
+    }
+
+    #items a{
+        padding-top: 0.5rem;
         display: inline-block;
     }
 
     a.small {
-        padding-top: 3.0em;
+        margin-top: 3rem;
+        display: block;
         color: #8C2727;
-        font-size: 12px;
+        font-size: 0.8rem;
         font-family: arial, sans-serif;
     }
 </style>
 <div id="main">
-    <h1 id="title"> ... </h1> <br />
-    <h3 id="head"> ... </h3> <br />
-    <a href="category/blog/">🚣Blog</a> |
-    <a href="category/thinking/">🤔Thinking</a> |
-    <a href="category/life/">😋Life</a> |
-    <a href="resume.html">📇Resume</a> |
-    <a href="about.html">📖About</a> <br />
+    <div id="titles">
+        <h1 id="title"> ... </h1>
+        <h3 id="head"> ... </h3>
+    </div>
+    <div id="items">
+        <a href="category/blog/">🚣博客</a> |
+        <a href="category/thinking/">🤔随想</a> |
+        <a href="category/life/">😋生活</a> |
+        <a href="resume.html">📇简历</a> |
+        <a href="about.html">📖关于</a>
+    </div>
     <a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
 </div>
 

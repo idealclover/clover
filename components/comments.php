@@ -37,37 +37,34 @@
     <?php $this->comments()->to($comments); ?>
     <?php if ($this->allow('comment')) : ?>
         <div id="<?php $this->respondId(); ?>" class="respond">
-            <span class="cancel-comment-reply">
-                <?php $comments->cancelReply(); ?>
-            </span>
+            <hr />
             <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
-                <div class="row">
+                <div class="reply row">
                     <?php if ($this->user->hasLogin()) : ?>
-                        <p class="form-group col-12">
+                        <div class="form-group col-12">
                             <?php _e('已登录: '); ?>
                             <a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>.
                             <a href="<?php $this->options->logoutUrl(); ?>" title="登出"><?php _e('登出'); ?>&raquo;
                             </a>
-                        </p>
+                        </div>
                     <?php else : ?>
-                        <p class="col-sm col-lg-4">
+                        <div class="reply-info col-sm col-lg-4">
                             <input class="form-control" type="text" name="author" id="author" placeholder="<?php _e('昵称 *：'); ?>" value="<?php $this->remember('author'); ?>" required="">
-                        </p>
-                        <p class="col-sm col-lg-4">
+                        </div>
+                        <div class="reply-info col-sm col-lg-4">
                             <input class="form-control" type="email" name="mail" id="mail" placeholder="<?php _e('电邮 *：'); ?>" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?>>
-                        </p>
-                        <p class="col-sm col-lg-4">
+                        </div>
+                        <div class="reply-info col-sm col-lg-4">
                             <input class="form-control" type="url" name="url" id="url" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?>>
-                        </p>
+                        </div>
                     <?php endif; ?>
                     <div class="col-12">
-                        <p>
-                            <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea" placeholder="<?php _e('快来评论吧 (*≧ω≦)ﾉ'); ?>" required=""><?php $this->remember('text'); ?></textarea>
-                            <div class="OwO"></div>
-                        </p>
-                        <p>
-                            <button type="submit" class="btn btn-dark"><?php _e('写好了~'); ?></button>
-                        </p>
+                        <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea" placeholder="<?php _e('快来评论吧 (*≧ω≦)ﾉ'); ?>" required=""><?php $this->remember('text'); ?></textarea>
+                        <div class="OwO"></div>
+                        <button type="submit" class="btn btn-dark"><?php _e('写好了~'); ?></button>
+                        <span class="cancel-comment-reply col-12">
+                            <?php $comments->cancelReply(); ?>
+                        </span>
                     </div>
                 </div>
             </form>

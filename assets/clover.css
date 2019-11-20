@@ -46,6 +46,11 @@ img {
     max-width: 100%;
 }
 
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /* - main - */
 /*----------*/
 
@@ -96,6 +101,10 @@ img {
     text-decoration: underline;
 }
 
+.post-content ul{
+    padding-inline-start:20px;
+}
+
 blockquote {
     padding: 0.5rem;
     background: #F0F0F0;
@@ -113,6 +122,15 @@ blockquote p {
 
 /* - article list  - */
 /*-------------------*/
+
+.post {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+.post:first-child {
+    padding-top: 0;
+}
 
 .archive-title {
     text-align: center;
@@ -157,8 +175,13 @@ blockquote p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+    transition: 0.4s;
 }
 
+#comment-area:focus{
+    background-position-y: 115px;
+    transition: 0.4s;
+}
 /* - comments - */
 /*--------------*/
 
@@ -219,6 +242,14 @@ blockquote p {
     margin: 0;
 }
 
+.reply-info {
+    margin-bottom: 1rem;
+}
+
+.OwO {
+    margin-bottom: 1rem;
+}
+
 /* -  moments - */
 /*--------------*/
 
@@ -248,11 +279,35 @@ blockquote p {
 }
 
 .comment-list .moment-content {
-    clear: both;
+    margin-left: 55px;
+    display: block;
+    /* clear: both; */
 }
 
-.moment-meta p {
+#comment-area {
+    margin-bottom: 1rem;
+}
+
+.moment-content p {
     margin: 0;
+}
+
+.moment-content a img {
+    width: 20vw;
+    height: 20vw !important;
+    object-fit: cover;
+}
+
+.moment-content a {
+    text-decoration: underline;
+}
+
+.reply a {
+    text-decoration: underline;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #343a40;
 }
 
 /* - side bar - */
@@ -262,6 +317,18 @@ blockquote p {
     margin-bottom: 1rem;
 }
 
+.intro, .shield{
+    margin-bottom: 0.5rem;
+}
+
+.contact{
+    margin: 0.7rem 0;
+}
+
+.more a{
+    margin-top: 0.3rem;
+    display: inline-block;
+}
 
 .list-group-root>.list-group-item,
 .list-group-wrapper>.list-group-item {
