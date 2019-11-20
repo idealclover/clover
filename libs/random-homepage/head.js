@@ -77,7 +77,7 @@
 
 	function play() {
 	  var head = document.getElementById('head');
-	  var history = (0, _gen2.default)('Stay simple, stay naive.').history;
+	  var history = (0, _gen2.default)('Stay curious, stay naive.').history;
 	  isRunning = true;
 	  var i = 0;
 	  history.forEach(function (text, i) {
