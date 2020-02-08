@@ -2,7 +2,8 @@
     exit;
 } ?>
 <?php function threadedComments($comments, $options)
-{
+{ ?>
+    <?php
     $commentClass = '';
     if ($comments->authorId) {
         if ($comments->authorId == $comments->ownerId) {
