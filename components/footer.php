@@ -28,7 +28,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="successTitle">请重新复制</h5>
+                <h5 class="modal-title">请重新复制</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -42,8 +42,13 @@
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
-    <?php _e("📝除非特别注明，本站所有文章在 CC BY-NC-SA 4.0 协议下授权") ?>
-    <br />
+    <div class="row justify-content-center" style="margin: 0">
+        <div>
+        📝除非特别注明，
+        </div><div>
+        本站所有文章在 CC BY-NC-SA 4.0 协议下授权
+        </div>
+    </div>
     博客主题 <a href="https://github.com/idealclover/Clover">clover</a> 由 <a href="https://idealclover.top">idealclover</a> 本人用❤制作
     <br />
     &copy; <?php echo date('Y'); ?>
@@ -72,6 +77,7 @@
 </footer>
 
 <?php $this->footer(); ?>
+<?php if (!$this->user->hasLogin()) : ?>
 <script>
     function copy() {
         if (window.ActiveXObject) {
@@ -114,6 +120,7 @@
         return false;
     }
 </script>
+<?php endif; ?>
 <script type="text/javascript">
     // function is_weixin() {
     //     var ua = navigator.userAgent.toLowerCase();
@@ -181,7 +188,7 @@
 </script>
 <script src="<?php $this->options->themeUrl('assets/clover.js'); ?>"></script>
 <!-- TODO -->
-<?php if ($this->is('index')) : ?>
+<?php if ($this->is('index') || $this->is('page', 'more')) : ?>
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
 <?php endif ?>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
@@ -203,11 +210,6 @@
     hljs.initHighlightingOnLoad();
 </script>
 <script>
-    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-        offset: 100
-    });
-</script>
-<script>
     $("p img").each(function(i) {
         if (!this.parentNode.href && $(this).attr("type")!=="memo") {
             $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
@@ -223,8 +225,10 @@
     $('.close').click(function( e ){
         e.preventDefault();
         $.cookie('alert-box', 'closed', { path: '/' });
+        $('#main').css("margin-top","4.5rem");
     });
     if( $.cookie('alert-box') !== 'closed' ) {
+        $('#main').css("margin-top","6.5rem");
         $('.alert').css("display","block");
     }
 </script>

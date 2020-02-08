@@ -16,7 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 <style type="text/css">
 
     #main {
-        margin-top: 3rem;
+        margin-top: 3rem!important;
         padding-bottom: 4rem;
         text-align: center;
         font-family: COURIER, arial, sans-serif;
@@ -46,8 +46,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         margin-top: 3rem;
         display: block;
         color: #8C2727;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-family: arial, sans-serif;
+        text-decoration: underline;
     }
 </style>
 <div id="main">
@@ -56,13 +57,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         <h3 id="head"> ... </h3>
     </div>
     <div id="items">
-        <a href="category/blog/">🚣博客</a> |
+        <a href="category/blog/">🔨技术</a> |
+        <a href="category/testing/">🖥️测评</a> |
         <a href="category/thinking/">🤔随想</a> |
         <a href="category/life/">😋生活</a> |
-        <a href="resume.html">📇简历</a> |
         <a href="about.html">📖关于</a>
     </div>
-    <a class="small" href="https://github.com/idealclover/Random-Homepage">How this page works</a>
+    <a class="small" target="_blank"  href="https://github.com/idealclover/Random-Homepage">How this page works.</a>
+    <!-- <a  target="_blank" href="https://github.com/idealclover"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Followers&query=%24.followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fidealclover&style=social&logo=github" /></a> -->
+    <!-- <a  target="_blank" href="https://github.com/idealclover/Random-Homepage"><img src="https://img.shields.io/github/stars/idealclover/Random-Homepage?style=social" /></a> -->
 </div>
 
 <script src="<?php $this->options->themeUrl('libs/random-homepage/head.js'); ?>"></script>

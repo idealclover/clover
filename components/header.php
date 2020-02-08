@@ -17,19 +17,24 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php $this->archiveTitle(array(
                 'category' => _t('%s'),
                 'search'   => _t('包含关键字 %s 的文章'),
                 'tag'      => _t('标签 %s 下的文章'),
                 'author'   => _t('%s 发布的文章')
-            ), '', ' - '); ?><?php $this->options->title(); ?></title>
-
+            ), '', ' - '); ?><?php $this->options->title(); ?>
+    </title>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="idealclover">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/styles/atom-one-light.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/clover.css?version=19072103'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/clover.css?version=20020101'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <!-- 通过自有函数输出HTML头部信息 -->
@@ -59,39 +64,21 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                             <?php endif; ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
-
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($this->is('page', 'messageboard')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/messageboard.html"><?php _e("留言板") ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($this->is('page', 'projects')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/projects.html"><?php _e("项目") ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link search-form-input"><?php _e("搜索") ?></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if ($this->is('page', 'about')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
                     </li>
-                    <li class="nav-item dropdown pull-right">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php _e("更多") ?>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/resume.html"><?php _e("我的简历") ?></a>
-                            <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/github.html"><?php _e("我的项目") ?></a>
-                            <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/onenote.html"><?php _e("我的笔记") ?></a>
-                            <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/bilibili.html"><?php _e("我的追番") ?></a>
-                            <a class="dropdown-item" href="<?php $this->options->siteUrl(); ?>index.php/cross.html"><?php _e("我的情绪") ?></a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($this->is('page', 'more')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/more.html"><?php _e("更多") ?></a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div id="banner" class="alert alert-primary alert-dismissible fade show" role="alert" style="display:none;">
-            <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
-                <div style="text-align:center">试试用邮箱订阅翠翠的博客吧！ww</div>
-            </a>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <div id="banner" class="alert alert-secondary alert-dismissible text-center fade show" role="alert" style="display:none;">
+            <div style="padding-left: 34px; ">
+                <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
+                    用邮箱订阅翠翠的博客吧！ </a>
+            </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="display: inline-block;">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>

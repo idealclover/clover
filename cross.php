@@ -162,7 +162,7 @@ function threadedComments($comments, $options)
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        api: 'https://clover-1254951786.cos.ap-shanghai.myqcloud.com/Blog/OwO/OwO.json',
+        api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
         position: 'down',
         width: '100%',
         maxHeight: '250px'

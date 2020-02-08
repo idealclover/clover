@@ -62,6 +62,7 @@ p {
 #main img {
     height: auto;
     transition: filter .3s;
+    max-height: 50rem;
 }
 
 .page-title,
@@ -69,7 +70,12 @@ p {
     display: inline-block;
 }
 
-.post-content img,
+.post-content img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
 .comment-content img,
 .post-content video,
 .comment-content video {
@@ -171,7 +177,7 @@ blockquote p {
 /*-------------------*/
 
 #comment-area {
-    background-image: url(https://clover-1254951786.file.myqcloud.com/Blog/comments.jpg);
+    background-image: url(https://image.idealclover.cn/blog/assets/comments.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -382,4 +388,10 @@ blockquote p {
 
 .footer {
     font-size: .875rem;
+}
+
+.menu-target-fix {
+    display: block;
+    position: relative;
+    top: -120px;
 }

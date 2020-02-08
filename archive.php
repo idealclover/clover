@@ -4,6 +4,12 @@
 
 <?php $this->need('components/header.php'); ?>
 
+<style>
+.post-content a img {
+    display:none;
+}
+</style>
+
 
 <div class="container col-10" id="main">
 

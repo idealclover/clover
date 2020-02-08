@@ -13,6 +13,7 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category('Y.m.d'); ?> |
+                    <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false); _e(" 赞") ?> |
                     <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
                     <?php if ($this->authorId == $this->user->uid) : ?>

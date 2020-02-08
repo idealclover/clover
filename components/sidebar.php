@@ -75,37 +75,21 @@
     </div>
     <div class="card">
         <div class="card-header">
+            <div class="widget-title">
+                <a class="nav-link search-form-input" style="padding: 0;">
+                    <?php _e("🔎搜博客") ?>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
             <div class="widget-title"><?php _e("💾博客小程序") ?></div>
         </div>
         <div class="card-body">
-            <img src="<?php $this->options->themeUrl('assets/qrcode.png'); ?>" />
+            <img src="https://image.idealclover.cn/blog/assets/qrcode.png" />
         </div>
     </div>
-    <!-- <div class="card">
-        <div class="card-header">
-            <div class="widget-title"><?php _e("💡文章分类") ?></div>
-        </div>
-        <ul class="list-group list-group-root">
-            <?php $this->widget('Widget_Metas_Category_List')->to($categories); ?>
-            <?php while ($categories->next()) : ?>
-                <?php if ($categories->levels === 0) : ?>
-                    <?php $children = $categories->getAllChildren($categories->mid); ?>
-                    <li class="list-group-item">
-                        <a href="<?php $categories->permalink(); ?>" title="<?php $categories->name(); ?>"><?php $categories->name(); ?></a>
-                    </li>
-                    <?php if (!empty($children)) : ?>
-                        <div class="list-group-wrapper">
-                            <?php foreach ($children as $mid) { ?>
-                                <?php $child = $categories->getCategory($mid); ?>
-                                <li class="list-group-item">
-                                    <a href="<?php echo $child['permalink'] ?>" title="<?php echo $child['name']; ?>"><?php echo $child['name']; ?></a>
-                                </li>
-                            <?php } ?>
-                        </div>
-                    <?php endif ?>
-                <?php endif; ?>
-            <?php endwhile; ?>
-        </ul>
-    </div> -->
 </div>
 <!-- end #sidebar -->

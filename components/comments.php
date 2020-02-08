@@ -57,6 +57,10 @@
                         <div class="reply-info col-sm col-lg-4">
                             <input class="form-control" type="url" name="url" id="url" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?>>
                         </div>
+                        <!-- <div class="container" style="padding-bottom: 0.8rem;">
+                            <span>或使用以下方式登录：</span>
+                            <?php TeConnect_Plugin::show(); ?>
+                        </div> -->
                     <?php endif; ?>
                     <div class="col-12">
                         <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea" placeholder="<?php _e('快来评论吧 (*≧ω≦)ﾉ'); ?>" required=""><?php $this->remember('text'); ?></textarea>
@@ -81,7 +85,7 @@
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        api: 'https://clover-1254951786.cos.ap-shanghai.myqcloud.com/Blog/OwO/OwO.json',
+        api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
         position: 'down',
         width: '100%',
         maxHeight: '250px'

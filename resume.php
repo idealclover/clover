@@ -35,7 +35,7 @@
 </style>
 <div class="container col-10" id="main" role="main">
     <section class="contact">
-        <h2 class="name">崔容皓</h1>
+        <h2 class="name">翠翠 idealclover</h1>
             江苏省南京市栖霞区 仙林大道163号 南京大学商学院<br />
             (+86) 1********** | idealclover@live.com<br />
             https://idealclover.top

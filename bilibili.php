@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Bilibili
  *
@@ -49,7 +50,19 @@ function curl_get_contents($url)
 
 <style>
     .moviecard {
-        margin: 1rem 1.4rem;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        transition: ease all 0.3s;
+        overflow: hidden;
+        background: #f7fbf7;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        border: none !important;
+        display: block;
+        margin-left: 15px;
+        margin-bottom: 15px;
     }
 
     .movieimg {
@@ -58,16 +71,17 @@ function curl_get_contents($url)
     }
 
     .movietitle {
-        height: 4rem;
+        margin: 8px 0 !important;
+        font-size: 1.2em !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        color: #202020 !important;
+        font-weight: 700 !important;
+        border: none !important;
     }
 
-    .moviename {
-        height: 4rem;
-        overflow: hidden;
-        display: block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
 </style>
 
 <div class="container col-10" id="main" role="main">
@@ -75,19 +89,19 @@ function curl_get_contents($url)
         <div class="col-12 col-lg-8">
             <article class="panel">
                 <div class="booklist">
-                    <h2>我的bilibili追番列表</h2>
+                    <h2>我的追番</h2>
                     <small class="text-muted m-xs letterspacing douban_book_tips"><i class="fontello fontello-clock-o m-xs" aria-hidden="true"></i>以下数据为实时从Bilibili API读取</small>
                     <div class="row">
                         <?php
                         $readList = getBookData($this->fields->mid);
                         foreach ($readList as $v) : ?>
-                            <div class="card moviecard" style="width: 10rem;">
+                            <div class="moviecard" style="width: 10rem;">
                                 <img class="card-img-top movieimg" src="<?php echo $v['img']; ?>" alt="Card image cap" style="height:12rem;" referrerPolicy="no-referrer">
                                 <!-- <div class="card-body moviename">
                                         <a target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                     </div> -->
-                                <div class="card-body movietitle">
-                                    <a class="card-title moviename" target="_blank" target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
+                                <div class="movietitle">
+                                    <a class="moviename" target="_blank" target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
