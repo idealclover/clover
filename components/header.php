@@ -25,18 +25,47 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                 'author'   => _t('%s 发布的文章')
             ), '', ' - '); ?><?php $this->options->title(); ?>
     </title>
+
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="idealclover">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php $this->options->themeUrl('assets/favicon/apple-touch-icon.png'); ?>">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php $this->options->themeUrl('assets/favicon/favicon-32x32.png'); ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php $this->options->themeUrl('assets/favicon/favicon-16x16.png'); ?>">
+    <link rel="mask-icon" href="<?php $this->options->themeUrl('assets/favicon/safari-pinned-tab.svg') ?>" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#343A40">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/styles/atom-one-light.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/clover.css?version=20020101'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/clover.css?version=20021901'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var _paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = "//analytics.idealclover.cn/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'matomo.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>

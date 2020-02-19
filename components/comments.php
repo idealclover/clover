@@ -17,7 +17,7 @@
     ?>
 
     <li id="<?php $comments->theId(); ?>">
-        <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/default.jpg'); ?>
+        <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/imgs/default.jpg'); ?>
         <div class="coment-meta">
             <span class="comment-author"><?php $comments->author(); ?></span>
             <time class="comment-time"><?php $comments->date('y.m.d'); ?></time>
@@ -58,10 +58,6 @@
                         <div class="reply-info col-sm col-lg-4">
                             <input class="form-control" type="url" name="url" id="url" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?>>
                         </div>
-                        <!-- <div class="container" style="padding-bottom: 0.8rem;">
-                            <span>或使用以下方式登录：</span>
-                            <?php TeConnect_Plugin::show(); ?>
-                        </div> -->
                     <?php endif; ?>
                     <div class="col-12">
                         <textarea rows="3" id="comment-area" name="text" class="form-control OwO-textarea" id="textarea" placeholder="<?php _e('快来评论吧 (*≧ω≦)ﾉ'); ?>" required=""><?php $this->remember('text'); ?></textarea>

@@ -9,7 +9,8 @@
         <div class="card-body">
             <div class="intro">
                 <?php _e("翠翠 idealclover") ?><br />
-                <?php _e("南京大学商学院2016级本科生") ?>
+                <?php _e("南京大学商学院 2016 级本科生") ?><br />
+                <?php _e("字节跳动商业产品经理入职前") ?>
             </div>
             <div class="shield">
                 <a href="https://www.zhihu.com/people/cuicuijiang" style="text-decoration: none; padding-top:2px" target="_blank" title="Zhihu: @不蠢会死的某翠">
@@ -49,7 +50,7 @@
                 </a>
             </div>
             <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" data-content='
-                <a href="<?php $this->options->themeUrl('assets/idealclover.txt'); ?>" target="_blank" class="btn btn-outline-dark btn-sm btn-block"><i class="fa fa-cloud-download" aria-hidden="true"></i> 下载</a>
+                <a href="<?php $this->options->themeUrl('assets/gpg.txt'); ?>" target="_blank" class="btn btn-outline-dark btn-sm btn-block"><i class="fa fa-cloud-download" aria-hidden="true"></i> 下载</a>
 				或者通过联系方式交换你的公钥<br />
 				指纹:<code> 1214 A7DF 781D A437 041F 586E 6BDC AEEE FE3B 6493</code>
             </div>'><i class="fa fa-key"></i> GPG Key</button>

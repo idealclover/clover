@@ -38,7 +38,7 @@ function threadedComments($comments, $options)
     $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
     ?>
     <li class="moment" id="<?php $comments->theId(); ?>">
-        <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/default.jpg'); ?>
+        <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/imgs/default.jpg'); ?>
         <div class="moment-meta">
             <span class="moment-author"><?php $comments->author(); ?></span>
             <time class="moment-time"><?php $comments->date('y.m.d H:m'); ?></time>
@@ -141,7 +141,7 @@ function threadedComments($comments, $options)
                         <ol class="comment-list">
                             <?php foreach ($feeds as $feed) : ?>
                                 <li class="moment" id="<?php $comments->theId(); ?>">
-                                    <img class="avatar" src="https://secure.gravatar.com/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45&amp;r=G&amp;d=https://127.0.0.1/blog/usr/themes/Clover/assets/default.jpg" alt="clover" width="45" height="45">
+                                    <img class="avatar" src="https://secure.gravatar.com/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45&amp;r=G&amp;d=https://127.0.0.1/blog/usr/themes/Clover/assets/imgs/default.jpg" alt="clover" width="45" height="45">
                                     <div class="moment-meta">
                                         <span class="moment-author">clover</span>
                                         <time class="moment-time"><?php echo (date('m月d日', strtotime($feed['date']))); ?></time>

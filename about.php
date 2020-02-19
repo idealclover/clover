@@ -15,30 +15,22 @@
     .linklist {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        text-decoration: none;
+        margin:0 auto;
     }
 
     .linkcard {
-        /* position: relative; */
-        /* cursor: pointer; */
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-        /* transition: ease all 0.3s; */
+        transition: ease all 0.3s;
         overflow: hidden;
         background: #f7fbf7;
-        /* display: flex; */
-        /* flex-flow: column nowrap; */
-        /* justify-content: flex-start; */
-        /* border: none !important; */
-        /* display: block; */
-        margin-left: 15px;
-        margin-bottom: 15px;
-        width: 20vh;
+        margin: 7.5px 7.5px 7.5px 7.5px;
+        width: 15vh;
     }
 
     .linkimg {
         object-fit: cover;
-        height: 20vh !important;
-        width: 20vh !important;
+        height: 15vh !important;
+        width: 15vh !important;
     }
 
     .linktitle {
