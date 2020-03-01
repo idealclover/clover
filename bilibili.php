@@ -81,7 +81,6 @@ function curl_get_contents($url)
         font-weight: 700 !important;
         border: none !important;
     }
-
 </style>
 
 <div class="container col-10" id="main" role="main">

@@ -5,9 +5,9 @@
 <?php $this->need('components/header.php'); ?>
 
 <style>
-.post-content a img {
-    display:none;
-}
+    .post-content a img {
+        display: none;
+    }
 </style>
 
 
@@ -36,7 +36,7 @@
                         </h1>
                         <p id="post-meta">
                             <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
-                            <i class="fa fa-tags"></i> <?php $this->category(','); ?>  |
+                            <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
                             <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid); ?> <?php _e("赞") ?> |
                             <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                             <!-- TODO: 输出点赞&浏览数-->
@@ -44,8 +44,8 @@
                         <div class="post-content" itemprop="articleBody">
                             <?php $this->content(_t('查看更多 ->')); ?>
                         </div>
-                     </article>
-                     <hr />
+                    </article>
+                    <hr />
                 <?php endwhile; ?>
             <?php else : ?>
                 <article class="post">

@@ -12,7 +12,8 @@
 <?php $this->need('components/header.php'); ?>
 
 <style>
-    .github-badge, .github-btn{
+    .github-badge,
+    .github-btn {
         margin-bottom: 0.5rem
     }
 </style>

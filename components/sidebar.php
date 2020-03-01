@@ -97,8 +97,8 @@
             <div class="widget-title"><?php _e("💸支持我") ?></div>
         </div>
         <div class="card-body">
-        <a href="https://donate.idealclover.cn" target="_blank">
-            <img src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
+            <a href="https://donate.idealclover.cn" target="_blank">
+                <img src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
             </a>
         </div>
     </div>

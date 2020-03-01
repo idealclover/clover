@@ -13,7 +13,8 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category(' '); ?> |
-                    <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false); _e(" 赞") ?> |
+                    <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false);
+                                                        _e(" 赞") ?> |
                     <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
                     <?php if ($this->authorId == $this->user->uid) : ?>
@@ -48,12 +49,12 @@
                 <?php endif; ?>
                 <hr />
                 <?php
-                    date_default_timezone_set("Asia/Shanghai");
-                    $created = round((time()- $this->created) / 3600 / 24);
-                    $updated = round((time()- $this->modified) / 3600 / 24);
-                    if ($updated >= 60 && $created > 180){
-                        echo '<blockquote>'.sprintf(_("请注意，本文编写于 %d 天前，最后修改于 %d 天前，其中某些信息可能已经过时。"),$created,$updated).'</blockquote>';
-                    }
+                date_default_timezone_set("Asia/Shanghai");
+                $created = round((time() - $this->created) / 3600 / 24);
+                $updated = round((time() - $this->modified) / 3600 / 24);
+                if ($updated >= 60 && $created > 180) {
+                    echo '<blockquote>' . sprintf(_("请注意，本文编写于 %d 天前，最后修改于 %d 天前，其中某些信息可能已经过时。"), $created, $updated) . '</blockquote>';
+                }
                 ?>
                 <div class="post-content" itemprop="articleBody">
                     <?php $this->content(); ?>

@@ -36,7 +36,7 @@ function threadedComments($comments, $options)
         }
     }
     $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
-    ?>
+?>
     <li class="moment" id="<?php $comments->theId(); ?>">
         <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/imgs/default.jpg'); ?>
         <div class="moment-meta">

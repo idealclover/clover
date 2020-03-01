@@ -15,7 +15,7 @@
     .linklist {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        margin:0 auto;
+        margin: 0 auto;
     }
 
     .linkcard {

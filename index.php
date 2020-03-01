@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 愿未来能让人有所期待。
  *
@@ -14,30 +15,29 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 <?php $this->need('components/header.php'); ?>
 <style type="text/css">
-
     #main {
-        margin-top: 3rem!important;
+        margin-top: 3rem !important;
         padding-bottom: 4rem;
         text-align: center;
         font-family: COURIER, arial, sans-serif;
     }
 
-    #title{
+    #title {
         margin-top: 3rem;
     }
 
-    #head{
+    #head {
         margin-top: 2rem;
     }
 
-    #items{
+    #items {
         color: #737386;
         font-size: 1rem;
         display: block;
         margin-top: 3.5rem;
     }
 
-    #items a{
+    #items a {
         padding-top: 0.5rem;
         display: inline-block;
     }
@@ -63,7 +63,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         <a class="text-body" href="category/life/">😋生活</a> |
         <a class="text-body" href="about.html">📖关于</a>
     </div>
-    <a class="small" target="_blank"  href="https://github.com/idealclover/Random-Homepage">How this page works.</a>
+    <a class="small" target="_blank" href="https://github.com/idealclover/Random-Homepage">How this page works.</a>
     <!-- <a  target="_blank" href="https://github.com/idealclover"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Followers&query=%24.followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fidealclover&style=social&logo=github" /></a> -->
     <!-- <a  target="_blank" href="https://github.com/idealclover/Random-Homepage"><img src="https://img.shields.io/github/stars/idealclover/Random-Homepage?style=social" /></a> -->
 </div>

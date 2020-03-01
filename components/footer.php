@@ -42,7 +42,6 @@
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket" style="height: 30px; width: 30px;"></i></a>
-    <!-- <a class="dark-mode" href="#">🌓</a> -->
     <div class="dark-mode custom-control custom-switch">
         <label class="dark-mode-label custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" style="height: 30px; width: 30px;"></i></label>
         <input type="checkbox" class="custom-control-input" id="darkSwitch" />

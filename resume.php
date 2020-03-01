@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Resume
  *
@@ -13,22 +14,28 @@
     .name {
         margin-bottom: 0.2rem
     }
+
     .contact {
         text-align: center;
     }
+
     .project_value {
         font-weight: bold;
     }
+
     .project_time {
         text-align: right;
     }
+
     .project_position {
         text-align: right;
     }
+
     .project_list {
         margin-top: 0.5rem;
         margin-bottom: 1rem;
     }
+
     hr {
         margin: 0.2rem 0;
     }
