@@ -2,11 +2,15 @@
 /*------------*/
 
 a {
-    color: #3e3e3e;
+    color: #3498db;
 }
 
 a:hover {
-    color: #3e3e3e;
+    color: #1d6fa5;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #3498db !important;
 }
 
 h1 {
@@ -51,9 +55,13 @@ p {
     margin-bottom: 1rem;
 }
 
-body {
-    background-color: #F6F6F6;
+.alert{
+    border-radius: 0;
 }
+
+/* body {
+    background-color: #F6F6F6;
+} */
 
 /* - main - */
 /*----------*/
@@ -117,7 +125,7 @@ body {
 
 blockquote {
     padding: 0.5rem;
-    background: #F0F0F0;
+    /* background: #F0F0F0; */
 }
 
 blockquote p:before {
@@ -168,13 +176,13 @@ blockquote p {
 }
 
 .page-navigator a:hover {
-    background: #EEE;
+    /* background: #EEE; */
     text-decoration: none;
 }
 
 .page-navigator .current a {
-    color: #444;
-    background: #EEE;
+    /* color: #444;
+    background: #EEE; */
 }
 
 /* - post comments - */
@@ -234,14 +242,9 @@ blockquote p {
     margin-bottom: .5rem;
 }
 
-.comment-list .comment-meta a {
-    color: #999;
-}
-
 .comment-list .comment-author {
     display: block;
     margin-bottom: 3px;
-    color: #444;
 }
 
 .comment-list .comment-content {
@@ -276,13 +279,13 @@ blockquote p {
     display: block;
 }
 
-.comment-list .moment-meta a {
+/* .comment-list .moment-meta a {
     color: #444;
 }
 
 .comment-list .moment-time {
     color: #999;
-}
+} */
 
 .comment-list .moment-time:before {
     content: "\00b7";
@@ -316,9 +319,9 @@ blockquote p {
     text-decoration: underline;
 }
 
-.nav-pills .nav-link.active {
+/* .nav-pills .nav-link.active {
     background-color: #343a40;
-}
+} */
 
 /* - side bar - */
 /*--------------*/
@@ -357,17 +360,38 @@ blockquote p {
 /* - footer  - */
 /*-------------*/
 
-.turn-up {
+.dark-mode {
     right: 20px;
-    bottom: 60px;
-    padding: .5em .6em;
+    bottom: 30px;
+    font-size: 30px;
+    color: #3498db;
+    /* padding-left: 0.2rem; */
+    padding: .5rem .5rem;
     display: block;
     cursor: pointer;
     position: fixed;
     background: #fff;
     border-radius: 4px;
     border: 1px solid #eee;
-    transform: translateX(60px);
+    /* transform: translateX(80px); */
+    transition: color .3s, border .3s, background .3s, transform .3s;
+}
+
+.dark-mode-label:before, .dark-mode-label:after {
+    display: none;
+}
+
+.turn-up {
+    right: 20px;
+    bottom: 100px;
+    padding: .5rem .5rem;
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    transform: translateX(80px);
     transition: color .3s, border .3s, background .3s, transform .3s;
 }
 
@@ -376,7 +400,7 @@ blockquote p {
 }
 
 .turn-up:before {
-    width: 1.5em;
+    width: 1.5rem;
     display: block;
     text-align: center;
 }

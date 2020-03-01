@@ -39,12 +39,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/styles/atom-one-light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.4.1/dist/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/clover.css?version=20021901'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20021901'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20021901'); ?>">
 
     <script type="text/javascript">
         var _paq = window._paq || [];
@@ -72,7 +71,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 <body>
     <div class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">idealclover</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -102,8 +101,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                 </ul>
             </div>
         </nav>
-        <div id="banner" class="alert alert-secondary alert-dismissible text-center fade show" role="alert" style="display:none;">
-            <div style="padding-left: 34px; ">
+        <div id="banner" class="alert alert-dark alert-dismissible text-center fade show" role="alert" style="display:none;">
+            <div style="padding-left: 34px;">
                 <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
                     用邮箱订阅翠翠的博客吧！ </a>
             </div>

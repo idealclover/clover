@@ -32,11 +32,11 @@
                 <?php while ($this->next()) : ?>
                     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
                         <h1 class="post-title" itemprop="name headline">
-                            <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                            <a itemprop="url" class="text-body" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                         </h1>
                         <p id="post-meta">
                             <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
-                            <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
+                            <i class="fa fa-tags"></i> <?php $this->category(','); ?>  |
                             <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid); ?> <?php _e("赞") ?> |
                             <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                             <!-- TODO: 输出点赞&浏览数-->

@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) {
     exit;
 } ?>
-<div class="col-12 col-lg-4" id="secondary" role="complementary">
+<div class="col-12 col-lg-4">
     <div class="card">
         <div class="card-header">
             <div class="widget-title"><?php _e("🤔关于我") ?></div>
@@ -49,12 +49,12 @@
                     <img width="28px" src="<?php $this->options->themeUrl('assets/icons/weibo.svg'); ?>">
                 </a>
             </div>
-            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" data-content='
-                <a href="<?php $this->options->themeUrl('assets/gpg.txt'); ?>" target="_blank" class="btn btn-outline-dark btn-sm btn-block"><i class="fa fa-cloud-download" aria-hidden="true"></i> 下载</a>
+            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" data-content='
+                <a href="<?php $this->options->themeUrl('assets/gpg.txt'); ?>" target="_blank" class="btn btn-outline-primary btn-sm btn-block"><i class="fa fa-cloud-download" aria-hidden="true"></i> 下载</a>
 				或者通过联系方式交换你的公钥<br />
 				指纹:<code> 1214 A7DF 781D A437 041F 586E 6BDC AEEE FE3B 6493</code>
             </div>'><i class="fa fa-key"></i> GPG Key</button>
-            <a href="<?php $this->options->siteUrl(); ?>index.php/about.html" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-street-view"></i> <?php _e("了解更多") ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="<?php $this->options->siteUrl(); ?>index.php/about.html" target="_blank" role="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-street-view"></i> <?php _e("了解更多") ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
     </div>
     <div class="card">
@@ -67,10 +67,10 @@
                 <?php _e("使用个人创作的") ?> <a style="text-decoration: underline" href="https://github.com/idealclover/clover" target="_blank">clover</a> <a href="https://github.com/idealclover/clover" target="_blank"><img src="https://img.shields.io/github/stars/idealclover/clover.svg?style=social" /></a> <?php _e("主题") ?><br />
             </div>
             <div class="more">
-                <a href="https://idealclover.top/feed" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-rss" aria-hidden="true"></i> <?php _e("RSS 订阅") ?></a>
-                <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-envelope" aria-hidden="true"></i> <?php _e("Email 订阅") ?></a>
-                <a href="https://t.me/idealcloverchannel" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-telegram" aria-hidden="true"></i> <?php _e("Telegram 频道订阅") ?></a>
-                <a href="https://www.pgyer.com/8keO" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-android" aria-hidden="true"></i> <?php _e("下载 Android APP") ?></a>
+                <a href="https://idealclover.top/feed" target="_blank" role="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-rss" aria-hidden="true"></i> <?php _e("RSS 订阅") ?></a>
+                <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" role="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-envelope" aria-hidden="true"></i> <?php _e("Email 订阅") ?></a>
+                <a href="https://t.me/idealcloverchannel" target="_blank" role="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-telegram" aria-hidden="true"></i> <?php _e("Telegram 频道订阅") ?></a>
+                <a href="https://www.pgyer.com/8keO" target="_blank" role="button" class="btn btn-outline-primary btn-sm"><i class="fa fa-android" aria-hidden="true"></i> <?php _e("下载 Android APP") ?></a>
             </div>
         </div>
     </div>
@@ -90,6 +90,16 @@
         </div>
         <div class="card-body">
             <img src="https://image.idealclover.cn/blog/assets/qrcode.png" />
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title"><?php _e("💸支持我") ?></div>
+        </div>
+        <div class="card-body">
+        <a href="https://donate.idealclover.cn" target="_blank">
+            <img src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
+            </a>
         </div>
     </div>
 </div>

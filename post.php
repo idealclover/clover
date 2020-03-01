@@ -8,11 +8,11 @@
         <div class="col-12 col-lg-8">
             <article class="post">
                 <h1 class="post-title">
-                    <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                    <a itemprop="url" class="text-body" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                 </h1>
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
-                    <i class="fa fa-tags"></i> <?php $this->category('Y.m.d'); ?> |
+                    <i class="fa fa-tags"></i> <?php $this->category(' '); ?> |
                     <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false); _e(" 赞") ?> |
                     <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
@@ -23,7 +23,7 @@
                 </p>
                 <?php if ($this->fields->ENG) : ?>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Language
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

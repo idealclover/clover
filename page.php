@@ -9,7 +9,7 @@
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
                 <section>
                     <h1 class="page-title" itemprop="name headline">
-                        <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                        <a itemprop="url" class="text-body" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                     </h1>
                     <?php if ($this->authorId == $this->user->uid) : ?>
                         <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid; ?>" target="_blank"><?php _e("编辑") ?></a>

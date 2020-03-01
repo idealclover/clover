@@ -17,8 +17,8 @@
     ?>
 
     <li id="<?php $comments->theId(); ?>">
-        <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/imgs/default.jpg'); ?>
-        <div class="coment-meta">
+        <?php $comments->gravatar('45', $default = "https://image.idealclover.cn/blog/assets/default.jpg"); ?>
+        <div class="comment-meta">
             <span class="comment-author"><?php $comments->author(); ?></span>
             <time class="comment-time"><?php $comments->date('y.m.d'); ?></time>
             <span class="comment-reply"><?php $comments->reply(); ?></span>
@@ -76,7 +76,7 @@
         <?php $comments->pageNav(_t('&laquo; 前一页'), _t('后一页 &raquo;')); ?>
     <?php endif; ?>
 </section>
-<script src="<?php $this->options->themeUrl('libs/OwO/OwO.min.js'); ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
 <script>
     var OwO_demo = new OwO({
         logo: 'OωO表情',

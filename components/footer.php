@@ -41,7 +41,12 @@
 </div>
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
-    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <a class="turn-up" href="#"><i class="fa fa-rocket" style="height: 30px; width: 30px;"></i></a>
+    <!-- <a class="dark-mode" href="#">🌓</a> -->
+    <div class="dark-mode custom-control custom-switch">
+        <label class="dark-mode-label custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" style="height: 30px; width: 30px;"></i></label>
+        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+    </div>
     <div class="row justify-content-center" style="margin: 0">
         <div>📝除非特别注明，</div>
         <div>本站所有文章在 CC BY-NC-SA 4.0 协议下授权</div>
@@ -68,11 +73,12 @@
 <?php endif ?>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dark-mode-switch@1.0.0/dark-mode-switch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-<script src="<?php $this->options->themeUrl('assets/scripts/clover.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('assets/scripts/main.js'); ?>"></script>
 
 </body>
 

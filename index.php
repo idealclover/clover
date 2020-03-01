@@ -57,11 +57,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         <h3 id="head"> ... </h3>
     </div>
     <div id="items">
-        <a href="category/blog/">🔨技术</a> |
-        <a href="category/testing/">🖥️测评</a> |
-        <a href="category/thinking/">🤔随想</a> |
-        <a href="category/life/">😋生活</a> |
-        <a href="about.html">📖关于</a>
+        <a class="text-body" href="category/blog/">🔨技术</a> |
+        <a class="text-body" href="category/testing/">🖥️测评</a> |
+        <a class="text-body" href="category/thinking/">🤔随想</a> |
+        <a class="text-body" href="category/life/">😋生活</a> |
+        <a class="text-body" href="about.html">📖关于</a>
     </div>
     <a class="small" target="_blank"  href="https://github.com/idealclover/Random-Homepage">How this page works.</a>
     <!-- <a  target="_blank" href="https://github.com/idealclover"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Followers&query=%24.followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fidealclover&style=social&logo=github" /></a> -->
