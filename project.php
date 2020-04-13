@@ -24,7 +24,7 @@
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
                 <section>
                     <h1 class="page-title" itemprop="name headline">
-                        <a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                        <a class="text-body" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                     </h1>
                     <?php if ($this->authorId == $this->user->uid) : ?>
                         <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-page.php?cid=<?php echo $this->cid; ?>" target="_blank" role="button"><?php _e("编辑") ?></a>
@@ -257,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <?php AnotherLike_Plugin::theLike(); ?>
+            <?php AnotherLike_Plugin::theLike($this->cid); ?>
             <?php $this->need('components/comments.php'); ?>
         </div>
         <?php $this->need('components/sidebar.php'); ?>

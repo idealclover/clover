@@ -18,6 +18,7 @@
 [data-theme="dark"] .card,
 [data-theme="dark"] .jumbotron,
 [data-theme="dark"] .modal-content,
+[data-theme="dark"] blockquote,
 [data-theme="dark"] input,
 [data-theme="dark"] textarea {
   background-color: #303030 !important;

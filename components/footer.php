@@ -34,7 +34,7 @@
                 </button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary"" data-dismiss=" modal">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
             </div>
         </div>
     </div>
@@ -54,9 +54,25 @@
     <br />
     &copy; <?php echo date('Y'); ?>
     <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('Powered by <a href="http://www.typecho.org">Typecho</a>'); ?>.<br />
+    Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a><br />
     <div id="span_dt_dt"></div>
-    </script>
+    <?php if (!$this->is('index')) : ?>
+        <div>
+            <a href="https://t.me/idealcloverchannel" style="text-decoration: none" target="_blank">
+                <img src="https://img.shields.io/badge/dynamic/json?label=Telegram&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3a%2f%2fapi.spencerwoo.com%2fsubstats%2f%3fsource%3dtelegram%26queryKey%3didealcloverchannel&color=2ca5e0&logo=telegram&longCache=true">
+            </a>
+        </div>
+        <div>
+            <a href="https://idealclover.top/feed" style="text-decoration: none" target="_blank">
+                <img src="https://img.shields.io/badge/dynamic/json?color=ffa500&label=RSS%20Feed&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dinoreader%257Cfeedly%26queryKey%3Dhttps%3A%2F%2Fidealclover.top%2Ffeed&logo=rss&longCache=true">
+            </a>
+        </div>
+        <div class="shield">
+            <a href="https://mailchi.mp/7f28311041bc/idealclover" style="text-decoration: none" target="_blank">
+                <img src="https://img.shields.io/badge/dynamic/json?label=Email&suffix=%20Subscribers&query=%24.totalSubs&url=https%3a%2f%2fmailchimp.idealclover.workers.dev&color=168de2&logo=mail.ru&longCache=true">
+            </a>
+        </div>
+    <?php endif ?>
 </footer>
 
 <?php $this->footer(); ?>
@@ -77,8 +93,9 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="<?php $this->options->themeUrl('assets/scripts/main.js'); ?>"></script>
-
+<script src="<?php $this->options->themeUrl('libs/mouse-click/mouse-click.js'); ?>"></script>
 </body>
 
 </html>

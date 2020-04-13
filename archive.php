@@ -4,13 +4,6 @@
 
 <?php $this->need('components/header.php'); ?>
 
-<style>
-    .post-content a img {
-        display: none;
-    }
-</style>
-
-
 <div class="container col-10" id="main">
 
     <!-- <div class="col-12" id="title">
@@ -37,12 +30,21 @@
                         <p id="post-meta">
                             <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                             <i class="fa fa-tags"></i> <?php $this->category(','); ?> |
-                            <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false, $this->cid); ?> <?php _e("赞") ?> |
+                            <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike($this->cid, false); ?> <?php _e("赞") ?> |
                             <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                             <!-- TODO: 输出点赞&浏览数-->
                         </p>
                         <div class="post-content" itemprop="articleBody">
-                            <?php $this->content(_t('查看更多 ->')); ?>
+                            <?php
+                            $c = $this->excerpt;
+                            $c = preg_replace("/<[img|IMG].*?src=[\'\"](.*?(?:[\.gif|\.jpg|\.jpeg|\.png|\.tiff|\.bmp]))[\'|\"].*?[\/]?>/", "", $c);
+                            if (preg_match('/<pre>/', $c)) {
+                                echo $c, '</code></pre>';
+                            } else {
+                                echo $c;
+                            }
+                            echo '<p class="more"><a href="', $this->permalink(), '" title="', $this->title(), '">查看更多 -></a></p>';
+                            ?>
                         </div>
                     </article>
                     <hr />

@@ -24,6 +24,8 @@ function show_date_time() {
 }
 show_date_time();
 
+pangu.spacingElementById('main');
+
 // 代码高亮
 
 hljs.initHighlightingOnLoad();

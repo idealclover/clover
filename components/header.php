@@ -42,28 +42,16 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.4.1/dist/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20021901'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20021901'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20041301'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20031801'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-
-    <script type="text/javascript">
-        var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u = "//analytics.idealclover.cn/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript';
-            g.async = true;
-            g.defer = true;
-            g.src = u + 'matomo.js';
-            s.parentNode.insertBefore(g, s);
-        })();
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-112910356-3');
     </script>
 
     <!-- 通过自有函数输出HTML头部信息 -->
@@ -83,6 +71,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link <?php if ($this->is('index')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>"><?php _e("主页") ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($this->is('page', 'articles')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/articles.html"><?php _e("归档") ?></a>
                     </li>
                     <?php $category = $this->widget('Widget_Metas_Category_List');
                     if ($category->have()) :

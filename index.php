@@ -16,25 +16,27 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 <?php $this->need('components/header.php'); ?>
 <style type="text/css">
     #main {
-        margin-top: 3rem !important;
-        padding-bottom: 4rem;
+        /* margin-top: 3rem !important; */
+        padding-bottom: 2rem;
         text-align: center;
         font-family: COURIER, arial, sans-serif;
     }
 
     #title {
+        font-weight: 500;
         margin-top: 3rem;
     }
 
     #head {
         margin-top: 2rem;
+        font-weight: 500;
     }
 
     #items {
         color: #737386;
         font-size: 1rem;
         display: block;
-        margin-top: 3.5rem;
+        margin-top: 2rem;
     }
 
     #items a {
@@ -43,7 +45,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     }
 
     a.small {
-        margin-top: 3rem;
+        margin-top: 2rem;
         display: block;
         color: #8C2727;
         font-size: 0.9rem;

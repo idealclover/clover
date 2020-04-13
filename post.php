@@ -13,7 +13,7 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category(' '); ?> |
-                    <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike(false);
+                    <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike($this->cid, false);
                                                         _e(" 赞") ?> |
                     <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>
                     <!-- TODO: 输出点赞&浏览数-->
@@ -72,7 +72,7 @@
                 <li><?php _e('下一篇:');
                     $this->theNext('%s', _t('没有了')); ?></li>
             </ul>
-            <?php AnotherLike_Plugin::theLike(); ?>
+            <?php AnotherLike_Plugin::theLike($this->cid); ?>
             <?php $this->need('components/comments.php'); ?>
         </div><!-- end #main-->
         <?php $this->need('components/sidebar.php'); ?>
