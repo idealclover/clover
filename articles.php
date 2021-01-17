@@ -44,7 +44,8 @@
                     $mon = $mon_tmp;
                     $output .= '<li><span class="al_mon">' . $mon . ' 月</span><ul class="al_post_list">';
                 }
-                $output .= '<li>' . date('m.d: ', $archives->created) . '<a href="' . $archives->permalink . '">' . $archives->title . '</a> (' . AnotherLike_Plugin::theLike($archives->cid, false, false) . ' <i class="fa fa-thumbs-o-up"></i> , ' . $archives->commentsNum . ' <i class="fa fa-comments-o"></i>' . ')</li>';
+                $output .= '<li>' . date('m.d: ', $archives->created) . '<a href="' . $archives->permalink . '">' . $archives->title . '</a>';
+                // $output .= '<li>' . date('m.d: ', $archives->created) . '<a href="' . $archives->permalink . '">' . $archives->title . '</a> (' . AnotherLike_Plugin::theLike($archives->cid, false, false) . ' <i class="fa fa-thumbs-o-up"></i> , ' . $archives->commentsNum . ' <i class="fa fa-comments-o"></i>' . ')</li>';
             endwhile;
             $output .= '</ul></li></ul></div>';
             echo $output;

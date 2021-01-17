@@ -24,15 +24,48 @@ function show_date_time() {
 }
 show_date_time();
 
-pangu.spacingElementById('main');
+pangu.spacingElementById("main");
 
 // 代码高亮
-
 hljs.initHighlightingOnLoad();
+$("pre").each(function (i, e) {
+  $(this).html(
+    '<div class="code-toolbar">' +
+      $(this)
+        .html()
+        .replace("<code", '<code id="codeblock' + i + '"') +
+      '<div class="toolbar"><div class="toolbar-item"><span>' +
+      // $this.html() +
+      '</span></div><div class="toolbar-item"><button class="btn-copycode" data-clipboard-target="#codeblock' +
+      i +
+      '">Copy</button></div></div><div>'
+  );
+});
+$("pre code").each(function () {
+  $(this).html(
+    "<ul><li>" + $(this).html().replace(/\n/g, "\n</li><li>") + "\n</li></ul>"
+  );
+});
+setTimeout(function () {
+  $("pre").each(function (i, e) {
+    let html = $(this)[0].outerHTML;
+    let re = /class="hljs (.*?)"/;
+    let type = html.match(re);
+    if(type[1] != null) $(this).find(".toolbar-item span")[0].innerHTML = type[1];
+  });
+}, 0);
+var clipboard = new ClipboardJS(".btn-copycode");
+clipboard.on("success", function (e) {
+  e.trigger.innerHTML = "Copied!";
+  setTimeout(function () {
+    e.trigger.innerHTML = "Copy";
+  }, 3000);
+  e.clearSelection();
+});
 
 // 图片预览
 
-$("p img").each(function(i) {
+$("p img").each(function (i) {
   if (!this.parentNode.href && $(this).attr("type") !== "memo") {
     $(this).wrap(
       "<a href='" +
@@ -43,7 +76,7 @@ $("p img").each(function(i) {
     );
   }
 });
-$(document).ready(function() {
+$(document).ready(function () {
   $("[data-fancybox]").fancybox();
 });
 
@@ -51,7 +84,7 @@ $(document).ready(function() {
 
 var titleTime;
 var OriginTitile = document.title;
-document.addEventListener("visibilitychange", function() {
+document.addEventListener("visibilitychange", function () {
   if (document.hidden) {
     // var link =
     //   document.querySelector("link[rel*='icon']") ||
@@ -71,7 +104,7 @@ document.addEventListener("visibilitychange", function() {
     // link.href = "/favicon.ico";
     // document.getElementsByTagName("head")[0].appendChild(link);
     document.title = "(/≧▽≦)/ 呦吼~肥来啦！";
-    titleTime = setTimeout(function() {
+    titleTime = setTimeout(function () {
       document.title = OriginTitile;
     }, 1000);
   }
@@ -79,11 +112,11 @@ document.addEventListener("visibilitychange", function() {
 
 // 返回页首
 
-$(function() {
+$(function () {
   $('[data-toggle="popover"]').popover();
 });
 
-window.onscroll = function() {
+window.onscroll = function () {
   var btn = document.getElementsByClassName("turn-up")[0];
   var scroll =
     window.pageYOffset ||
@@ -98,15 +131,15 @@ window.onscroll = function() {
 };
 
 var scroll = new SmoothScroll("a.turn-up, .article-list a", {
-  offset: 100
+  offset: 100,
 });
 
 // 顶栏通知
 
-$(".close").click(function(e) {
+$(".close").click(function (e) {
   e.preventDefault();
   $.cookie("alert-box", "closed", {
-    path: "/"
+    path: "/",
   });
   $("#main").css("margin-top", "4.5rem");
 });
@@ -114,3 +147,11 @@ if ($.cookie("alert-box") !== "closed") {
   $("#main").css("margin-top", "6.5rem");
   $(".alert").css("display", "block");
 }
+
+if (window.location.hash.indexOf('#') >= 0) {
+  let padding = $.cookie("alert-box") !== "closed" ? 80 : 50;
+  $('html,body').animate({
+      scrollTop: ($(window.location.hash).offset().top - padding) + "px"
+  },
+  300);
+};

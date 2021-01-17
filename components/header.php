@@ -26,6 +26,23 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
             ), '', ' - '); ?><?php $this->options->title(); ?>
     </title>
 
+    <!--twitter card begin-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@idealclover" />
+    <meta name="twitter:creator" content="@idealclover" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php $this->permalink() ?>" />
+    <meta property="og:title" itemprop="name" content="<?php $this->archiveTitle('', ''); ?>" />
+    <meta property="og:image" itemprop="image" content="<?php $this->options->themeUrl('assets/favicon/android-chrome-192x192.png'); ?>">
+    <?php if ($this->is('post')) : ?>
+        <!-- <meta itemprop="image" content="<?php // echo Content::returnHeaderImgSrc($this, 'post', 0, true); 
+                                                ?>"> -->
+        <meta name="description" itemprop="description" property="og:description" content="<?php $this->excerpt(); ?>">
+    <?php else : ?>
+        <meta name="description" property="og:description" itemprop="description" content="<?php $this->options->description(); ?>">
+    <?php endif; ?>
+    <!--twitter card end-->
+
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="idealclover">
@@ -41,17 +58,21 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.4.1/dist/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20041301'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20042202'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20031801'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-112910356-3');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-112910356-3');
     </script>
 
     <!-- 通过自有函数输出HTML头部信息 -->

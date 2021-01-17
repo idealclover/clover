@@ -28,10 +28,13 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">请重新复制</h5>
+                <h5 class="modal-title">提示</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+            </div>
+            <div class="modal-body">
+                感谢同意！烦请重新复制 OωO
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
@@ -48,9 +51,9 @@
     </div>
     <div class="row justify-content-center" style="margin: 0">
         <div>📝除非特别注明，</div>
-        <div>本站所有文章在 CC BY-NC-SA 4.0 协议下授权</div>
+        <div>本站所有文章在 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议下授权</div>
     </div>
-    博客主题 <a href="https://github.com/idealclover/Clover">clover</a> 由 <a href="https://idealclover.top">idealclover</a> 本人用❤制作
+    博客主题 <a target="_blank" href="https://github.com/idealclover/Clover">clover</a> 由 <a target="_blank" href="https://idealclover.top">idealclover</a> 本人用❤制作
     <br />
     &copy; <?php echo date('Y'); ?>
     <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
@@ -90,10 +93,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dark-mode-switch@1.0.0/dark-mode-switch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script src="<?php $this->options->themeUrl('assets/scripts/main.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('libs/mouse-click/mouse-click.js'); ?>"></script>
 </body>

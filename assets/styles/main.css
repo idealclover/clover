@@ -65,7 +65,7 @@ p {
 }
 
 ul {
-  padding-left:1.2rem;
+  padding-left: 1.2rem;
 }
 
 /* body {
@@ -132,7 +132,7 @@ ul {
 
 blockquote {
   padding: 0.5rem;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 blockquote p:before {
@@ -189,7 +189,7 @@ blockquote p {
 
 .page-navigator .current a {
   color: #444;
-  background: #EEE;
+  background: #eee;
 }
 
 /* - post comments - */
@@ -442,3 +442,119 @@ blockquote p {
   margin: 0 3px 0 5px;
   width: 10px;
 } */
+
+/* - code highlight  - */
+/*---------------------*/
+
+.hljs {
+  border: 0;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  display: block;
+  padding: 1px;
+  margin: 0;
+  width: 100%;
+  font-weight: 200;
+  overflow-x: auto;
+  background-color: #696969;
+}
+.hljs ul {
+  /* margin: 0px 0px 0 40px !important; */
+  padding: 0;
+  margin: 0;
+}
+.hljs ul li {
+  counter-increment: custom;
+  /* list-style: none; */
+  /* list-style: decimal-leading-zero; */
+  /* border-left: 1px solid #ddd !important; */
+  padding: 5px !important;
+  margin: 0 !important;
+  line-height: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.hljs ul li:first-child {
+  counter-reset: custom;
+}
+
+.hljs ul li:before {
+  width: 3em;
+  display: inline-block;
+  text-align: center;
+  content: counter(custom);
+}
+
+.hljs ul li:nth-of-type(even) {
+  color: inherit;
+}
+
+.code-toolbar {
+  font-size: 100%;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  padding-top: 30px;
+  background-color: #3f3f3f;
+  margin: 20px 0 20px 0;
+}
+
+.code-toolbar::before {
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 11px;
+  height: 11px;
+  left: 10px;
+  top: 10px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+
+.code-toolbar > .toolbar {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+.code-toolbar > .toolbar button {
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  background-color: transparent;
+  right: 6px;
+  top: 0;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 3px 5px;
+  border: 1px solid;
+  border-radius: 6px;
+  opacity: 0;
+  color: #fff;
+}
+
+.code-toolbar:hover button {
+  opacity: 1;
+}
+
+.code-toolbar > .div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  opacity: 0;
+  color: #fff;
+}
+
+.code-toolbar:hover .toolbar span {
+  opacity: 1;
+}
