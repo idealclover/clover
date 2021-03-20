@@ -34,13 +34,16 @@
     }
 
     .linktitle {
-        margin: 8px 0 !important;
+        margin: 8px 5px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
         text-align: center !important;
-        font-weight: 600 !important;
+        /* font-weight: 600 !important; */
         border: none !important;
+    }
+    .linklist a {
+        text-decoration: none !important;
     }
 </style>
 

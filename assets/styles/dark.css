@@ -33,3 +33,13 @@
 [data-theme="dark"] code {
   color: #eee !important;
 }
+
+[data-theme="dark"] .OwO-items,
+[data-theme="dark"] .linkcard {
+  background: #303030 !important;
+}
+
+[data-theme="dark"] .OwO-item {
+  background: #303030 !important;
+  border: 1px solid #eee;
+}

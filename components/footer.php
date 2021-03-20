@@ -45,34 +45,36 @@
 <footer class="footer bottom" role="contentinfo">
     <!--置顶按钮-->
     <a class="turn-up" href="#"><i class="fa fa-rocket" style="height: 30px; width: 30px;"></i></a>
-    <div class="dark-mode custom-control custom-switch">
-        <label class="dark-mode-label custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" style="height: 30px; width: 30px;"></i></label>
-        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+    <!-- <a class="turn-up" href="#"><i class="fa-moon-o" style="height: 30px; width: 30px;"></i></a> -->
+
+    <div class="dark-mode custom-control custom-switch" style="height: 48px; width: 48px;">
+        <label class="dark-mode-label custom-control-label" style="margin: -9px;" for="darkSwitch"><i class="fa fa-moon-o" style="height: 30px; width: 30px;"></i> <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+        </label>
     </div>
     <div class="row justify-content-center" style="margin: 0">
         <div>📝除非特别注明，</div>
-        <div>本站所有文章在 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议下授权</div>
+        <div>本站所有文章在 <a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议下授权</div>
     </div>
-    博客主题 <a target="_blank" href="https://github.com/idealclover/Clover">clover</a> 由 <a target="_blank" href="https://idealclover.top">idealclover</a> 本人用❤制作
+    博客主题 <a target="_blank" rel="noreferrer" href="https://github.com/idealclover/Clover">clover</a> 由 <a target="_blank" href="https://idealclover.top">idealclover</a> 本人用❤制作
     <br />
     &copy; <?php echo date('Y'); ?>
     <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a><br />
+    Powered by <a target="_blank" rel="noreferrer" href="http://www.typecho.org">Typecho</a><br />
     <div id="span_dt_dt"></div>
     <?php if (!$this->is('index')) : ?>
         <div>
-            <a href="https://t.me/idealcloverchannel" style="text-decoration: none" target="_blank">
-                <img src="https://img.shields.io/badge/dynamic/json?label=Telegram&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3a%2f%2fapi.spencerwoo.com%2fsubstats%2f%3fsource%3dtelegram%26queryKey%3didealcloverchannel&color=2ca5e0&logo=telegram&longCache=true">
+            <a href="https://t.me/idealcloverchannel" rel="noreferrer" style="text-decoration: none" target="_blank">
+                <img alt="telegram" src="https://img.shields.io/badge/dynamic/json?label=Telegram&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3a%2f%2fapi.spencerwoo.com%2fsubstats%2f%3fsource%3dtelegram%26queryKey%3didealcloverchannel&color=2ca5e0&logo=telegram&longCache=true">
             </a>
         </div>
         <div>
-            <a href="https://idealclover.top/feed" style="text-decoration: none" target="_blank">
-                <img src="https://img.shields.io/badge/dynamic/json?color=ffa500&label=RSS%20Feed&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dinoreader%257Cfeedly%26queryKey%3Dhttps%3A%2F%2Fidealclover.top%2Ffeed&logo=rss&longCache=true">
+            <a href="https://idealclover.top/feed" rel="noreferrer" style="text-decoration: none" target="_blank">
+                <img alt="rss" src="https://img.shields.io/badge/dynamic/json?color=ffa500&label=RSS%20Feed&suffix=%20Subscribers&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dinoreader%257Cfeedly%26queryKey%3Dhttps%3A%2F%2Fidealclover.top%2Ffeed&logo=rss&longCache=true">
             </a>
         </div>
         <div class="shield">
-            <a href="https://mailchi.mp/7f28311041bc/idealclover" style="text-decoration: none" target="_blank">
-                <img src="https://img.shields.io/badge/dynamic/json?label=Email&suffix=%20Subscribers&query=%24.totalSubs&url=https%3a%2f%2fmailchimp.idealclover.workers.dev&color=168de2&logo=mail.ru&longCache=true">
+            <a href="https://mailchi.mp/7f28311041bc/idealclover" rel="noreferrer" style="text-decoration: none" target="_blank">
+                <img alt="mail" src="https://img.shields.io/badge/dynamic/json?label=Email&suffix=%20Subscribers&query=%24.totalSubs&url=https%3a%2f%2fmailchimp.idealclover.workers.dev&color=168de2&logo=mail.ru&longCache=true">
             </a>
         </div>
     <?php endif ?>

@@ -25,6 +25,7 @@ function show_date_time() {
 show_date_time();
 
 pangu.spacingElementById("main");
+var lazyLoadInstance = new LazyLoad();
 
 // 代码高亮
 hljs.initHighlightingOnLoad();
@@ -51,7 +52,8 @@ setTimeout(function () {
     let html = $(this)[0].outerHTML;
     let re = /class="hljs (.*?)"/;
     let type = html.match(re);
-    if(type[1] != null) $(this).find(".toolbar-item span")[0].innerHTML = type[1];
+    if (type[1] != null)
+      $(this).find(".toolbar-item span")[0].innerHTML = type[1];
   });
 }, 0);
 var clipboard = new ClipboardJS(".btn-copycode");
@@ -148,10 +150,37 @@ if ($.cookie("alert-box") !== "closed") {
   $(".alert").css("display", "block");
 }
 
-if (window.location.hash.indexOf('#') >= 0) {
+if (
+  window.location.hash.indexOf("#") >= 0 &&
+  window.location.hash.indexOf("#top") < 0
+) {
   let padding = $.cookie("alert-box") !== "closed" ? 80 : 50;
-  $('html,body').animate({
-      scrollTop: ($(window.location.hash).offset().top - padding) + "px"
-  },
-  300);
-};
+  $("html,body").animate(
+    {
+      scrollTop: $(window.location.hash).offset().top - padding + "px",
+    },
+    300
+  );
+}
+
+// <!-- start webpushr code -->
+(function (w, d, s, id) {
+  if (typeof w.webpushr !== "undefined") return;
+  w.webpushr =
+    w.webpushr ||
+    function () {
+      (w.webpushr.q = w.webpushr.q || []).push(arguments);
+    };
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  js = d.createElement(s);
+  js.id = id;
+  js.async = 1;
+  js.src = "https://cdn.webpushr.com/app.min.js";
+  fjs.parentNode.appendChild(js);
+})(window, document, "script", "webpushr-jssdk");
+webpushr("setup", {
+  key:
+    "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
+});
+// <!-- end webpushr code -->
