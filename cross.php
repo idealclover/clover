@@ -126,13 +126,13 @@ function threadedComments($comments, $options)
                     <div class="tab-pane fade" id="pills-share" role="tabpanel" aria-labelledby="pills-share-tab">
                         <?php
                         $rss = new DOMDocument();
-                        $rss->load('https://wallabag.idealclover.cn/idealclover/k2FPz43Z4V4hw1/starred.xml');
+                        $rss->load('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred');
                         $feeds = array();
-                        foreach ($rss->getElementsByTagName('item') as $node) {;
+                        foreach ($rss->getElementsByTagName('entry') as $node) {
                             $item = array(
                                 'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
                                 // 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
-                                'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
+                                'link' => $node->getElementsByTagName('link')->item(1)->nodeValue,
                                 'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
                             );
                             array_push($feeds, $item);
@@ -156,13 +156,14 @@ function threadedComments($comments, $options)
         <?php $this->need('components/sidebar.php'); ?>
     </div>
 </div><!-- end #main-->
-<script src="<?php $this->options->themeUrl('libs/OwO/OwO.min.js'); ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
 <script>
     var OwO_demo = new OwO({
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
+        // api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
+        api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
         position: 'down',
         width: '100%',
         maxHeight: '250px'
