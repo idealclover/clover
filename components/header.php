@@ -61,7 +61,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.css?version=20042202'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=21032101'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20031801'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->

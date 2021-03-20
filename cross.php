@@ -108,9 +108,9 @@ function threadedComments($comments, $options)
                     </div>
                 </div>
                 <hr />
-                <ul class="nav nav-pills nav-dark" id="pills-tab" role="tablist">
+                <ul class="nav nav-tabs nav-dark" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" style=".active{background-color: #000;}" id="pills-moment-tab" data-toggle="pill" href="#pills-moment" role="tab" aria-controls="pills-moment" aria-selected="true"><?php _e("我的动态") ?></a>
+                        <a class="nav-link active" id="pills-moment-tab" data-toggle="pill" href="#pills-moment" role="tab" aria-controls="pills-moment" aria-selected="true"><?php _e("我的动态") ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="pills-share-tab" data-toggle="pill" href="#pills-share" role="tab" aria-controls="pills-share" aria-selected="false"><?php _e("我的分享") ?></a>
@@ -133,7 +133,7 @@ function threadedComments($comments, $options)
                                 'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
                                 // 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
                                 'link' => $node->getElementsByTagName('link')->item(1)->nodeValue,
-                                'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
+                                'date' => $node->getElementsByTagName('published')->item(0)->nodeValue,
                             );
                             array_push($feeds, $item);
                         }
@@ -141,10 +141,10 @@ function threadedComments($comments, $options)
                         <ol class="comment-list">
                             <?php foreach ($feeds as $feed) : ?>
                                 <li class="moment" id="<?php $comments->theId(); ?>">
-                                    <img class="avatar" src="https://secure.gravatar.com/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45&amp;r=G&amp;d=https://127.0.0.1/blog/usr/themes/Clover/assets/imgs/default.jpg" alt="clover" width="45" height="45">
+                                    <img class="avatar" src="https://gravatar.loli.net/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45&amp;r=G&amp;d=https://127.0.0.1/blog/usr/themes/Clover/assets/imgs/default.jpg" alt="clover" width="45" height="45">
                                     <div class="moment-meta">
-                                        <span class="moment-author">clover</span>
-                                        <time class="moment-time"><?php echo (date('m月d日', strtotime($feed['date']))); ?></time>
+                                        <span class="moment-author">idealclover</span>
+                                        <time class="moment-time"><?php echo (date('y.m.d h:m', strtotime($feed['date']))); ?></time>
                                         <p><strong><a href="<?php echo ($feed['link']) ?>" style="text-decoration: underline" target="_blank" title="<?php echo ($feed['title']) ?>"><i class="fa fa-link" aria-hidden="true"></i> <?php echo ($feed['title']) ?></a></strong><br />
                                 </li>
                             <?php endforeach; ?>

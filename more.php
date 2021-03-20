@@ -34,9 +34,9 @@
         <div class="col-lg-6 col-12">
             <div class="jumbotron">
                 <h1>我的笔记 / My Notebooks</h1>
-                <p class="lead">我的 OneNote 笔记，上面是我大学的所思所获。</p>
+                <p class="lead">我的 Obsidian.md 笔记，上面是翠翠的所思所获。</p>
                 <hr class="my-4">
-                <a class="btn btn-secondary btn-lg" href="/notes.html" role="button">Learn more</a>
+                <a class="btn btn-secondary btn-lg" href="https://publish.obsidian.md/idealclover" role="button">Learn more</a>
             </div>
         </div>
         <div class="col-lg-6 col-12">
