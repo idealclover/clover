@@ -34,17 +34,20 @@
     }
 
     .linktitle {
-        margin: 8px 0 !important;
+        margin: 8px 5px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
         text-align: center !important;
-        font-weight: 600 !important;
+        /* font-weight: 600 !important; */
         border: none !important;
+    }
+    .linklist a {
+        text-decoration: none !important;
     }
 </style>
 
-<div class="container col-10" id="main" role="main">
+<div class="container col-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">

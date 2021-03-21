@@ -46,7 +46,7 @@
         margin: 0.2rem 0;
     }
 </style>
-<div class="container col-10" id="main" role="main">
+<div class="container col-6" id="main" role="main">
     <section class="contact">
         <h2 class="name">翠翠 idealclover</h1>
             Blog: <a href="https://idealclover.top">https://idealclover.top</a><br />

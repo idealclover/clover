@@ -18,7 +18,7 @@
     }
 </style>
 
-<div class="container col-10" id="main">
+<div class="container col-9" id="main">
 
     <div class="row">
         <div class="col-12 col-lg-8">

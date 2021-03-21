@@ -56,13 +56,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.4.1/dist/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/flatly/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=20042202'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=20031801'); ?>">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=21032102'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=21032101'); ?>">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
     <script>
@@ -116,7 +117,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         </nav>
         <div id="banner" class="alert alert-dark alert-dismissible text-center fade show" role="alert" style="display:none;">
             <div style="padding-left: 34px;">
-                <a href="https://mailchi.mp/7f28311041bc/idealclover" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
+                <a href="https://mailchi.mp/7f28311041bc/idealclover" rel="noreferrer" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
                     用邮箱订阅翠翠的博客吧！ </a>
             </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="display: inline-block;">

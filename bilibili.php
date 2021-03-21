@@ -49,41 +49,37 @@ function curl_get_contents($url)
 ?>
 
 <style>
-    .moviecard {
-        position: relative;
-        cursor: pointer;
+    .linkcard {
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
         transition: ease all 0.3s;
         overflow: hidden;
         background: #f7fbf7;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        border: none !important;
-        display: block;
-        margin-left: 15px;
-        margin-bottom: 15px;
+        margin: 7.5px 7.5px 7.5px 7.5px;
+        width: 21vh;
     }
 
-    .movieimg {
+    .linkimg {
         object-fit: cover;
-        width: 100%;
+        height: 28vh !important;
     }
 
-    .movietitle {
-        margin: 8px 0 !important;
-        font-size: 1.2em !important;
+    .linktitle {
+        margin: 8px 5px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
         text-align: center !important;
-        color: #202020 !important;
-        font-weight: 700 !important;
+        /* font-weight: 600 !important; */
         border: none !important;
+    }
+
+    .linktitle a {
+        text-decoration: none !important;
+        color: #777;
     }
 </style>
 
-<div class="container col-10" id="main" role="main">
+<div class="container col-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="panel">
@@ -94,19 +90,20 @@ function curl_get_contents($url)
                         <?php
                         $readList = getBookData($this->fields->mid);
                         foreach ($readList as $v) : ?>
-                            <div class="moviecard" style="width: 10rem;">
-                                <img class="card-img-top movieimg" src="<?php echo $v['img']; ?>" alt="Card image cap" style="height:12rem;" referrerPolicy="no-referrer">
-                                <!-- <div class="card-body moviename">
+                            <div class="linkcard">
+                                <img class="card-img-top linkimg" src="<?php echo $v['img']; ?>" alt="Card image cap" referrerPolicy="no-referrer">
+                                <!-- <div class="card-body linkname">
                                         <a target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                     </div> -->
-                                <div class="movietitle">
-                                    <a class="moviename" target="_blank" target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
+                                <div class="linktitle">
+                                    <a class="linkname" target="_blank" target="_blank" href="<?php echo $v['url']; ?>"><?php echo $v['name']; ?></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
             </article>
+            <?php AnotherLike_Plugin::theLike($this->cid); ?>
             <?php $this->need('components/comments.php'); ?>
         </div>
         <?php $this->need('components/sidebar.php'); ?>

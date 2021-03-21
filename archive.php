@@ -4,7 +4,7 @@
 
 <?php $this->need('components/header.php'); ?>
 
-<div class="container col-10" id="main">
+<div class="container col-9" id="main">
 
     <!-- <div class="col-12" id="title">
         <h1 class="archive-title">
