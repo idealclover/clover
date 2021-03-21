@@ -24,6 +24,29 @@ function show_date_time() {
 }
 show_date_time();
 
+// var info = [
+//   {
+//     name: "github",
+//     url:
+//       "https://api.spencerwoo.com/substats/?source=zhihu&queryKey=cuicuijiang",
+//     query: "data.data.totalSubs"
+//   },
+// ];
+
+// info.forEach(i => {
+//   $.getJSON(i.url,
+//     function (data) {
+//       $("#shield-number-"+i.name)[0].innerHTML = eval(i.query);
+//     }
+//   );
+// });
+
+$(".shield-item").each(function (i, e) {
+  $.getJSON(e.getAttribute("data-url"), function (data) {
+    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = eval(e.getAttribute("data-query"));
+  });
+});
+
 pangu.spacingElementById("main");
 var lazyLoadInstance = new LazyLoad();
 

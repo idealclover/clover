@@ -55,7 +55,7 @@
         <div>📝除非特别注明，</div>
         <div>本站所有文章在 <a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议下授权</div>
     </div>
-    博客主题 <a target="_blank" rel="noreferrer" href="https://github.com/idealclover/Clover">clover</a> 由 <a target="_blank" href="https://idealclover.top">idealclover</a> 本人用❤制作
+    博客主题 <a target="_blank" rel="noreferrer" href="https://github.com/idealclover/Clover">clover</a> 由 <a target="_blank" href="https://idealclover.top">idealclover</a> 用❤制作
     <br />
     &copy; <?php echo date('Y'); ?>
     <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.

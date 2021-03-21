@@ -50,7 +50,7 @@ function threadedComments($comments, $options)
         </div>
     </li>
 <?php } ?>
-<div class="container col-10" id="main" role="main">
+<div class="container col-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">

@@ -18,7 +18,7 @@
     }
 </style>
 
-<div class="container col-10" id="main" role="main">
+<div class="container col-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -188,10 +188,10 @@
                             <a class="btn btn-outline-dark btn-sm github-btn" href="https://github.com/idealclover/zhuye_kim_HTML" target="_blank" role="button">GitHub 地址 <i class="fa fa-external-link" aria-hidden="true"></i></a>
                         </div>
                     </div>
+                    <?php AnotherLike_Plugin::theLike($this->cid); ?>
                 </div>
-                <?php AnotherLike_Plugin::theLike($this->cid); ?>
-                <?php $this->need('components/comments.php'); ?>
             </div>
+            <?php $this->need('components/comments.php'); ?>
         </div>
         <?php $this->need('components/sidebar.php'); ?>
     </div>

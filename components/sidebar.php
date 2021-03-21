@@ -1,6 +1,28 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) {
     exit;
 } ?>
+<?php
+    $info = array(
+        array(
+            "id"=>"zhihu",
+            "name"=>"知乎",
+            "href"=>"https://www.zhihu.com/people/cuicuijiang",
+            "color"=>"rgb(0, 117, 210)",
+            "icon"=>'<svg t="1616307689361" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1770" width="20" height="20"><path d="M512 73.28A438.72 438.72 0 1 0 950.72 512 438.72 438.72 0 0 0 512 73.28z m-98.56 458.88l-16.8 66.88 23.68-20.8s53.92 61.28 64 76.48 1.44 68.96 1.44 68.96l-92.48-113.12s-29.12 101.12-68.48 124.16a97.6 97.6 0 0 1-80 6.56 342.08 342.08 0 0 0 85.44-89.76 382.88 382.88 0 0 0 39.52-119.36h-115.04s8.8-40.48 24.16-41.6 90.88 0 90.88 0l-1.76-124.8-43.2 2.24a96 96 0 0 1-32 48c-24.16 17.44-38.4 10.88-38.4 10.88s42.72-118.24 55.84-141.28 50.4-25.12 50.4-25.12l-23.04 66.72h147.84c17.6 0 18.56 40.64 18.56 40.64h-90.56v122.56s61.28-2.24 81.12 0 19.68 41.6 19.68 41.6z m329.44 160h-91.52l-65.12 46.24-13.6-46.24h-36.96v-368h208z" fill="#0075D2" p-id="1771"></path><path d="M602.88 691.68l54.88-41.44h43.04V364.64h-121.12v285.6h11.2l12 41.44z" fill="#0075D2" p-id="1772"></path></svg>',
+            "url"=>"https://api.spencerwoo.com/substats/?source=zhihu&queryKey=cuicuijiang",
+            "query"=>"data.data.totalSubs"
+        ),
+        array(
+            "id"=>"github",
+            "name"=>"GitHub",
+            "href"=>"https://github.com/idealclover",
+            "color"=>"rgb(24, 23, 23)",
+            "icon"=>'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#181717" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>',
+            "url"=>"https://api.github.com/users/idealclover",
+            "query"=>"data.followers"
+        )
+    )
+?>
 <div class="col-12 col-lg-4">
     <div class="card">
         <div class="card-header">
@@ -9,9 +31,45 @@
         <div class="card-body">
             <div class="intro">
                 <?php _e("翠翠 idealclover") ?><br />
-                <?php _e("南京大学商学院 2016 级本科生") ?><br />
+                <?php _e("南京大学 2016 级本科生") ?><br />
             </div>
-            <style></style>
+            <style>
+                .shield-item {
+                    border-style: solid;
+                    border-radius: .25rem;
+                    border-width: 2px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: .5rem;
+                    margin: .5rem 0;
+                }
+
+                .shield-name {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .shield-number {
+                    /* padding-bottom: .25rem; */
+                    text-align: right;
+                    padding: .25rem .5rem;
+                    text-overflow: hidden;
+                    color: #FFF;
+                }
+            </style>
+            <?php foreach ($info as $i) : ?>
+            <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer">
+                <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
+                    <?php echo $i['icon']; ?>
+                    <div class="col-7" class="shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
+                    <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
+                </div>
+            </a>
+            <?php endforeach; ?>
+
+
+
             <div class="shield">
                 <a href="https://www.zhihu.com/people/cuicuijiang" rel="noreferrer" style="text-decoration: none; padding-top:2px" target="_blank" title="Zhihu: @不蠢会死的某翠">
                     <img alt="Zhihu: @不蠢会死的某翠" src="https://img.shields.io/badge/dynamic/json.svg?labelColor=%230767C8&color=%23343A40&label=%E7%9F%A5%E4%B9%8E%20zhihu&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dzhihu%26queryKey%3Dcuicuijiang&style=for-the-badge&longCache=true">
@@ -79,7 +137,7 @@
         <div class="card-body">
             <div class="intro">
                 <?php _e("基于 Typecho 博客框架") ?><br />
-                <?php _e("使用个人创作的") ?> <a style="text-decoration: underline" rel="noreferrer" href="https://github.com/idealclover/clover" target="_blank">clover</a> <a rel="noreferrer" href="https://github.com/idealclover/clover" rel="noreferrer" target="_blank"><img alt="clover" src="https://img.shields.io/github/stars/idealclover/clover.svg?style=social" /></a> <?php _e("主题") ?><br />
+                <?php _e("使用个人的") ?> <a style="text-decoration: underline" rel="noreferrer" href="https://github.com/idealclover/clover" target="_blank">clover</a> <a rel="noreferrer" href="https://github.com/idealclover/clover" rel="noreferrer" target="_blank"><img alt="clover" src="https://img.shields.io/github/stars/idealclover/clover.svg?style=social" /></a> <?php _e("主题") ?><br />
             </div>
             <div class="shield">
                 <a href="https://t.me/idealcloverchannel" rel="noreferrer" style="text-decoration: none" target="_blank">
