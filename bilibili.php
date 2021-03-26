@@ -79,7 +79,7 @@ function curl_get_contents($url)
     }
 </style>
 
-<div class="container col-9" id="main" role="main">
+<div class="container col-10 col-lg-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
             <article class="panel">

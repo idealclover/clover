@@ -93,7 +93,7 @@ $subs = array(
         "id" => "email",
         "name" => "Email 订阅",
         "desc" => "Email 订阅本站",
-        "href" => "https://www.zhihu.com/people/cuicuijiang",
+        "href" => "https://mailchi.mp/7f28311041bc/idealclover",
         "color" => "#168de2",
         "icon" => '<svg t="1616322364939" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4702" width="20" height="20"><path d="M854.016 342.016l0-86.016-342.016 214.016-342.016-214.016 0 86.016 342.016 212.010667zM854.016 169.984q34.005333 0 59.008 25.984t25.002667 59.989333l0 512q0 34.005333-25.002667 59.989333t-59.008 25.984l-683.989333 0q-34.005333 0-59.008-25.984t-25.002667-59.989333l0-512q0-34.005333 25.002667-59.989333t59.008-25.984l683.989333 0z" p-id="4703" fill="#168de2"></path></svg>',
         "url" => "https://mailchimp.idealclover.workers.dev",

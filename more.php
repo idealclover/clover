@@ -13,7 +13,7 @@
 <?php $this->need('components/header.php'); ?>
 
 
-<div class="container col-9" id="main" role="main">
+<div class="container col-10 col-lg-9" id="main" role="main">
     <div class="row">
         <div class="col-lg-6 col-12">
             <div class="jumbotron">
