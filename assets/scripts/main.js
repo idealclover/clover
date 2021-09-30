@@ -26,7 +26,8 @@ show_date_time();
 
 $(".shield-item").each(function (i, e) {
   $.getJSON(e.getAttribute("data-url"), function (data) {
-    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = eval(e.getAttribute("data-query"));
+    let num = eval(e.getAttribute("data-query"));
+    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = (num == 0 ? 'Error' : num);
   });
 });
 
@@ -190,3 +191,11 @@ webpushr("setup", {
     "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
 });
 // <!-- end webpushr code -->
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+      pageLanguage: 'zh-CN',
+      includedLanguages: 'en,zh-CN,zh-TW,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi',
+      autoDisplay: false
+  }, 'google_translate_element');
+}

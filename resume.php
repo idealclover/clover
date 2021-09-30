@@ -19,6 +19,11 @@
         text-align: center;
     }
 
+    .last-update {
+        color:#7b8a8b;
+        font-size: .8rem;
+    }
+
     .project_value {
         font-weight: bold;
         padding-right: 0;
@@ -46,43 +51,12 @@
         margin: 0.2rem 0;
     }
 </style>
-<div class="container col-6" id="main" role="main">
+<div class="container col-10 col-lg-6" id="main" role="main">
     <section class="contact">
         <h2 class="name">翠翠 idealclover</h1>
             Blog: <a href="https://idealclover.top">https://idealclover.top</a><br />
-            idealclover@live.com
-    </section>
-    <section class="category">
-        <h3 class="category_name">教育背景</h2>
-            <hr />
-            <section class="project">
-                <div class="row">
-                    <div class="project_value col-6">南京大学商学院</div>
-                    <div class="project_time col-6">2016.08 - 2020.06</div>
-                </div>
-                <div class="row">
-                    <div class="project_role col-6">工商管理系</div>
-                    <div class="project_position col-6">江苏南京</div>
-                </div>
-                <ul class="project_list">
-                    <li class="project_listitem">专业课程：会计学 (97) ，微观经济学 (94) ，管理学 (94)</li>
-                    <li class="project_listitem">辅修课程：计算机相关课程 （高级程序设计，计算机网络，数据库概论等） ，逻辑学</li>
-                    <li class="project_listitem">所获荣誉：校级优秀学生 (5%) (2017) ， 人民奖学金 (2017) ，优秀共青团员 (5%)(2017, 2018) </li>
-                    <li class="project_listitem">技能证书：MS Office Specialist (MOS) Master，江苏省计算机等级三级，大学英语六级</li>
-                    <li class="project_listitem">竞赛奖项：华为财务精英挑战赛江苏赛区第四名 (2018)，银星杯学术论文竞赛新人奖 (2018)</li>
-                </ul>
-                <div class="row">
-                    <div class="project_value col-6">哥伦比亚大学 </div>
-                    <div class="project_time col-6">2018.07 - 2018.08</div>
-                </div>
-                <div class="row">
-                    <div class="project_role col-6">交换生</div>
-                    <div class="project_position col-6">美国纽约</div>
-                </div>
-                <ul class="project_list">
-                    <li class="project_listitem">交换课程：数据分析，商业模式，逻辑与辩论</li>
-                </ul>
-            </section>
+            <a href="mailto:idealclover@163.com">idealclover@live.com</a><br />
+        <div class="last-update">最后更新于：2021-01-01</div>
     </section>
     <section class="category">
         <h3 class="category_name">工作经历</h2>
@@ -97,13 +71,14 @@
                     <div class="project_position col-6">北京</div>
                 </div>
                 <ul class="project_list">
+                    <li class="project_listitem">负责巨量引擎广告平台广告创编主流程建设与迭代。</li>
                 </ul>
                 <div class="row">
                     <div class="project_value col-6">京东</div>
                     <div class="project_time col-6">2019.07 - 2019.08</div>
                 </div>
                 <div class="row">
-                    <div class="project_role col-6">JD RUN 产品方向</div>
+                    <div class="project_role col-6">JD RUN 产品方向培训生</div>
                     <div class="project_position col-6">北京</div>
                 </div>
                 <ul class="project_list">
@@ -136,7 +111,7 @@
                 <ul class="project_list">
                     <li class="project_listitem">由个人独立进行产品调研、产品研发及后期产品推广运营活动，为用户头像戴上口罩，呼唤安全意识；</li>
                     <li class="project_listitem">疫情期间 30 天 PV 150w+，UV 70w+，成功生成头像 90w+ 次，评分 4.8+；</li>
-                    <li class="project_listitem">代码公开于 GitHub(idealclover/Wear-A-Mask)，获得 160+ stars。</li>
+                    <li class="project_listitem">代码公开于 <a href="https://github.com/idealclover/Wear-A-Mask" rel="noreferrer" target="_blank">GitHub</a>，获得 180+ stars。</li>
                 </ul>
                 <div class="row">
                     <div class="project_value col-6">南哪课表</div>
@@ -144,17 +119,17 @@
                 </div>
                 <ul class="project_list">
                     <li class="project_listitem">作为个人开发者负责从项目需求制定，代码编写测试以及后期宣传推广等一系列工作；</li>
-                    <li class="project_listitem">已正式上线并迭代 6 个正式版本，宣传推文浏览量 4000+，月活跃用户数 1800+，上架酷安应用商店与 testflight，捐赠用户数 300+；</li>
-                    <li class="project_listitem">代码公开于 GitHub(idealclover/NJU-Class-Shedule-Android)，获得共计 70+ stars。</li>
+                    <li class="project_listitem">已正式上线并迭代 3 个大版本， 10 个正式版本，宣传推文总浏览量 1w+，月活跃用户数 3000+，上架酷安应用商店与 Apple Store，累计捐赠用户数 1000+；</li>
+                    <li class="project_listitem">代码公开于 <a href="https://github.com/idealclover/NJU-Class-Shedule-Flutter" rel="noreferrer" target="_blank">GitHub</a>，获得共计 70+ stars。</li>
                 </ul>
                 <div class="row">
                     <div class="project_value col-6">idealclover.top</div>
                     <div class="project_time col-6">2017.10 - 至今</div>
                 </div>
                 <ul class="project_list">
-                    <li class="project_listitem">持续运行 3 年以上，网址 https://idealclover.top，累计文章 100+ 篇，评论 800+ 条；</li>
-                    <li class="project_listitem">使用 Typecho 博客框架，并在此基础上基于 bootstrap 自己设计并开发了前端主题，自行开发了 Typecho-PWA， Typecho-AnotherLike(GitHub: idealclover/Another-Typecho-Like-Plugin) 等多款 Typecho 插件；</li>
-                    <li class="project_listitem">独立编写小程序项目 UniTypecho 创建了博客的微信小程序“翠翠酱的个人博客”，并参与了 WeTypecho (300+ stars) 的开发工作。</li>
+                    <li class="project_listitem">持续运行 3 年以上，网址 https://idealclover.top，累计文章 120+ 篇，评论 1200+ 条；</li>
+                    <li class="project_listitem">使用 Typecho 博客框架，并在此基础上基于 bootstrap 自己设计并开发了前端主题，自行开发了 Typecho-PWA， Typecho-AnotherLike 等多款 Typecho 插件；</li>
+                    <li class="project_listitem">独立编写小程序项目 UniTypecho 创建了博客的微信小程序“翠翠的个人博客”，并独立开发小程序框架 UniTypecho。代码公开于 <a href="https://github.com/idealclover/UniTypecho" rel="noreferrer" target="_blank">GitHub</a>，获得 80+ stars。</li>
                 </ul>
                 <div class="row">
                     <div class="project_value col-6">Easy-to-RSS</div>
@@ -162,10 +137,10 @@
                 </div>
                 <ul class="project_list">
                     <li class="project_listitem">上架 Google Chrome 商店并迭代 3 版，用户评分 4.67，活跃用户数 2000+，被小众软件，电脑爱好者等网站杂志报道与推荐；</li>
-                    <li class="project_listitem">遵循 MIT 开源协议，代码全部公开于 GitHub，已获得 350+ stars；</li>
+                    <li class="project_listitem">遵循 MIT 开源协议，代码全部公开于 GitHub，已获得 380+ stars；</li>
                 </ul>
                 <div class="row">
-                    <div class="project_value col-6">GitHub @idealclover</div>
+                    <div class="project_value col-6">GitHub @idealclover <a href="/projects.html" rel="noreferrer" target="_blank">详细项目列表</a></div>
                     <div class="project_time col-6">2016.08 - 至今</div>
                 </div>
                 <ul class="project_list">
@@ -173,6 +148,38 @@
                     <li class="project_listitem">个人主页项目 idealclover/Random-Homepage</li>
                     <li class="project_listitem">简历生成器 idealclover/Resume-Builder</li>
                     <li class="project_listitem">课程评估自动化脚本 idealclover/Fxxk-NJU-Class-Evaluator</li>
+                </ul>
+            </section>
+    </section>
+    <section class="category">
+        <h3 class="category_name">教育背景</h2>
+            <hr />
+            <section class="project">
+                <div class="row">
+                    <div class="project_value col-6">南京大学商学院</div>
+                    <div class="project_time col-6">2016.08 - 2020.06</div>
+                </div>
+                <div class="row">
+                    <div class="project_role col-6">工商管理系</div>
+                    <div class="project_position col-6">江苏南京</div>
+                </div>
+                <ul class="project_list">
+                    <li class="project_listitem">专业课程：会计学 (97) ，微观经济学 (94) ，管理学 (94)</li>
+                    <li class="project_listitem">辅修课程：计算机相关课程 （高级程序设计，计算机网络，数据库概论等） ，逻辑学</li>
+                    <li class="project_listitem">所获荣誉：校级优秀学生 (5%) (2017) ， 人民奖学金 (2017) ，优秀共青团员 (5%)(2017, 2018) </li>
+                    <li class="project_listitem">技能证书：MS Office Specialist (MOS) Master，江苏省计算机等级三级，大学英语六级</li>
+                    <li class="project_listitem">竞赛奖项：华为财务精英挑战赛江苏赛区第四名 (2018)，银星杯学术论文竞赛新人奖 (2018)</li>
+                </ul>
+                <div class="row">
+                    <div class="project_value col-6">哥伦比亚大学 </div>
+                    <div class="project_time col-6">2018.07 - 2018.08</div>
+                </div>
+                <div class="row">
+                    <div class="project_role col-6">交换生</div>
+                    <div class="project_position col-6">美国纽约</div>
+                </div>
+                <ul class="project_list">
+                    <li class="project_listitem">交换课程：数据分析，商业模式，逻辑与辩论</li>
                 </ul>
             </section>
     </section>

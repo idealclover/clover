@@ -74,6 +74,9 @@
 <?php if ($this->is('index') || $this->is('page', 'more')) : ?>
     <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
 <?php endif ?>
+
+<script src="<?php $this->options->themeUrl('assets/scripts/googletranslate.js'); ?>"></script>
+<!-- <script type="text/javascript" src="https://translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>

@@ -43,3 +43,7 @@
   background: #303030 !important;
   border: 1px solid #eee;
 }
+
+[data-theme="dark"] .goog-te-combo {
+  background: #2e2e2e;
+}

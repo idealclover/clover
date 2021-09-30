@@ -27,7 +27,7 @@ $info = array(
         "id" => "jike",
         "name" => "即刻 APP",
         "desc" => "即刻：@idealclover",
-        "href" => "https://m.okjike.com/users/e2ede1ee-79e6-420b-92fc-9983566db44c",
+        "href" => "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
         "color" => "#f8d44b",
         "icon" => '<img alt="即刻APP @idealclover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIaSURBVDhPpdRNa1NREAbg48qNknvoqnu3+nfERUH8RNxWXLlwq+Ayv6Cu3BVKV4IFV63YxH5oPlptkxK1Nm1VaK8kM74z98zNySUhQS+8EEJ48s6cw3Uueuhw5jK1k5fc9jxVDjxTp3SL2V2IHUf1Kxfpq69NhYz4MzrwRJ2knKP/g2mJVhbaL807GfNfmym0j+xlobZPHbVKCxPBVoIGIdZIIMO+4LPks2c3ERPgeJ7l6RPzq8pzQMBDK4N4F79DpgO7DwNIfGflJ9MewNBIWim2gzQngWHZ/ONeBJ5iNIAFSDBujAMNsh1F4N2VEzQCGBoZxHWAyPDIdmrRyeloh/fzhgruAAyNDOIafvcpBotYdHL87cEw2ACI8RQTKGD0UcDieDFkyz56qmCP5FCwwzrAAiQYbQs44i4NFi67moV0rOCvP8S333SBJUwYTxMg2sJnxOmO7ApYI134DPPZKjOdKSZPuXLOT96uAgEYQ5vAJBsC2vFHd0n3I3vqfVco7RG/eHfOc8spdzau6WjWyCD6gO+QDJRGdg0Uyxa+uPaMry+lfGOZ+PHrTe5vXxpgUSvFqlkcN0s3R14BPbmEf2/NAsGIEtlTGE3Gs1aKVbI4eTlSw1N+BbBouU/5jsaNFxoptJ6lX/VdfSdSMynLNRg6NYOKjUZA9B7Yuu+l1eTq4CVb84/6dZ/mCx+zo7wREIEUq/gjWsuwv5l6gVFzAq7PAAAAAElFTkSuQmCC"></img>',
         "url" => "https://api.spencerwoo.com/substats/?source=jikeFollower&queryKey=e2ede1ee-79e6-420b-92fc-9983566db44c",
@@ -47,7 +47,7 @@ $info = array(
         "id" => "coolapk",
         "name" => "酷安 APP",
         "desc" => "酷安：@idealclover",
-        "href" => "https://space.bilibili.com/5044093",
+        "href" => "https://www.coolapk.com/u/999081",
         "color" => "#11ab60",
         "icon" => '<svg t="1616320503434" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1920" width="20" height="20"><path d="M445.493333 46.72c95.733333-13.653333 195.626667 2.613333 281.493334 47.253333 92.373333 47.36 168.16 126.24 211.626666 220.48 46.986667 100.426667 56.16 217.706667 26.24 324.426667-26.24 94.293333-82.826667 180-159.573333 240.8-72.586667 58.133333-162.826667 94.24-255.68 101.013333-116.586667 10.293333-236.32-26.186667-328.053333-98.773333-66.08-51.52-117.546667-121.44-147.893334-199.466667-44.106667-112.48-42.186667-242.133333 5.226667-353.226666 61.866667-149.6 206.026667-261.226667 366.613333-282.506667M270.4 350.08c-61.76 30.453333-102.986667 98.4-99.413333 167.413333 0.693333 66.666667 42.72 130.24 102.933333 158.293334 39.253333 19.04 84.853333 21.173333 127.093333 12.64 49.12-10.293333 90.453333-41.973333 124.8-77.173334 53.6-54.72 86.453333-124.96 129.6-187.36 22.666667 41.173333 45.333333 82.346667 67.786667 123.573334-24.586667-15.786667-46.773333-35.04-72.16-49.653334-16.746667 11.946667-33.28 24.213333-50.186667 35.946667 62.08 49.013333 126.666667 94.826667 190.026667 142.186667 12.96 8.746667 27.84 23.253333 44.64 14.666666 17.6-7.146667 22.613333-30.346667 12.106667-45.44-52.373333-99.466667-108.48-196.906667-163.253334-295.093333-5.653333-13.066667-19.626667-22.773333-34.24-18.56-13.493333 2.133333-20.266667 15.52-27.146666 25.76-32.106667 52.8-61.813333 107.146667-97.44 157.76-33.866667 48.213333-77.12 96.373333-136.586667 110.88-58.026667 15.2-126.026667-14.506667-148.213333-71.68-17.813333-46.133333-2.933333-102.613333 36.533333-132.8 35.946667-29.013333 86.72-31.093333 129.386667-17.653333 42.666667 13.76 76.533333 44.48 110.773333 72.053333 17.493333-12.053333 36-23.146667 50.986667-38.4-44.96-39.84-93.013333-79.306667-151.146667-97.76-48.16-12.64-101.813333-13.12-146.88 10.4z" fill="#0f9d58" p-id="1921"></path><path d="M270.4 350.08c45.066667-23.52 98.72-23.04 146.88-10.4 58.133333 18.453333 106.186667 57.92 151.146667 97.76-14.986667 15.253333-33.493333 26.346667-50.986667 38.4-34.24-27.573333-68.106667-58.293333-110.773333-72.053333-42.666667-13.44-93.44-11.36-129.386667 17.653333-39.466667 30.186667-54.346667 86.666667-36.533333 132.8 22.186667 57.173333 90.186667 86.88 148.213333 71.68 59.466667-14.506667 102.72-62.666667 136.586667-110.88 35.626667-50.613333 65.333333-104.96 97.44-157.76 6.88-10.24 13.653333-23.626667 27.146666-25.76 14.613333-4.213333 28.586667 5.493333 34.24 18.56 54.773333 98.186667 110.88 195.626667 163.253334 295.093333 10.506667 15.093333 5.493333 38.293333-12.106667 45.44-16.8 8.586667-31.68-5.92-44.64-14.666666-63.36-47.36-127.946667-93.173333-190.026667-142.186667 16.906667-11.733333 33.44-24 50.186667-35.946667 25.386667 14.613333 47.573333 33.866667 72.16 49.653334-22.453333-41.226667-45.12-82.4-67.786667-123.573334-43.146667 62.4-76 132.64-129.6 187.36-34.346667 35.2-75.68 66.88-124.8 77.173334-42.24 8.533333-87.84 6.4-127.093333-12.64-60.213333-28.053333-102.24-91.626667-102.933333-158.293334-3.573333-69.013333 37.653333-136.96 99.413333-167.413333z" fill="#FFFFFF" p-id="1922"></path></svg>',
         "url" => "https://api.spencerwoo.com/substats/?source=coolapk&queryKey=idealclover",
@@ -122,6 +122,7 @@ $subs = array(
 )
 ?>
 <div class="col-12 col-lg-4">
+    <div id="google_translate_element"></div>
     <div class="card">
         <div class="card-header">
             <div class="widget-title"><?php _e("🤔关于我") ?></div>
@@ -129,12 +130,14 @@ $subs = array(
         <div class="card-body">
             <div class="intro">
                 <?php _e("翠翠 idealclover") ?><br />
+                <?php _e("Product Manager @ByteDance") ?><br />
                 <?php _e("南京大学 2016 级本科生") ?><br />
             </div>
             <style>
                 .shields a:hover {
-                    text-decoration:none;
+                    text-decoration: none;
                 }
+
                 .shield-item {
                     border-style: solid;
                     border-radius: .25rem;
@@ -160,15 +163,15 @@ $subs = array(
                 }
             </style>
             <div class="shields">
-            <?php foreach ($info as $i) : ?>
-                <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer" title="<?php echo $i['desc']; ?>">
-                    <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
-                        <?php echo $i['icon']; ?>
-                        <div class="col-7" class="shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
-                        <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+                <?php foreach ($info as $i) : ?>
+                    <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer" title="<?php echo $i['desc']; ?>">
+                        <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
+                            <?php echo $i['icon']; ?>
+                            <div class="col-7" class="shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
+                            <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
             <div class="contact">
                 <a href="http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes" rel="noreferrer" style="text-decoration: none" target="_blank" title="QQ: 1455169173">
@@ -204,24 +207,45 @@ $subs = array(
                 <?php _e("基于 Typecho 博客框架") ?><br />
                 <?php _e("使用个人的") ?> <a style="text-decoration: underline" rel="noreferrer" href="https://github.com/idealclover/clover" target="_blank">clover</a> <a rel="noreferrer" href="https://github.com/idealclover/clover" rel="noreferrer" target="_blank"><img alt="clover" src="https://img.shields.io/github/stars/idealclover/clover.svg?style=social" /></a> <?php _e("主题") ?><br />
             </div>
-            <div class="shields">
-            <?php foreach ($subs as $i) : ?>
-                <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer" title="<?php echo $i['desc']; ?>">
-                    <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
-                        <?php echo $i['icon']; ?>
-                        <div class="col-7 shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
-                        <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
+            <!-- Begin Mailchimp Signup Form -->
+            <!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"> -->
+            <style type="text/css">
+                /* #mc_embed_signup {
+                    background: #fff;
+                    clear: left;
+                    font: 14px Helvetica, Arial, sans-serif;
+                    width: 100%;
+                } */
+            </style>
+            <!-- <div id="mc_embed_signup">
+                <form action="https://live.us3.list-manage.com/subscribe/post?u=bbfbc23183002c44e5e2d249f&amp;id=91999b8e42" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bbfbc23183002c44e5e2d249f_91999b8e42" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                     </div>
-                </a>
-            <?php endforeach; ?>
-            <!-- <div class="more">
+                </form>
+            </div> -->
+            <!--End mc_embed_signup-->
+            <div class="shields">
+                <?php foreach ($subs as $i) : ?>
+                    <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer" title="<?php echo $i['desc']; ?>">
+                        <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
+                            <?php echo $i['icon']; ?>
+                            <div class="col-7 shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
+                            <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+                <!-- <div class="more">
                 <a href="https://idealclover.top/feed" target="_blank" rel="noreferrer" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-rss" aria-hidden="true"></i> <?php _e("RSS 订阅") ?></a>
                 <a href="https://mailchi.mp/7f28311041bc/idealclover" rel="noreferrer" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-envelope" aria-hidden="true"></i> <?php _e("Email 订阅") ?></a>
                 <a href="https://t.me/idealcloverchannel" target="_blank" rel="noreferrer" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-telegram" aria-hidden="true"></i> <?php _e("Telegram 频道订阅") ?></a>
                 <a href="https://cdn.idealclover.cn/Projects/idealclover/idealclover.apk" rel="noreferrer" target="_blank" role="button" class="btn btn-outline-dark btn-sm"><i class="fa fa-android" aria-hidden="true"></i> <?php _e("下载 Android APP") ?></a>
             </div> -->
-            <div class="more" style="margin-top:0.5rem">
-                <div id="webpushr-subscription-button" data-size="small" data-button-text="浏览器通知订阅(beta)" data-subscriber-count-text="位用户正在订阅中" data-background-color="#7b8a8b"></div>
+                <div class="more" style="margin-top:0.5rem">
+                    <div id="webpushr-subscription-button" data-size="small" data-button-text="浏览器通知订阅(beta)" data-subscriber-count-text="位用户正在订阅中" data-background-color="#7b8a8b"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -263,5 +287,4 @@ $subs = array(
             <a class="btn btn-outline-dark btn-block" href="https://www.patreon.com/idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> Patreon</a>
         </div>
     </div>
-</div>
-<!-- end #sidebar -->
+    <!-- end #sidebar -->

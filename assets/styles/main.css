@@ -128,6 +128,7 @@ ul {
 
 .post-content a {
   text-decoration: underline;
+  word-break: break-all;
 }
 
 blockquote {
@@ -557,4 +558,32 @@ div.code-toolbar > .toolbar span {
 
 .code-toolbar:hover .toolbar span {
   opacity: 1;
+}
+
+.goog-te-banner-frame {
+  display: none
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-combo {
+  word-wrap: normal;
+  display: inline-block;
+  width: 100%;
+  padding: .375rem 1.75rem .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right .75rem center/8px 10px no-repeat;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  appearance: none;
 }

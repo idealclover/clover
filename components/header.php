@@ -57,12 +57,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/flatly/bootstrap.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=21032102'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=21032101'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=21041904'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=21041902'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>

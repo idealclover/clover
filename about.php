@@ -12,39 +12,52 @@
 <?php $this->need('components/header.php'); ?>
 
 <style>
-    .linklist {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin: 0 auto;
-    }
+.linklist {
+    /* justify-content: center; */
+}
 
-    .linkcard {
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-        transition: ease all 0.3s;
-        overflow: hidden;
-        background: #f7fbf7;
-        margin: 7.5px 7.5px 7.5px 7.5px;
-        width: 15vh;
-    }
+.linkcard {
+    position: relative;
+    margin-bottom: .75rem;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    --tw-space-x-reverse: 0;
+    margin-right: calc(.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(.75rem * calc(1 - var(--tw-space-x-reverse)));
+    border-width: 1px;
+    border-style: solid;
+    /* width: 20vh; */
+}
+.linkcard:hover {
+    background-color: #7e8a8b;
+    color: #FFF !important;
+}
+.linkimg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-rotate: 12deg;
+    border-radius: .75rem;
+}
 
-    .linkimg {
-        object-fit: cover;
-        height: 15vh !important;
-        width: 15vh !important;
-    }
-
-    .linktitle {
-        margin: 8px 5px !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
-        text-align: center !important;
-        /* font-weight: 600 !important; */
-        border: none !important;
-    }
-    .linklist a {
-        text-decoration: none !important;
-    }
+.linktitle {
+    margin-left: 3rem;
+}
 </style>
 
 <div class="container col-10 col-lg-9" id="main" role="main">

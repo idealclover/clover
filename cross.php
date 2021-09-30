@@ -41,7 +41,7 @@ function threadedComments($comments, $options)
         <?php $comments->gravatar('45', $default = Helper::options()->themeUrl . '/assets/imgs/default.jpg'); ?>
         <div class="moment-meta">
             <span class="moment-author"><?php $comments->author(); ?></span>
-            <time class="moment-time"><?php $comments->date('y.m.d H:m'); ?></time>
+            <time class="moment-time"><?php $comments->date('y.m.d H:i'); ?></time>
         </div>
 
         <div class="moment-content">
@@ -126,7 +126,8 @@ function threadedComments($comments, $options)
                     <div class="tab-pane fade" id="pills-share" role="tabpanel" aria-labelledby="pills-share-tab">
                         <?php
                         $rss = new DOMDocument();
-                        $rss->load('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred');
+                        // $rss->load('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred');
+                        $rss->load('https://qingmang.me/users/idealclover/feed/');
                         $feeds = array();
                         foreach ($rss->getElementsByTagName('entry') as $node) {
                             $item = array(
@@ -141,7 +142,7 @@ function threadedComments($comments, $options)
                         <ol class="comment-list">
                             <?php foreach ($feeds as $feed) : ?>
                                 <li class="moment" id="<?php $comments->theId(); ?>">
-                                    <img class="avatar" src="https://gravatar.loli.net/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45&amp;r=G&amp;d=https://127.0.0.1/blog/usr/themes/Clover/assets/imgs/default.jpg" alt="clover" width="45" height="45">
+                                    <img class="avatar" src="https://gravatar.loli.net/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45" alt="clover" width="45" height="45">
                                     <div class="moment-meta">
                                         <span class="moment-author">idealclover</span>
                                         <time class="moment-time"><?php echo (date('y.m.d h:m', strtotime($feed['date']))); ?></time>
