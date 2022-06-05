@@ -27,12 +27,76 @@ show_date_time();
 $(".shield-item").each(function (i, e) {
   $.getJSON(e.getAttribute("data-url"), function (data) {
     let num = eval(e.getAttribute("data-query"));
-    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = (num == 0 ? 'Error' : num);
+    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
+      typeof num == "undefined" || num == 0 ? "Error" : num;
+  });
+});
+
+$.getJSON("https://blogroll.icl.moe/linkList.json", function (data) {
+  // for(item in data[])
+  $(".linklist").each(function (i, e) {
+    const classify = e.getAttribute("data-classify");
+    const status = e.getAttribute("data-status");
+    let items = [];
+
+    if (classify == null && status == null) {
+      return;
+    } else if (classify == null) {
+      for (let i in data) {
+        items = items.concat(data[i][status]);
+      }
+    } else if (status == null) {
+      for (let i in data[classify]) {
+        items = items.concat(data[classify][i]);
+      }
+    } else {
+      items = data[classify][status];
+    }
+    let innerHTML = "";
+    for (const item of items) {
+      if (item["title"] == "idealclover") continue;
+      innerHTML +=
+        '<a href="' +
+        item["htmlUrl"] +
+        '" class="text-dark" target="_blank" title="' +
+        item["description"] +
+        '"><div class="linkcard"><img class="linkimg" src="' +
+        item["avatarUrl"] +
+        '" href="' +
+        item["htmlUrl"] +
+        '" onerror="this.src=&quot;https://image.idealclover.cn/blog/assets/default.jpg&quot;" referrerpolicy="no-referrer"><div class="linktitle">' +
+        item["title"] +
+        "</div></div></a>";
+    }
+    e.innerHTML = innerHTML;
   });
 });
 
 pangu.spacingElementById("main");
 var lazyLoadInstance = new LazyLoad();
+
+var darkSwitch = document.getElementById("darkSwitch");
+window.addEventListener("load", function () {
+  if (darkSwitch) {
+    var darkThemeSelected =
+      localStorage.getItem("darkSwitch") !== null &&
+      localStorage.getItem("darkSwitch") === "dark";
+    darkSwitch.checked = darkThemeSelected;
+    darkSwitch.addEventListener("change", function () {
+      resetTheme();
+    });
+  }
+});
+
+function resetTheme() {
+  if (darkSwitch.checked) {
+    document.body.setAttribute("data-theme", "dark");
+    localStorage.setItem("darkSwitch", "dark");
+  } else {
+    document.body.removeAttribute("data-theme");
+    localStorage.removeItem("darkSwitch");
+  }
+}
 
 // 代码高亮
 hljs.initHighlightingOnLoad();
@@ -147,12 +211,10 @@ var scroll = new SmoothScroll("a.turn-up, .article-list a", {
 
 $(".close").click(function (e) {
   e.preventDefault();
-  $.cookie("alert-box", "closed", {
-    path: "/",
-  });
+  localStorage.setItem("alert-box", "closed");
   $("#main").css("margin-top", "4.5rem");
 });
-if ($.cookie("alert-box") !== "closed") {
+if (localStorage.getItem("alert-box") !== "closed") {
   $("#main").css("margin-top", "6.5rem");
   $(".alert").css("display", "block");
 }
@@ -161,7 +223,7 @@ if (
   window.location.hash.indexOf("#") >= 0 &&
   window.location.hash.indexOf("#top") < 0
 ) {
-  let padding = $.cookie("alert-box") !== "closed" ? 80 : 50;
+  let padding = localStorage.getItem("alert-box") !== "closed" ? 80 : 50;
   $("html,body").animate(
     {
       scrollTop: $(window.location.hash).offset().top - padding + "px",
@@ -187,15 +249,30 @@ if (
   fjs.parentNode.appendChild(js);
 })(window, document, "script", "webpushr-jssdk");
 webpushr("setup", {
-  key:
-    "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
+  key: "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
 });
 // <!-- end webpushr code -->
 
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-      pageLanguage: 'zh-CN',
-      includedLanguages: 'en,zh-CN,zh-TW,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi',
-      autoDisplay: false
-  }, 'google_translate_element');
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "zh-CN",
+      includedLanguages:
+        "en,zh-CN,zh-TW,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi",
+      autoDisplay: false,
+    },
+    "google_translate_element"
+  );
+}
+
+if ("serviceWorker" in navigator) {
+  console.log("Will the service worker register?");
+  navigator.serviceWorker
+    .register("https://idealclover.top/sw.js")
+    .then(function (reg) {
+      console.log("Yes, it did.");
+    })
+    .catch(function (err) {
+      console.log("No it did not. This happened: ", err);
+    });
 }

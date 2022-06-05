@@ -71,22 +71,20 @@
 <?php endif; ?>
 <!-- fuckweixin -->
 <script src="<?php $this->options->themeUrl('assets/scripts/fuckweixin.js'); ?>"></script>
-<?php if ($this->is('index') || $this->is('page', 'more')) : ?>
-    <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<?php if ($this->is('page', 'more')) : ?>
+    <script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
 <?php endif ?>
 
 <script src="<?php $this->options->themeUrl('assets/scripts/googletranslate.js'); ?>"></script>
-<!-- <script type="text/javascript" src="https://translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dark-mode-switch@1.0.0/dark-mode-switch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-lVcnjCLGjJTaZU55wD7H3f8SJVi6VV5cQRcmGuYcyIY607N/rzZGEl90lNgsiEhKygATryG/i6e5u2moDFs5kQ==" src="https://lib.baomitu.com/vanilla-lazyload/17.3.1/lazyload.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" src="https://lib.baomitu.com/popper.js/1.16.1/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://lib.baomitu.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-1Jq1gXc0sLyvpP1iLt5QoryVCyJkBLyfNkaeECRYRX4u1Nx7gT547w5/5YZ1b5DG" src="https://lib.baomitu.com/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-Zm+UU4tdcfAm29vg+MTbfu//q5B/lInMbMCr4T8c9rQFyOv6PlfQYpB5wItcXWe7" src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-tL84mD+FR70jI7X8vYj5AfRqe0EifOaFUapjt1KvDaPLHgTlUZ2gQL/Tzvvn8HXuQm9oHYShJpNFdyJmH2yHrw==" src="https://lib.baomitu.com/highlight.js/10.7.3/highlight.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-HeUHqi0nVsPUm/E0ss7OfnIV/yD96JWB8ehZvUuoVax9DpNHL17jj9pdfXHzqDxm" src="https://lib.baomitu.com/pangu/4.0.7/pangu.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-PIisRT8mFfdxx99gMs7WAY5Gp+CtjYYxKvF93w8yWAvX548UBNADHu7Qkavgr6yRG+asocqfuk5crjNd5z9s6Q==" src="https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js"></script>
+
 <script src="<?php $this->options->themeUrl('assets/scripts/main.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('libs/mouse-click/mouse-click.js'); ?>"></script>
 </body>

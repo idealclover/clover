@@ -1,0 +1,631 @@
+{
+  "friend": {
+    "active": [
+      {
+        "title": "idealclover",
+        "htmlUrl": "https://idealclover.top",
+        "description": "是翠翠的个人网站！",
+        "avatarUrl": "https://idealclover.top/favicon.ico",
+        "xmlUrl": "https://idealclover.top/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "NJU-LUG",
+        "htmlUrl": "https://blogroll.njulug.org",
+        "description": "",
+        "avatarUrl": "https://blogroll.njulug.org/favicon.ico",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "ZGQ's Blog",
+        "htmlUrl": "https://blog.izgq.net",
+        "description": "",
+        "avatarUrl": "https://blog.izgq.net/favicon.ico",
+        "xmlUrl": "https://blog.izgq.net/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "bus1996",
+        "htmlUrl": "https://bus1996.me",
+        "description": "",
+        "avatarUrl": "https://bus1996.me/assets/img/favicon.ico",
+        "xmlUrl": "https://bus1996.me/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "HiKi",
+        "htmlUrl": "https://www.aneureka.cn",
+        "description": "",
+        "avatarUrl": "https://www.aneureka.cn/img/favicon.ico",
+        "xmlUrl": "https://www.aneureka.cn/atom.xml",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "lizhihao6",
+        "htmlUrl": "https://lizhihao6.online",
+        "description": "",
+        "avatarUrl": "https://lizhihao6.online/favicon.ico",
+        "xmlUrl": "https://lizhihao6.online/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "Jennifer's Blog",
+        "htmlUrl": "https://jyzhangchn.github.io",
+        "description": "",
+        "avatarUrl": "https://jyzhangchn.github.io/images/gavin.JPG",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "鹏鹏",
+        "htmlUrl": "http://blog.chper.cn",
+        "description": "",
+        "avatarUrl": "http://blog.chper.cn/favicon.ico",
+        "xmlUrl": "http://blog.chper.cn/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "净水流深.",
+        "htmlUrl": "https://www.maorx.cn",
+        "description": "这里是毛若昕的个人主页",
+        "avatarUrl": "https://www.maorx.cn/favicon.ico",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "VicBlog",
+        "htmlUrl": "https://ddadaal.me",
+        "description": "",
+        "avatarUrl": "https://ddadaal.me/icons/icon-512x512.png",
+        "xmlUrl": "https://ddadaal.me/rss.xml",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "YSZ 的个人主页",
+        "htmlUrl": "https://yangshangzhen.com",
+        "description": "",
+        "avatarUrl": "https://yangshangzhen.com/favicon.ico",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "热铁盒",
+        "htmlUrl": "https://rthsoftware.cn",
+        "description": "",
+        "avatarUrl": "https://rthsoftware.cn/favicon.ico",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "iznauy",
+        "htmlUrl": "https://iznauy.github.io",
+        "description": "",
+        "avatarUrl": "https://avatars0.githubusercontent.com/u/22297856?s=400&u=9ac5d0437ef685b62e402ed130d67d589d234f0b&v=4",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "Mengzelev's Blog",
+        "htmlUrl": "https://mengzelev.github.io",
+        "description": "",
+        "avatarUrl": "https://mengzelev.github.io/assets/moe.ico",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "fengkx",
+        "htmlUrl": "https://www.fengkx.top",
+        "description": "",
+        "avatarUrl": "https://www.fengkx.top/images/icons/icon-128x128.png",
+        "xmlUrl": "https://www.fengkx.top/atom.xml",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "LadderOperator",
+        "htmlUrl": "https://ladderoperator.top",
+        "description": "",
+        "avatarUrl": "https://ladderoperator.top/img/favicon.jpg",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "ALID",
+        "htmlUrl": "https://calmtime.github.io",
+        "description": "",
+        "avatarUrl": "https://calmtime.github.io/img/avatar-my.jpg",
+        "xmlUrl": "https://calmtime.github.io/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "Orangex4",
+        "htmlUrl": "https://orangex4.cool",
+        "description": "",
+        "avatarUrl": "https://orangex4.cool/images/icons/profile.jpg",
+        "xmlUrl": "https://orangex4.cool/atom.xml",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "不鉴的安全屋",
+        "htmlUrl": "https://ryushane.com",
+        "description": "",
+        "avatarUrl": "https://ryushane.com/favicon.ico",
+        "xmlUrl": "https://ryushane.com/feed",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "南雍随笔",
+        "htmlUrl": "https://ydjsir.com.cn",
+        "description": "",
+        "avatarUrl": "https://ydjsir.com.cn/img/avatar.png",
+        "xmlUrl": "https://ydjsir.com.cn/atom.xml",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "LarryZhao",
+        "htmlUrl": "https://larryzhao.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      },
+      {
+        "title": "Pemp's Blog",
+        "htmlUrl": "https://pemp.top",
+        "description": "",
+        "avatarUrl": "https://pemp.top/images/logo.jpg",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "active"
+      }
+    ],
+    "lost": [
+      {
+        "title": "水风车",
+        "htmlUrl": "https://blog.shuifengche.top",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "lost"
+      },
+      {
+        "title": "GeRongcun",
+        "htmlUrl": "https://www.gerongcun.xyz/blog",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "lost"
+      },
+      {
+        "title": "青鱼博客",
+        "htmlUrl": "https://qingyu.me",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "friend",
+        "status": "lost"
+      }
+    ]
+  },
+  "net": {
+    "active": [
+      {
+        "title": "冰凌胧月的小窝",
+        "htmlUrl": "https://imiku.me",
+        "description": "聆听最初的声音，向往无尽的未来",
+        "avatarUrl": "https://imiku.me/favicon.ico",
+        "xmlUrl": "https://imiku.me/index.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "SimpleZero",
+        "htmlUrl": "https://mikuac.com",
+        "description": "",
+        "avatarUrl": "https://mikuac.com/favicon.ico",
+        "xmlUrl": "https://mikuac.com/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Literature",
+        "htmlUrl": "https://www.literature.hk",
+        "description": "",
+        "avatarUrl": "https://www.literature.hk/favicon.ico",
+        "xmlUrl": "https://www.literature.hk/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "青空之蓝",
+        "htmlUrl": "https://www.ixk.me",
+        "description": "站在时光一端，回忆过往记忆。",
+        "avatarUrl": "https://www.ixk.me/favicon.ico",
+        "xmlUrl": "https://blog.ixk.me/rss.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "樱花庄的白猫",
+        "htmlUrl": "https://2heng.xin",
+        "description": "",
+        "avatarUrl": "https://2heng.xin/wp-content/static/favicon-96x96.png",
+        "xmlUrl": "https://2heng.xin/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "辣椒の酱",
+        "htmlUrl": "https://removeif.github.io",
+        "description": "",
+        "avatarUrl": "https://removeif.github.io/images/avatar.jpg",
+        "xmlUrl": "https://removeif.github.io/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "SangSir",
+        "htmlUrl": "https://sangsir.com",
+        "description": "",
+        "avatarUrl": "https://sangsir.com/favicon.ico",
+        "xmlUrl": "https://sangsir.com/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "恶魔菌の记事簿",
+        "htmlUrl": "https://meow3.family.blog",
+        "description": "",
+        "avatarUrl": "https://meow3.family.blog/favicon.ico",
+        "xmlUrl": "https://meow3.family.blog/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "蓝小柠的博客",
+        "htmlUrl": "https://www.bleshi.com",
+        "description": "是可爱的蓝孩子呀—",
+        "avatarUrl": "https://www.bleshi.com/favicon.ico",
+        "xmlUrl": "https://www.bleshi.com/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "宇宙よりも遠い場所",
+        "htmlUrl": "https://kirainmoe.com",
+        "description": "",
+        "avatarUrl": "https://kirainmoe.com/favicon.ico",
+        "xmlUrl": "https://kirainmoe.com/index.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "小太の游乐园",
+        "htmlUrl": "https://baka.fun",
+        "description": "",
+        "avatarUrl": "https://baka.fun/favicon.ico",
+        "xmlUrl": "https://baka.fun/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "NoneData",
+        "htmlUrl": "https://www.nonedata.com",
+        "description": "",
+        "avatarUrl": "https://www.nonedata.com/images/icons/favicon.ico",
+        "xmlUrl": "https://www.nonedata.com/rss.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "蝉时雨",
+        "htmlUrl": "https://chanshiyu.com",
+        "description": "",
+        "avatarUrl": "https://chanshiyu.com/favicon.ico",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "ChrAlpha 的幻想乡",
+        "htmlUrl": "https://ichr.me/",
+        "description": "",
+        "avatarUrl": "https://cdn.jsdelivr.net/npm/ckx@0.0.1/favicon/favicon-32x32.png",
+        "xmlUrl": "https://blog.ichr.me/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "木子的博客",
+        "htmlUrl": "https://blog.k8s.li",
+        "description": "",
+        "avatarUrl": "https://blog.k8s.li/favicon.ico",
+        "xmlUrl": "https://blog.k8s.li/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "云游君的小站",
+        "htmlUrl": "https://www.yunyoujun.cn",
+        "description": "",
+        "avatarUrl": "https://www.yunyoujun.cn/favicon.ico",
+        "xmlUrl": "https://www.yunyoujun.cn/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "猫鱼的小站",
+        "htmlUrl": "http://2cat.net",
+        "description": "",
+        "avatarUrl": "https://2cat.net/wp-content/uploads/2020/04/cropped-YZSC.TAOBAO.COM-24-192x192.png",
+        "xmlUrl": "https://2cat.net/?feed=rss2",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "MiaoTony's 小窝",
+        "htmlUrl": "https://miaotony.xyz",
+        "description": "",
+        "avatarUrl": "https://miaotony.xyz/favicon.ico",
+        "xmlUrl": "https://miaotony.xyz/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Timegg",
+        "htmlUrl": "https://timegg.top",
+        "description": "",
+        "avatarUrl": "https://timegg.top/images/favicon.ico",
+        "xmlUrl": "https://timegg.top/index.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Aengus Blog",
+        "htmlUrl": "https://www.aengus.top",
+        "description": "",
+        "avatarUrl": "https://www.aengus.top/favicon.ico",
+        "xmlUrl": "https://www.aengus.top/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "klaus & laura",
+        "htmlUrl": "https://klauslaura.cn",
+        "description": "",
+        "avatarUrl": "https://klauslaura.cn/favicon.ico",
+        "xmlUrl": "https://klauslaura.cn/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Kant",
+        "htmlUrl": "https://www.deathfugue.com",
+        "description": "",
+        "avatarUrl": "https://s1.ax1x.com/2020/09/27/0kSwmq.jpg",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "小丁的个人博客",
+        "htmlUrl": "https://tding.top",
+        "description": "",
+        "avatarUrl": "https://tding.top/images/avatar.webp",
+        "xmlUrl": "https://tding.top/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Cyris",
+        "htmlUrl": "https://cyris.moe",
+        "description": "",
+        "avatarUrl": "https://cyris.moe/images/favicon.ico",
+        "xmlUrl": "https://sound.cyris.moe/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "Dejavu's Blog",
+        "htmlUrl": "https://www.dejavu.moe",
+        "description": "",
+        "avatarUrl": "https://www.dejavu.moe/favicon.ico",
+        "xmlUrl": "https://www.dejavu.moe/index.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "remiliacn",
+        "htmlUrl": "https://www.remiliacn.com",
+        "description": "",
+        "avatarUrl": "https://avatars.githubusercontent.com/remiliacn",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "世说新语",
+        "htmlUrl": "https://www.wangyurui.top",
+        "description": "",
+        "avatarUrl": "https://www.wangyurui.top/favicon.ico",
+        "xmlUrl": "https://www.wangyurui.top/feed",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "送报少年",
+        "htmlUrl": "https://okarin.cn",
+        "description": "",
+        "avatarUrl": "https://okarin.cn/favicon.ico",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "itsNekoDeng",
+        "htmlUrl": "https://dyfa.top",
+        "description": "",
+        "avatarUrl": "https://nekodeng.gitee.io/medias/avatar.jpg",
+        "xmlUrl": "https://dyfa.top/atom.xml",
+        "category": "net",
+        "status": "active"
+      },
+      {
+        "title": "SkyWT",
+        "htmlUrl": "https://skywt.cn",
+        "description": "",
+        "avatarUrl": "https://blog.skywt.cn/usr/themes/Daydream/assets/img/avatar.png",
+        "xmlUrl": "https://skywt.cn/feed",
+        "category": "net",
+        "status": "active"
+      }
+    ],
+    "lost": [
+      {
+        "title": "DIYGod",
+        "htmlUrl": "https://diygod.me",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "http://diygod.me/atom.xml",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "咸鱼不咸",
+        "htmlUrl": "https://lcblog.cn",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "XZYMOE'S BLOG",
+        "htmlUrl": "https://www.xzymoe.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "BOHC!",
+        "htmlUrl": "https://hewanyue.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "dna049",
+        "htmlUrl": "https://dna049.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "JosePhilo",
+        "htmlUrl": "https://josephilo.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "c0sMx",
+        "htmlUrl": "https://www.c0smx.com",
+        "description": "",
+        "avatarUrl": "https://c0smx.lajiya.cn/archives/LOGO/c0sMx.png",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "王荣胜",
+        "htmlUrl": "https://sqdxwz.com",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "风景工作室",
+        "htmlUrl": "https://aspire.studio",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "Manami",
+        "htmlUrl": "https://www.manami.top",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      },
+      {
+        "title": "Oasis's Blog",
+        "htmlUrl": "https://blog.imoasis.cn",
+        "description": "",
+        "avatarUrl": "",
+        "xmlUrl": "",
+        "category": "net",
+        "status": "lost"
+      }
+    ]
+  },
+  "supporter": {
+    "active": [
+      {
+        "title": "beyondstars",
+        "htmlUrl": "https://exploro.one",
+        "description": "",
+        "avatarUrl": "https://exploro.one/favicon.ico",
+        "xmlUrl": "https://exploro.one/feed/atom",
+        "category": "supporter",
+        "status": "active"
+      },
+      {
+        "title": "SpencerWoo",
+        "htmlUrl": "https://spencerwoo.com",
+        "description": "",
+        "avatarUrl": "https://spencerwoo.com/favicon.ico",
+        "xmlUrl": "https://spencerwoo.com/feed",
+        "category": "supporter",
+        "status": "active"
+      }
+    ],
+    "lost": []
+  }
+}

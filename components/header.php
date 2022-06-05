@@ -35,7 +35,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <meta property="og:title" itemprop="name" content="<?php $this->archiveTitle('', ''); ?>" />
     <meta property="og:image" itemprop="image" content="<?php $this->options->themeUrl('assets/favicon/android-chrome-192x192.png'); ?>">
     <?php if ($this->is('post')) : ?>
-        <!-- <meta itemprop="image" content="<?php // echo Content::returnHeaderImgSrc($this, 'post', 0, true); 
+        <!-- <meta itemprop="image" content="<?php // echo Content::returnHeaderImgSrc($this, 'post', 0, true);
                                                 ?>"> -->
         <meta name="description" itemprop="description" property="og:description" content="<?php $this->excerpt(); ?>">
     <?php else : ?>
@@ -53,16 +53,24 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link rel="mask-icon" href="<?php $this->options->themeUrl('assets/favicon/safari-pinned-tab.svg') ?>" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#343A40">
+    <link rel="manifest" href="https://idealclover.top/manifest.json">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/flatly/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=21041904'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=21041902'); ?>">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/flatly/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/dracula.min.css"> -->
+    <link crossorigin="anonymous" integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ" href="https://lib.baomitu.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" integrity="sha512-5bGVgbI2xuyCes5Q7colxgLChuX/2lidwyC6zFo0Fu7Nb46xf55YcMwojQel2JBxaJoa3w0d14dKek6TbGROfQ==" href="https://lib.baomitu.com/bootswatch/4.6.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" integrity="sha384-Q8BgkilbsFGYNNiDqJm69hvDS7NCJWOodvfK/cwTyQD4VQA0qKzuPpvqNER1UC0F" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" integrity="sha512-UPcL+5Ec/OV1+OGGgpK9ZS1NLz/sXczHAYUkSaSMQjgIYufontU+rYGAkK9B//Oze4cFTLfLnzNtsI+cG2FwjQ==" href="https://lib.baomitu.com/highlight.js/10.7.3/styles/dracula.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css"> -->
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=22050301'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=22052901'); ?>">
+    <script crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
     <script>
@@ -92,6 +100,24 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 </head>
 
 <body>
+    <!-- set darkmode -->
+    <script>
+        function initTheme() {
+            var dt = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null,
+                ds = localStorage.getItem("darkSwitch"),
+                darkThemeSelected =
+                ds !== "light" &&
+                ds === "dark";
+            if (ds === null && dt !== null) {
+                darkThemeSelected = dt.matches;
+            }
+            darkThemeSelected
+                ?
+                document.body.setAttribute("data-theme", "dark") :
+                document.body.removeAttribute("data-theme");
+        }
+        initTheme();
+    </script>
     <div class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">idealclover</a>

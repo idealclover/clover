@@ -76,14 +76,14 @@
         <?php $comments->pageNav(_t('&laquo; 前一页'), _t('后一页 &raquo;')); ?>
     <?php endif; ?>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
+<script src="<?php $this->options->themeUrl('libs/OwO/OwO.min.js'); ?>"></script>
 <script>
     var OwO_demo = new OwO({
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        // api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
-        api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
+        api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
+        // api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
         position: 'down',
         width: '100%',
         maxHeight: '250px'

@@ -30,6 +30,7 @@
 }
 
 [data-theme="dark"] .text-body,
+[data-theme="dark"] .timeline-item__link,
 [data-theme="dark"] code {
   color: #eee !important;
 }

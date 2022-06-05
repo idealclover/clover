@@ -146,6 +146,92 @@ blockquote p {
   margin: 0;
 }
 
+/* - timeline list  - */
+/*-------------------*/
+
+.timeline {
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  left: 0;
+  border-left: 0.2rem solid #efefef;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: block;
+  position: relative;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #7b8a8b;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.timeline-item__time {
+  display: inline-block;
+  width: 3.5rem;
+  vertical-align: middle;
+  color: #99a9bf;
+  -webkit-transform: translateY(3%);
+  -moz-transform: translateY(3%);
+  -o-transform: translateY(3%);
+  -ms-transform: translateY(3%);
+  transform: translateY(3%);
+}
+
+.timeline-item--year {
+  font-size: 1.2rem;
+}
+
+
+.timeline-item__title {
+  display: inline-block;
+  margin: 0;
+  width: calc(100% - 4.5rem);
+  font-size: 1em;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.timeline-item__link {
+  color: #2c323c;
+}
+
 /* - article list  - */
 /*-------------------*/
 
@@ -403,6 +489,7 @@ blockquote p {
   border: 1px solid #eee;
   transform: translateX(80px);
   transition: color 0.3s, border 0.3s, background 0.3s, transform 0.3s;
+  z-index: 1;
 }
 
 .turn-up.active {

@@ -60,5 +60,5 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         <a href="/" class="btn btn-outline-dark btn-lg"><i class="fa fa-home" aria-hidden="true"></i> 回到首页</a>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
 <?php $this->need('components/footer.php'); ?>

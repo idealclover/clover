@@ -12,52 +12,108 @@
 <?php $this->need('components/header.php'); ?>
 
 <style>
-.linklist {
-    /* justify-content: center; */
-}
+    .linklist {
+        /* justify-content: center; */
+    }
 
-.linkcard {
-    position: relative;
-    margin-bottom: .75rem;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: .25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    --tw-space-x-reverse: 0;
-    margin-right: calc(.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(.75rem * calc(1 - var(--tw-space-x-reverse)));
-    border-width: 1px;
-    border-style: solid;
-    /* width: 20vh; */
-}
-.linkcard:hover {
-    background-color: #7e8a8b;
-    color: #FFF !important;
-}
-.linkimg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    height: 3rem;
-    width: 3rem;
-    --tw-translate-x: 0;
-    --tw-translate-y: 0;
-    --tw-skew-x: 0;
-    --tw-skew-y: 0;
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    --tw-rotate: 12deg;
-    border-radius: .75rem;
-}
+    .linkcard {
+        position: relative;
+        margin-bottom: .75rem;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: .25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        --tw-space-x-reverse: 0;
+        margin-right: calc(.75rem * var(--tw-space-x-reverse));
+        margin-left: calc(.75rem * calc(1 - var(--tw-space-x-reverse)));
+        border-width: 1px;
+        border-style: solid;
+        /* width: 20vh; */
+    }
 
-.linktitle {
-    margin-left: 3rem;
-}
+    .linkcard:hover {
+        background-color: #7e8a8b;
+        color: #FFF !important;
+    }
+
+    .linkimg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 3rem;
+        width: 3rem;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        --tw-rotate: 12deg;
+        border-radius: .75rem;
+    }
+
+    .linktitle {
+        margin-left: 3rem;
+    }
+
+    .loading {
+        width: 150px;
+        height: 15px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .loading span {
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+        margin-right: 5px;
+        border-radius: 50%;
+        background: #7e898b;
+        -webkit-animation: load 1.04s ease infinite;
+    }
+
+    .loading span:last-child {
+        margin-right: 0px;
+    }
+
+    @-webkit-keyframes load {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale(1.3);
+        }
+
+        100% {
+            opacity: 0.2;
+            -webkit-transform: scale(.3);
+        }
+    }
+
+    .loading span:nth-child(1) {
+        -webkit-animation-delay: 0.13s;
+    }
+
+    .loading span:nth-child(2) {
+        -webkit-animation-delay: 0.26s;
+    }
+
+    .loading span:nth-child(3) {
+        -webkit-animation-delay: 0.39s;
+    }
+
+    .loading span:nth-child(4) {
+        -webkit-animation-delay: 0.52s;
+    }
+
+    .loading span:nth-child(5) {
+        -webkit-animation-delay: 0.65s;
+    }
 </style>
 
 <div class="container col-10 col-lg-9" id="main" role="main">
@@ -103,6 +159,24 @@
                 <hr />
                 <div class="post-content" itemprop="articleBody">
                     <?php $this->content(); ?>
+                </div>
+                <div class="row linklist" data-status="active">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="row linklist" data-classify="friend">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </article>
             <?php AnotherLike_Plugin::theLike($this->cid); ?>

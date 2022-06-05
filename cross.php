@@ -126,8 +126,18 @@ function threadedComments($comments, $options)
                     <div class="tab-pane fade" id="pills-share" role="tabpanel" aria-labelledby="pills-share-tab">
                         <?php
                         $rss = new DOMDocument();
+
+                        $arrContextOptions=array(
+                            "ssl"=>array(
+                                  "verify_peer"=>false,
+                                  "verify_peer_name"=>false,
+                              ),
+                          );
+                        $wallabag = file_get_contents('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred', false, stream_context_create($arrContextOptions));
+                        $rss->loadXML($wallabag);
+
                         // $rss->load('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred');
-                        $rss->load('https://qingmang.me/users/idealclover/feed/');
+                        // $rss->load('https://qingmang.me/users/idealclover/feed/');
                         $feeds = array();
                         foreach ($rss->getElementsByTagName('entry') as $node) {
                             $item = array(
@@ -135,6 +145,10 @@ function threadedComments($comments, $options)
                                 // 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
                                 'link' => $node->getElementsByTagName('link')->item(1)->nodeValue,
                                 'date' => $node->getElementsByTagName('published')->item(0)->nodeValue,
+                                // 'title' => '$node->getElementsByTagName->item(0)->nodeValue',
+                                // // 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
+                                // 'link' => '$node->getElementsByTagName->item(1)->nodeValue',
+                                // 'date' => '$node->getElementsByTagName->item(0)->nodeValue',
                             );
                             array_push($feeds, $item);
                         }
@@ -145,7 +159,7 @@ function threadedComments($comments, $options)
                                     <img class="avatar" src="https://gravatar.loli.net/avatar/a95161b3602abef9f540e7fc6c8cb53a?s=45" alt="clover" width="45" height="45">
                                     <div class="moment-meta">
                                         <span class="moment-author">idealclover</span>
-                                        <time class="moment-time"><?php echo (date('y.m.d h:m', strtotime($feed['date']))); ?></time>
+                                        <time class="moment-time"><?php echo (date('y.m.d H:i', strtotime($feed['date']))); ?></time>
                                         <p><strong><a href="<?php echo ($feed['link']) ?>" style="text-decoration: underline" target="_blank" title="<?php echo ($feed['title']) ?>"><i class="fa fa-link" aria-hidden="true"></i> <?php echo ($feed['title']) ?></a></strong><br />
                                 </li>
                             <?php endforeach; ?>
@@ -157,14 +171,15 @@ function threadedComments($comments, $options)
         <?php $this->need('components/sidebar.php'); ?>
     </div>
 </div><!-- end #main-->
-<script src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script> -->
+<script src="<?php $this->options->themeUrl('libs/OwO/OwO.min.js'); ?>"></script>
 <script>
     var OwO_demo = new OwO({
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        // api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
-        api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
+        api: 'https://image.idealclover.cn/blog/assets/OwO/OwO.json',
+        // api: '<?php $this->options->themeUrl('libs/OwO/OwO.json'); ?>',
         position: 'down',
         width: '100%',
         maxHeight: '250px'

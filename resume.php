@@ -71,7 +71,7 @@
                     <div class="project_position col-6">北京</div>
                 </div>
                 <ul class="project_list">
-                    <li class="project_listitem">负责巨量引擎广告平台广告创编主流程建设与迭代。</li>
+                    <li class="project_listitem">负责巨量引擎广告投放平台广告创编主流程建设与迭代。</li>
                 </ul>
                 <div class="row">
                     <div class="project_value col-6">京东</div>
