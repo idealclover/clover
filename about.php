@@ -119,7 +119,7 @@
 <div class="container col-10 col-lg-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
-            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+            <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
                 <section>
                     <div class="row">
                         <div class="col">
@@ -168,3 +168,45 @@
     </div>
 </div><!-- end #main-->
 <?php $this->need('components/footer.php'); ?>
+<script>
+    // 获取友链
+    $.getJSON("https://blogroll.icl.moe/linkList.json", function(data) {
+        // for(item in data[])
+        $(".linklist").each(function(i, e) {
+            const classify = e.getAttribute("data-classify");
+            const status = e.getAttribute("data-status");
+            let items = [];
+
+            if (classify == null && status == null) {
+                return;
+            } else if (classify == null) {
+                for (let i in data) {
+                    items = items.concat(data[i][status]);
+                }
+            } else if (status == null) {
+                for (let i in data[classify]) {
+                    items = items.concat(data[classify][i]);
+                }
+            } else {
+                items = data[classify][status];
+            }
+            let innerHTML = "";
+            for (const item of items) {
+                if (item["title"] == "idealclover") continue;
+                innerHTML +=
+                    '<a href="' +
+                    item["htmlUrl"] +
+                    '" class="text-dark" target="_blank" title="' +
+                    item["description"] +
+                    '"><div class="linkcard"><img class="linkimg" src="' +
+                    item["avatarUrl"] +
+                    '" href="' +
+                    item["htmlUrl"] +
+                    '" onerror="this.src=&quot;https://image.idealclover.cn/blog/assets/default.jpg&quot;" referrerpolicy="no-referrer"><div class="linktitle">' +
+                    item["title"] +
+                    "</div></div></a>";
+            }
+            e.innerHTML = innerHTML;
+        });
+    });
+</script>

@@ -84,9 +84,13 @@
 <script crossorigin="anonymous" integrity="sha512-tL84mD+FR70jI7X8vYj5AfRqe0EifOaFUapjt1KvDaPLHgTlUZ2gQL/Tzvvn8HXuQm9oHYShJpNFdyJmH2yHrw==" src="https://lib.baomitu.com/highlight.js/10.7.3/highlight.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-HeUHqi0nVsPUm/E0ss7OfnIV/yD96JWB8ehZvUuoVax9DpNHL17jj9pdfXHzqDxm" src="https://lib.baomitu.com/pangu/4.0.7/pangu.min.js"></script>
 <script crossorigin="anonymous" integrity="sha512-PIisRT8mFfdxx99gMs7WAY5Gp+CtjYYxKvF93w8yWAvX548UBNADHu7Qkavgr6yRG+asocqfuk5crjNd5z9s6Q==" src="https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-uQPAXWjjvZGmVjKnobPRQOCEJ0rkCNRXW1GBUsJkjw1w0K7TxLH6Z3zMX7wtx+Lf" src="https://lib.baomitu.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-bc70Hu1TZ2OROJD7JbkXhiny4jZbnfn6L3lm0mCNi1KD8rRE4S0ixk5tH1yZKDJF" src="https://lib.baomitu.com/jquery-ui-bootstrap/0.5pre/assets/js/jquery-ui-1.10.0.custom.min.js"></script>
 
 <script src="<?php $this->options->themeUrl('assets/scripts/main.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('libs/mouse-click/mouse-click.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('libs/tocify/jquery.tocify.min.js'); ?>"></script>
+
 </body>
 
 </html>

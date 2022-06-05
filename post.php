@@ -6,7 +6,7 @@
 <div class="container col-10 col-lg-9" id="main" role="main">
     <div class="row">
         <div class="col-12 col-lg-8">
-            <article class="post">
+            <article class="post single-post">
                 <h1 class="post-title">
                     <a itemprop="url" class="text-body" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                 </h1>

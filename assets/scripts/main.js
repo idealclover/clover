@@ -24,56 +24,15 @@ function show_date_time() {
 }
 show_date_time();
 
-$(".shield-item").each(function (i, e) {
-  $.getJSON(e.getAttribute("data-url"), function (data) {
-    let num = eval(e.getAttribute("data-query"));
-    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
-      typeof num == "undefined" || num == 0 ? "Error" : num;
-  });
-});
-
-$.getJSON("https://blogroll.icl.moe/linkList.json", function (data) {
-  // for(item in data[])
-  $(".linklist").each(function (i, e) {
-    const classify = e.getAttribute("data-classify");
-    const status = e.getAttribute("data-status");
-    let items = [];
-
-    if (classify == null && status == null) {
-      return;
-    } else if (classify == null) {
-      for (let i in data) {
-        items = items.concat(data[i][status]);
-      }
-    } else if (status == null) {
-      for (let i in data[classify]) {
-        items = items.concat(data[classify][i]);
-      }
-    } else {
-      items = data[classify][status];
-    }
-    let innerHTML = "";
-    for (const item of items) {
-      if (item["title"] == "idealclover") continue;
-      innerHTML +=
-        '<a href="' +
-        item["htmlUrl"] +
-        '" class="text-dark" target="_blank" title="' +
-        item["description"] +
-        '"><div class="linkcard"><img class="linkimg" src="' +
-        item["avatarUrl"] +
-        '" href="' +
-        item["htmlUrl"] +
-        '" onerror="this.src=&quot;https://image.idealclover.cn/blog/assets/default.jpg&quot;" referrerpolicy="no-referrer"><div class="linktitle">' +
-        item["title"] +
-        "</div></div></a>";
-    }
-    e.innerHTML = innerHTML;
-  });
-});
+// pangu
 
 pangu.spacingElementById("main");
+
+// lazyload
+
 var lazyLoadInstance = new LazyLoad();
+
+// darkmode switch
 
 var darkSwitch = document.getElementById("darkSwitch");
 window.addEventListener("load", function () {
@@ -98,7 +57,107 @@ function resetTheme() {
   }
 }
 
+// enable popover
+
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
+
+// 返回页首
+
+window.onscroll = function () {
+  var btn = document.getElementsByClassName("turn-up")[0];
+  var scroll =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop;
+
+  if (scroll >= window.innerHeight / 2) {
+    btn.classList.add("active");
+  } else {
+    btn.classList.remove("active");
+  }
+};
+
+var scroll = new SmoothScroll("a.turn-up, .article-list a");
+
+// 顶栏通知
+
+$(".close").click(function (e) {
+  e.preventDefault();
+  localStorage.setItem("alert-box", "closed");
+  $("#main").css("margin-top", "4.5rem");
+});
+if (localStorage.getItem("alert-box") !== "closed") {
+  $("#main").css("margin-top", "6.5rem");
+  $(".alert").css("display", "block");
+}
+
+// 锚点偏移
+
+if (
+  // window.location.hash.indexOf("#") >= 0 &&
+  // window.location.hash.indexOf("#top") < 0
+  window.location.hash.indexOf("#comment") >= 0
+) {
+  let padding = localStorage.getItem("alert-box") !== "closed" ? 60 : 10;
+  $("html,body").animate(
+    {
+      scrollTop: $(window.location.hash).offset().top - padding + "px",
+    },
+    300
+  );
+}
+
+// 目录
+
+//Executes your code when the DOM is ready.  Acts the same as $(document).ready().
+$(function () {
+  $("#toc").tocify({
+    context: ".single-post",
+    selectors: "h2,h3",
+    extendPage: false,
+    scrollTo: localStorage.getItem("alert-box") !== "closed" ? 100 : 50,
+    smoothScroll: false,
+    // hideEffect: "slidUp",
+    hashGenerator: function (text, element) {
+      return element["context"]["firstChild"]["id"];
+    },
+  });
+  if ($("#toc ul li").length > 0) {
+    $("#toc").parent().parent().show();
+    $("#sidebar-sticky-top").addClass("sticky-top");
+  }
+});
+
+// 动态图标
+
+var titleTime;
+var OriginTitile = document.title;
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    document.title = "|ω･) 哎呦~页面不见了~";
+    clearTimeout(titleTime);
+  } else {
+    document.title = "(/≧▽≦)/ 呦吼~肥来啦！";
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile;
+    }, 1000);
+  }
+});
+
+// 获取关注者
+
+$(".shield-item").each(function (i, e) {
+  $.getJSON(e.getAttribute("data-url"), function (data) {
+    let num = eval(e.getAttribute("data-query"));
+    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
+      typeof num == "undefined" || num == 0 ? "Error" : num;
+  });
+});
+
 // 代码高亮
+
 hljs.initHighlightingOnLoad();
 $("pre").each(function (i, e) {
   $(this).html(
@@ -153,104 +212,25 @@ $(document).ready(function () {
   $("[data-fancybox]").fancybox();
 });
 
-// 动态图标
-
-var titleTime;
-var OriginTitile = document.title;
-document.addEventListener("visibilitychange", function () {
-  if (document.hidden) {
-    // var link =
-    //   document.querySelector("link[rel*='icon']") ||
-    //   document.createElement("link");
-    // link.type = "image/x-icon";
-    // link.rel = "shortcut icon";
-    // link.href = "/favicon2.ico";
-    // document.getElementsByTagName("head")[0].appendChild(link);
-    document.title = "|ω･) 哎呦~页面不见了~";
-    clearTimeout(titleTime);
-  } else {
-    // var link =
-    //   document.querySelector("link[rel*='icon']") ||
-    //   document.createElement("link");
-    // link.type = "image/x-icon";
-    // link.rel = "shortcut icon";
-    // link.href = "/favicon.ico";
-    // document.getElementsByTagName("head")[0].appendChild(link);
-    document.title = "(/≧▽≦)/ 呦吼~肥来啦！";
-    titleTime = setTimeout(function () {
-      document.title = OriginTitile;
-    }, 1000);
-  }
-});
-
-// 返回页首
-
-$(function () {
-  $('[data-toggle="popover"]').popover();
-});
-
-window.onscroll = function () {
-  var btn = document.getElementsByClassName("turn-up")[0];
-  var scroll =
-    window.pageYOffset ||
-    document.documentElement.scrollTop ||
-    document.body.scrollTop;
-
-  if (scroll >= window.innerHeight / 2) {
-    btn.classList.add("active");
-  } else {
-    btn.classList.remove("active");
-  }
-};
-
-var scroll = new SmoothScroll("a.turn-up, .article-list a", {
-  offset: 100,
-});
-
-// 顶栏通知
-
-$(".close").click(function (e) {
-  e.preventDefault();
-  localStorage.setItem("alert-box", "closed");
-  $("#main").css("margin-top", "4.5rem");
-});
-if (localStorage.getItem("alert-box") !== "closed") {
-  $("#main").css("margin-top", "6.5rem");
-  $(".alert").css("display", "block");
-}
-
-if (
-  window.location.hash.indexOf("#") >= 0 &&
-  window.location.hash.indexOf("#top") < 0
-) {
-  let padding = localStorage.getItem("alert-box") !== "closed" ? 80 : 50;
-  $("html,body").animate(
-    {
-      scrollTop: $(window.location.hash).offset().top - padding + "px",
-    },
-    300
-  );
-}
-
 // <!-- start webpushr code -->
-(function (w, d, s, id) {
-  if (typeof w.webpushr !== "undefined") return;
-  w.webpushr =
-    w.webpushr ||
-    function () {
-      (w.webpushr.q = w.webpushr.q || []).push(arguments);
-    };
-  var js,
-    fjs = d.getElementsByTagName(s)[0];
-  js = d.createElement(s);
-  js.id = id;
-  js.async = 1;
-  js.src = "https://cdn.webpushr.com/app.min.js";
-  fjs.parentNode.appendChild(js);
-})(window, document, "script", "webpushr-jssdk");
-webpushr("setup", {
-  key: "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
-});
+// (function (w, d, s, id) {
+//   if (typeof w.webpushr !== "undefined") return;
+//   w.webpushr =
+//     w.webpushr ||
+//     function () {
+//       (w.webpushr.q = w.webpushr.q || []).push(arguments);
+//     };
+//   var js,
+//     fjs = d.getElementsByTagName(s)[0];
+//   js = d.createElement(s);
+//   js.id = id;
+//   js.async = 1;
+//   js.src = "https://cdn.webpushr.com/app.min.js";
+//   fjs.parentNode.appendChild(js);
+// })(window, document, "script", "webpushr-jssdk");
+// webpushr("setup", {
+//   key: "BAb2EacytRPuGvZGf1OO6OI-4olXc4Jh9cB3ujlVXzFHBzyFrdNjTANFumFbPmaDM2xnS21-xlHVrlugAREK_kk",
+// });
 // <!-- end webpushr code -->
 
 function googleTranslateElementInit() {

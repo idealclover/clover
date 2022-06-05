@@ -259,43 +259,129 @@ $subs = array(
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="widget-title">
-                <?php _e("😷疫情地图") ?>
+    <div id="sidebar-sticky-top" style="top: 100px;">
+        <div class="card" style="display:none;">
+            <div class="card-header">
+                <div class="widget-title">
+                    <?php _e("📇目录") ?>
+                </div>
+            </div>
+            <div class="card-body" style="padding: 0">
+                <div id="toc"></div>
             </div>
         </div>
-        <div class="card-body">
-            <iframe title="疫情地图" class="lazy" data-src="https://map.icl.moe" height="450" frameborder="no" border="0" width="100%"> </iframe>
+        <div class="card">
+            <div class="card-header">
+                <div class="widget-title av-link search-form-input">
+                    <?php _e("🔎搜博客") ?>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="widget-title av-link search-form-input">
-                <?php _e("🔎搜博客") ?>
+        <div class="card">
+            <div class="card-header">
+                <div class="widget-title"><?php _e("💾博客小程序") ?></div>
+            </div>
+            <div class="card-body">
+                <img alt="博客小程序" src="https://image.idealclover.cn/blog/assets/qrcode.png" />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="widget-title">
+                    <?php _e("😷疫情地图") ?>
+                </div>
+            </div>
+            <div class="card-body">
+                <iframe title="疫情地图" class="lazy" data-src="https://map.icl.moe" height="450" frameborder="no" border="0" width="100%"> </iframe>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="widget-title"><?php _e("💸支持我") ?></div>
+            </div>
+            <div class="card-body">
+                <a href="https://donate.idealclover.cn" rel="noreferrer" target="_blank">
+                    <img alt="支持我" src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
+                </a>
+                <hr />
+                <a class="btn btn-outline-dark btn-block" href="https://donate.idealclover.cn" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> <b>捐赠网站</b></a>
+                <a class="btn btn-outline-dark btn-block" href="https://afdian.net/@idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> 爱发电</a>
+                <a class="btn btn-outline-dark btn-block" href="https://www.patreon.com/idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> Patreon</a>
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="widget-title"><?php _e("💾博客小程序") ?></div>
-        </div>
-        <div class="card-body">
-            <img alt="博客小程序" src="https://image.idealclover.cn/blog/assets/qrcode.png" />
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="widget-title"><?php _e("💸支持我") ?></div>
-        </div>
-        <div class="card-body">
-            <a href="https://donate.idealclover.cn" rel="noreferrer" target="_blank">
-                <img alt="支持我" src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
-            </a>
-            <hr />
-            <a class="btn btn-outline-dark btn-block" href="https://donate.idealclover.cn" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> <b>捐赠网站</b></a>
-            <a class="btn btn-outline-dark btn-block" href="https://afdian.net/@idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> 爱发电</a>
-            <a class="btn btn-outline-dark btn-block" href="https://www.patreon.com/idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> Patreon</a>
-        </div>
-    </div>
+    <style>
+        #toc {
+            /* border-bottom: 1px solid #ddd;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px; */
+        }
+
+        .post-nav .nav-heading {
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px 8px 18px;
+            font-size: 16px;
+        }
+
+        .tocify {
+            width: 100%;
+            /* max-height: 90%; */
+            overflow: auto;
+        }
+
+        .tocify li {
+            border-bottom: 0.5px solid rgba(0, 0, 0, .125);
+            /* border-bottom: none; */
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        .tocify a {
+            display: block;
+        }
+
+        .tocify a:active,
+        .tocify a:focus {
+            background-color: transparent;
+        }
+
+        .tocify .active {
+            background-color: #f3f3f3;
+        }
+
+        [data-theme="dark"] .tocify .active {
+            background-color: #7e8a8b;
+        }
+
+        .tocify li,
+        .tocify ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            line-height: 40px;
+            min-width: 100%;
+        }
+
+        .tocify-header {
+            text-indent: 1.25rem;
+        }
+
+        .tocify-subheader {
+            text-indent: 2.5rem;
+            display: none;
+        }
+
+        .tocify-subheader li {
+            font-size: 12px;
+        }
+
+        .tocify-subheader .tocify-subheader {
+            text-indent: 36px;
+        }
+
+        .tocify-subheader .tocify-subheader .tocify-subheader {
+            text-indent: 54px;
+        }
+    </style>
     <!-- end #sidebar -->
