@@ -20,7 +20,7 @@
     }
 
     .last-update {
-        color:#7b8a8b;
+        color: #7b8a8b;
         font-size: .8rem;
     }
 
@@ -33,9 +33,11 @@
         text-align: right;
         padding-left: 0;
     }
+
     .project_role {
         padding-right: 0;
     }
+
     .project_position {
         text-align: right;
         padding-left: 0;
@@ -44,7 +46,7 @@
     .project_list {
         margin-top: 0.5rem;
         margin-bottom: 1rem;
-        padding-left:1.2rem;
+        padding-left: 1.2rem;
     }
 
     hr {
@@ -56,7 +58,7 @@
         <h2 class="name">翠翠 idealclover</h1>
             Blog: <a href="https://idealclover.top">https://idealclover.top</a><br />
             <a href="mailto:idealclover@163.com">idealclover@live.com</a><br />
-        <div class="last-update">最后更新于：2021-01-01</div>
+            <div class="last-update">最后更新于：2021-01-01</div>
     </section>
     <section class="category">
         <h3 class="category_name">工作经历</h2>

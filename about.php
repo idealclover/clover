@@ -160,24 +160,6 @@
                 <div class="post-content" itemprop="articleBody">
                     <?php $this->content(); ?>
                 </div>
-                <div class="row linklist" data-status="active">
-                    <div class="loading">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="row linklist" data-classify="friend">
-                    <div class="loading">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
             </article>
             <?php AnotherLike_Plugin::theLike($this->cid); ?>
             <?php $this->need('components/comments.php'); ?>

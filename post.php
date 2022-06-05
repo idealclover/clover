@@ -13,7 +13,9 @@
                 <p id="post-meta">
                     <i class="fa fa-clock-o"></i> <?php $this->date('Y.m.d'); ?> |
                     <i class="fa fa-tags"></i> <?php $this->category(' '); ?> |
-                    <i class="fa fa-eye"></i> <?php $db=Typecho_Db::get(); echo($db->fetchAll($db->select('views')->from('table.contents')->where('table.contents.cid = ?', $this->cid))[0]['views']); _e(" 浏览") ?> |
+                    <i class="fa fa-eye"></i> <?php $db = Typecho_Db::get();
+                                                echo ($db->fetchAll($db->select('views')->from('table.contents')->where('table.contents.cid = ?', $this->cid))[0]['views']);
+                                                _e(" 浏览") ?> |
                     <i class="fa fa-thumbs-o-up"></i> <?php AnotherLike_Plugin::theLike($this->cid, false);
                                                         _e(" 赞") ?> |
                     <i class="fa fa-comments-o"></i> <?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?>

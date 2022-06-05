@@ -127,12 +127,12 @@ function threadedComments($comments, $options)
                         <?php
                         $rss = new DOMDocument();
 
-                        $arrContextOptions=array(
-                            "ssl"=>array(
-                                  "verify_peer"=>false,
-                                  "verify_peer_name"=>false,
-                              ),
-                          );
+                        $arrContextOptions = array(
+                            "ssl" => array(
+                                "verify_peer" => false,
+                                "verify_peer_name" => false,
+                            ),
+                        );
                         $wallabag = file_get_contents('https://wallabag.idealclover.cn/feed/idealclover/k2FPz43Z4V4hw1/starred', false, stream_context_create($arrContextOptions));
                         $rss->loadXML($wallabag);
 

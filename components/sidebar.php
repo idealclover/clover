@@ -177,7 +177,7 @@ $subs = array(
                     <a href="<?php echo $i['href']; ?>" target="_blank" rel="noopener noreferrer" title="<?php echo $i['desc']; ?>">
                         <div class="shield-item" data-url="<?php echo $i['url']; ?>" data-query="<?php echo $i['query']; ?>" data-id="<?php echo $i['id']; ?>" style="border-color: <?php echo $i['color']; ?>;">
                             <?php echo $i['icon']; ?>
-                            <div class="col-7" id="shield-name-<?php echo $i['id']; ?>" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
+                            <div class="col-7" class="shield-name" style="color: <?php echo $i['color']; ?>;"><?php echo $i['name']; ?></div>
                             <div class="col align-self-end shield-number" id="shield-number-<?php echo $i['id']; ?>" style="background-color: <?php echo $i['color']; ?>;">...</div>
                         </div>
                     </a>
