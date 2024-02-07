@@ -75,7 +75,7 @@
     <script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
 <?php endif ?>
 
-<script src="<?php $this->options->themeUrl('assets/scripts/googletranslate.js'); ?>"></script>
+<!-- <script src="<?php $this->options->themeUrl('assets/scripts/googletranslate.js'); ?>"></script> -->
 <script crossorigin="anonymous" integrity="sha512-lVcnjCLGjJTaZU55wD7H3f8SJVi6VV5cQRcmGuYcyIY607N/rzZGEl90lNgsiEhKygATryG/i6e5u2moDFs5kQ==" src="https://lib.baomitu.com/vanilla-lazyload/17.3.1/lazyload.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" src="https://lib.baomitu.com/popper.js/1.16.1/umd/popper.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://lib.baomitu.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

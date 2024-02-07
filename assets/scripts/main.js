@@ -149,11 +149,26 @@ document.addEventListener("visibilitychange", function () {
 // 获取关注者
 
 $(".shield-item").each(function (i, e) {
-  $.getJSON(e.getAttribute("data-url"), function (data) {
-    let num = eval(e.getAttribute("data-query"));
-    $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
-      typeof num == "undefined" || num == 0 ? "Error" : num;
+  $.ajax({
+    url: e.getAttribute("data-url"),
+    dataType: 'json',
+    // data: data,
+    success: function (data) {
+      // console.log(data)
+      let num = eval(e.getAttribute("data-query"));
+      $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
+        typeof num == "undefined" || num == 0 ? "Error" : num;
+    },
+    error: function () {
+      $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = "Error";
+    },
+    timeout: 3000 //3 second timeout
   });
+  // $.getJSON(e.getAttribute("data-url"), function (data) {
+  //   let num = eval(e.getAttribute("data-query"));
+  //   $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
+  //     typeof num == "undefined" || num == 0 ? "Error" : num;
+  // });
 });
 
 // 代码高亮
@@ -233,17 +248,17 @@ $(document).ready(function () {
 // });
 // <!-- end webpushr code -->
 
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: "zh-CN",
-      includedLanguages:
-        "en,zh-CN,zh-TW,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi",
-      autoDisplay: false,
-    },
-    "google_translate_element"
-  );
-}
+// function googleTranslateElementInit() {
+//   new google.translate.TranslateElement(
+//     {
+//       pageLanguage: "zh-CN",
+//       includedLanguages:
+//         "en,zh-CN,zh-TW,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi",
+//       autoDisplay: false,
+//     },
+//     "google_translate_element"
+//   );
+// }
 
 if ("serviceWorker" in navigator) {
   console.log("Will the service worker register?");

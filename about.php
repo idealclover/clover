@@ -170,7 +170,7 @@
 <?php $this->need('components/footer.php'); ?>
 <script>
     // 获取友链
-    $.getJSON("https://blogroll.icl.moe/linkList.json", function(data) {
+    $.getJSON("https://idealclover.cn/linkList.json", function(data) {
         // for(item in data[])
         $(".linklist").each(function(i, e) {
             const classify = e.getAttribute("data-classify");

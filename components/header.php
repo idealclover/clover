@@ -140,12 +140,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                     <li class="nav-item">
                         <a class="nav-link <?php if ($this->is('page', 'about')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/about.html"><?php _e("关于") ?></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($this->is('page', 'more')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>index.php/more.html"><?php _e("更多") ?></a>
-                    </li>
                 </ul>
             </div>
         </nav>
+        <?php if (!$this->is('index')) : ?>
         <div id="banner" class="alert alert-dark alert-dismissible text-center fade show" role="alert" style="display:none;">
             <div style="padding-left: 34px;">
                 <a href="https://mailchi.mp/7f28311041bc/idealclover" rel="noreferrer" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
@@ -155,6 +153,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        <?php endif ?>
     </div>
     <?php
     if ($this->is('single')) {
