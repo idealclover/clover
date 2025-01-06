@@ -69,8 +69,8 @@
 <?php if (!$this->user->hasLogin()) : ?>
     <script src="<?php $this->options->themeUrl('assets/scripts/copyright.js'); ?>"></script>
 <?php endif; ?>
-<!-- fuckweixin -->
-<script src="<?php $this->options->themeUrl('assets/scripts/fuckweixin.js'); ?>"></script>
+<!-- fuckweixin 计划有变，先不fuck了 -->
+<!-- <script src="<?php $this->options->themeUrl('assets/scripts/fuckweixin.js'); ?>"></script> -->
 <?php if ($this->is('page', 'more')) : ?>
     <script src="<?php $this->options->themeUrl('libs/canvas-nest/canvas-nest.min.js'); ?>"></script>
 <?php endif ?>
