@@ -156,11 +156,11 @@ $(".shield-item").each(function (i, e) {
     success: function (data) {
       // console.log(data)
       let num = eval(e.getAttribute("data-query"));
-      $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML =
-        typeof num == "undefined" || num == 0 ? "Error" : num;
+      if(typeof num == "undefined" || num == 0) return;
+      $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = num;
     },
     error: function () {
-      $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = "Error";
+      // $("#shield-number-" + e.getAttribute("data-id"))[0].innerHTML = "Error";
     },
     timeout: 3000 //3 second timeout
   });

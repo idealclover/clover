@@ -103,7 +103,7 @@ $subs = array(
         "id" => "email",
         "name" => "Email 订阅",
         "desc" => "Email 订阅本站",
-        "href" => "https://mailchi.mp/7f28311041bc/idealclover",
+        "href" => "https://listmonk.idealclover.cn/subscription/form",
         "color" => "#168de2",
         "icon" => '<svg t="1616322364939" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4702" width="20" height="20"><path d="M854.016 342.016l0-86.016-342.016 214.016-342.016-214.016 0 86.016 342.016 212.010667zM854.016 169.984q34.005333 0 59.008 25.984t25.002667 59.989333l0 512q0 34.005333-25.002667 59.989333t-59.008 25.984l-683.989333 0q-34.005333 0-59.008-25.984t-25.002667-59.989333l0-512q0-34.005333 25.002667-59.989333t59.008-25.984l683.989333 0z" p-id="4703" fill="#168de2"></path></svg>',
         "url" => "https://mailchimp.idealclover.workers.dev",
@@ -277,14 +277,14 @@ $subs = array(
                 </div>
             </div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <div class="card-header">
                 <div class="widget-title"><?php _e("💾博客小程序") ?></div>
             </div>
-            <div class="card-body">
+            <div class="card-body"> -->
                 <img alt="博客小程序" src="https://image.idealclover.cn/blog/assets/qrcode.png" />
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
         <!-- <div class="card">
             <div class="card-header">
                 <div class="widget-title">
@@ -300,10 +300,10 @@ $subs = array(
                 <div class="widget-title"><?php _e("💸支持我") ?></div>
             </div>
             <div class="card-body">
-                <a href="https://donate.idealclover.cn" rel="noreferrer" target="_blank">
+                <!-- <a href="https://donate.idealclover.cn" rel="noreferrer" target="_blank">
                     <img alt="支持我" src="https://image.idealclover.cn/blog/assets/donateqr.png"></img>
                 </a>
-                <hr />
+                <hr /> -->
                 <a class="btn btn-outline-dark btn-block" href="https://donate.idealclover.cn" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> <b>捐赠网站</b></a>
                 <a class="btn btn-outline-dark btn-block" href="https://afdian.net/@idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> 爱发电</a>
                 <a class="btn btn-outline-dark btn-block" href="https://www.patreon.com/idealclover" rel="noreferrer" target="_blank" role="button"><i class="fa fa-flash" aria-hidden="true"></i> Patreon</a>

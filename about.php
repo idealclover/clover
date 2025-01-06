@@ -169,6 +169,23 @@
 </div><!-- end #main-->
 <?php $this->need('components/footer.php'); ?>
 <script>
+    // 随机排序
+    function shuffle(array) {
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+
+            // Pick a remaining element...
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+    }
+
     // 获取友链
     $.getJSON("https://idealclover.cn/linkList.json", function(data) {
         // for(item in data[])
@@ -190,6 +207,7 @@
             } else {
                 items = data[classify][status];
             }
+            shuffle(items);
             let innerHTML = "";
             for (const item of items) {
                 if (item["title"] == "idealclover") continue;

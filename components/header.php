@@ -61,8 +61,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link crossorigin="anonymous" integrity="sha384-Q8BgkilbsFGYNNiDqJm69hvDS7NCJWOodvfK/cwTyQD4VQA0qKzuPpvqNER1UC0F" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
     <link crossorigin="anonymous" integrity="sha512-UPcL+5Ec/OV1+OGGgpK9ZS1NLz/sXczHAYUkSaSMQjgIYufontU+rYGAkK9B//Oze4cFTLfLnzNtsI+cG2FwjQ==" href="https://lib.baomitu.com/highlight.js/10.7.3/styles/dracula.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=22050301'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=22052901'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=24123101'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=24110901'); ?>">
     <script crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910356-3"></script>
@@ -146,7 +146,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
         <?php if (!$this->is('index')) : ?>
         <div id="banner" class="alert alert-dark alert-dismissible text-center fade show" role="alert" style="display:none;">
             <div style="padding-left: 34px;">
-                <a href="https://mailchi.mp/7f28311041bc/idealclover" rel="noreferrer" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
+                <a href="https://listmonk.idealclover.cn/subscription/form" rel="noreferrer" target="_blank" onclick="$.cookie('alert-box', 'closed', { path: '/' });$('.alert').hide();" style="text-decoration: underline;">
                     用邮箱订阅翠翠的博客吧！ </a>
             </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="display: inline-block;">

@@ -83,7 +83,7 @@ ul {
 #main img {
   height: auto;
   transition: filter 0.3s;
-  max-height: 50rem;
+  max-height: 25rem;
 }
 
 .page-title,
