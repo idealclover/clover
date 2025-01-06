@@ -47,7 +47,7 @@
     <a class="turn-up" href="#"><i class="fa fa-rocket" style="height: 30px; width: 30px;"></i></a>
     <!-- <a class="turn-up" href="#"><i class="fa-moon-o" style="height: 30px; width: 30px;"></i></a> -->
 
-    <div class="dark-mode custom-control custom-switch" style="height: 48px; width: 48px;">
+    <div class="dark-mode custom-control custom-switch" style="height: 48px; width: 48px; z-index: 1111;">
         <label class="dark-mode-label custom-control-label" style="margin: -9px;" for="darkSwitch"><i class="fa fa-moon-o" style="height: 30px; width: 30px;"></i> <input type="checkbox" class="custom-control-input" id="darkSwitch" />
         </label>
     </div>

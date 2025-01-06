@@ -61,7 +61,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
     <link crossorigin="anonymous" integrity="sha384-Q8BgkilbsFGYNNiDqJm69hvDS7NCJWOodvfK/cwTyQD4VQA0qKzuPpvqNER1UC0F" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
     <link crossorigin="anonymous" integrity="sha512-UPcL+5Ec/OV1+OGGgpK9ZS1NLz/sXczHAYUkSaSMQjgIYufontU+rYGAkK9B//Oze4cFTLfLnzNtsI+cG2FwjQ==" href="https://lib.baomitu.com/highlight.js/10.7.3/styles/dracula.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('libs/OwO/OwO.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=24123101'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/main.min.css?version=25010701'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/styles/dark.min.css?version=24110901'); ?>">
     <script crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
