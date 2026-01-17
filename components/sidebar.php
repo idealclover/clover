@@ -8,7 +8,7 @@
         </div>
         <div class="card-body">
             <p style="margin-bottom:.5rem;">
-	            <?php echo str_replace("\r\n", "<br />", $this->options->clover_description); ?>
+	            <?php echo $this->options->clover_description ? str_replace("\r\n", "<br />", $this->options->clover_description) : ''; ?>
             </p>
             <p style="margin-bottom:.5rem;">
 	            <?php if (!empty($this->options->sidebarBlock) && in_array('ShowQQ', $this->options->sidebarBlock)): ?>
@@ -45,7 +45,7 @@
         </div>
         <div class="card-body">
             <p style="margin-bottom:.5rem;">
-	            <?php echo str_replace("\r\n", "<br />", $this->options->clover_about_blog); ?><br />
+	            <?php echo $this->options->clover_about_blog ? str_replace("\r\n", "<br />", $this->options->clover_about_blog) : ''; ?><br />
                 <?php _e("基于 Typecho 博客框架") ?><br />
                 <?php _e("使用") ?> <a style="text-decoration: underline" href="https://github.com/idealclover/clover" target="_blank">clover</a> <?php _e("主题") ?><br />
             </p>
